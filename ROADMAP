@@ -9,6 +9,10 @@ Show the menu image of the hero and let choose 3 heroes name
 **** First a local data explorer
 File is to big to be read using chromium (30Mo)
 Try to to nested list or use an API.
-**** Must read local data
-- [ ] Must find how to use VPKReader, using require once include dirs etc...
-  - [ ] Maybe rename as d2quizz
+**** TODO Must read local data
+:LOGBOOK:
+CLOCK: [2022-08-07 dim. 18:12]--[2022-08-07 dim. 18:37] =>  0:25
+:END:
+- [X] Must find how to use VPKReader, using require once include dirs etc...
+- [ ] May try find a way to get nested element clickables
+- [ ] Maybe rename as d2quizz

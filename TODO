@@ -3,3 +3,4 @@ d2view - AGPLv3 - A DotA2 local data viewer.
 === ChangeLog ===
 
 * v0.0.0-1 (29 Jul. 2022 - ???)
+- (1) Got DotA file location using home env var

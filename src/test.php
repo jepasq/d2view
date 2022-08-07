@@ -10,7 +10,8 @@ echo get_include_path();
 echo ini_get('include_path');
 */
 
-$dota = "/home/rainbru/.steam/steam/steamapps/common/dota 2 beta/game/dota/";
+$home = $_SERVER['HOME'];
+$dota = "$home/.steam/steam/steamapps/common/dota 2 beta/game/dota/";
 
 
 $vpk_file = $dota.'pak01_dir.vpk';
@@ -22,15 +23,34 @@ $data = $vpk->read_file($dota.'pak01_000.vpk', 10000);
 echo $data;
 */
 
+
+// Based on https://stackoverflow.com/a/31685070
+echo '<html><head>';
+echo '<script type="text/javascript">
+$("#chaps > li").click(function() {
+  $(this).find("ul.assignments").toggleClass("hide");
+});
+</script>';
+
+echo '<link href="style.css" rel="stylesheet" type="text/css">
+</head>';
+
+echo '<html><div id="chaps">';
+
+
 $print_tree = function($node, $pwd='') use (&$print_tree){
+    $hide='';
     if (is_countable($node)) {
         if(!is_null($node) && count($node) > 0) {
             if(is_array($node)){
-                echo '<ul>';
+                echo "<ul class='assignments $hide'>";
                 foreach($node as $name=>$subn) {
                     $fp = "$pwd/$name";
                     echo "<li>$fp";
-                    //  $print_tree($subn, $fp);
+                    /*                    $hide='hide';
+                    $print_tree($subn, $fp);
+                    $hide='';
+                    */
                     echo "</li>\n";
                 }
                 echo '</ul>';
@@ -44,4 +64,6 @@ $print_tree = function($node, $pwd='') use (&$print_tree){
 };
 $print_tree($ent_tree);
 
+
+echo '</div></html></head>';
 ?>
