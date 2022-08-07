@@ -12,3 +12,6 @@ to make further debugging/modification easier.
 
 	cd src
 	php test.php
+
+Then, open the `out.html` with your favorite browser. This file may be huge
+(>30Mo).

@@ -23,18 +23,22 @@ echo $data;
 */
 
 $print_tree = function($node, $pwd='') use (&$print_tree){
-    if(!is_null($node) && count($node) > 0) {
-        if(is_array($node)){
-            echo '<ul>';
-            foreach($node as $name=>$subn) {
-                $fp = "$pwd/$name";
-                echo "<li>$fp";
-                $print_tree($subn, $fp);
-                echo '</li>';
+    if (is_countable($node)) {
+        if(!is_null($node) && count($node) > 0) {
+            if(is_array($node)){
+                echo '<ul>';
+                foreach($node as $name=>$subn) {
+                    $fp = "$pwd/$name";
+                    echo "<li>$fp";
+                    //  $print_tree($subn, $fp);
+                    echo "</li>\n";
+                }
+                echo '</ul>';
+            }else{ // Node
+                echo " | size: $node->size bytes";
             }
-            echo '</ul>';
-        }else{ // Node
-            echo " | size: $node->size bytes";
+        } else { // !countable
+            echo "Not countable\n";
         }
     }
 };

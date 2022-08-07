@@ -3,5 +3,12 @@
 * v1.0.0
 ** v0.1.0
 *** v0.0.1
+**** If savig some stats, use D3 to show graphs
+**** Find heroes data and make our first quizz
+Show the menu image of the hero and let choose 3 heroes name
+**** First a local data explorer
+File is to big to be read using chromium (30Mo)
+Try to to nested list or use an API.
 **** Must read local data
 - [ ] Must find how to use VPKReader, using require once include dirs etc...
+  - [ ] Maybe rename as d2quizz
