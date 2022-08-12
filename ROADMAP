@@ -18,12 +18,17 @@ CLOCK: [2022-08-07 dim. 18:12]--[2022-08-07 dim. 18:37] =>  0:25
 - [ ] Maybe rename as d2quizz
 **** TODO Correct project setup
 :LOGBOOK:
+CLOCK: [2022-08-12 ven. 15:08]--[2022-08-12 ven. 15:25] =>  0:17
 CLOCK: [2022-08-11 jeu. 13:57]--[2022-08-11 jeu. 14:28] =>  0:31
 CLOCK: [2022-08-10 mer. 12:32]--[2022-08-10 mer. 13:11] =>  0:39
 :END:
 - [X] Create private github repo
-- [ ] Install on apache (explain in README)
+- [X] Add AGPLv3 license
+- [-] Install on apache (explain in README)
   https://wiki.archlinux.org/title/Apache_HTTP_Server
-- [ ] Add AGPLv3 license
+  - [X] Apache won't start. Running =/usr/bin/httpd -D FOREGROUND=
+    Apache is running a threaded MPM, but your PHP Module is not compiled to
+    be threadsafe.  You need to recompile PHP.
+  - [ ] Forbidden access
 - [ ] May rename main source index.php  
 - [ ] Make the repo public  

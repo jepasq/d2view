@@ -20,7 +20,7 @@ Then, open the `out.html` with your favorite browser. This file may be huge
 
 ## Install on apache
 
-	sudo pacman -S apache php-apache
+	sudo pacman -S apache php-apache php-fpm
 	sudo systemctl start httpd.service
 
 Then follow https://wiki.archlinux.org/title/Apache_HTTP_Server
