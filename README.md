@@ -20,12 +20,22 @@ Then, open the `out.html` with your favorite browser. This file may be huge
 
 ## Install on apache
 
+The following example is what I use on a manjaro box 
+1.Dependencies installation :
+
 	sudo pacman -S apache php-apache php-fpm
 	sudo systemctl start httpd.service
 
+2.If you want to modify system-wide index file :
+
+	sudo emacs /srv/http/index.html
+
+3.Then, edit the */etc/hosts* file to add this line:
+
+	127.0.0.1  d2view.localhost
+
+3.The vhost configuration file :
 Then follow https://wiki.archlinux.org/title/Apache_HTTP_Server
-As an example, The vhost configuration file I used on a manjaro box llks
-like this :
 
 	<VirtualHost *:80>
 		ServerAdmin webmaster@domainname1.dom
