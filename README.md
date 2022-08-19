@@ -20,11 +20,12 @@ Then, open the `out.html` with your favorite browser. This file may be huge
 
 ## Install on apache
 
-The following example is what I use on a manjaro box 
+The following example is what I use on a manjaro box. For more details see
+https://wiki.archlinux.org/title/Apache_HTTP_Server
+
 1.Dependencies installation :
 
 	sudo pacman -S apache php-apache php-fpm
-	sudo systemctl start httpd.service
 
 2.If you want to modify system-wide index file :
 
@@ -34,8 +35,12 @@ The following example is what I use on a manjaro box
 
 	127.0.0.1  d2view.localhost
 
-3.The vhost configuration file :
-Then follow https://wiki.archlinux.org/title/Apache_HTTP_Server
+4.Enable virtual hosts. Open */etc/httpd/conf/httpd.conf* file and uncomment :
+
+	Include conf/extra/httpd-vhosts.conf
+
+5.Open The vhost configuration file `/etc/httpd/conf/extra/httpd-vhosts.conf`,
+	and add this content. Be sure to change both directory path if needed :
 
 	<VirtualHost *:80>
 		ServerAdmin webmaster@domainname1.dom
@@ -50,3 +55,5 @@ Then follow https://wiki.archlinux.org/title/Apache_HTTP_Server
 			DirectoryIndex index.php
 		</Directory>
 	</VirtualHost>
+
+Now, you can start (or restart apache) : `sudo systemctl start httpd.service`.
