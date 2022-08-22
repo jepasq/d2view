@@ -62,8 +62,29 @@ $print_tree = function($node, $pwd='') use (&$print_tree){
         }
     }
 };
-$print_tree($ent_tree);
+//$print_tree($ent_tree);
+
+
+$count_files=function($node, $pwd='') use (&$count_files){
+    $count=0;
+    if (is_countable($node)) {
+        if(!is_null($node) && count($node) > 0) {
+            if(is_array($node)){
+                foreach($node as $name=>$subn) {
+                    $count++;       
+                }
+            }else{ // Node
+                $count++;
+            }
+        } else { // !countable
+        }
+    }
+    return $count;
+};
 
 
 echo '</div></html></head>';
+
+echo 'Total files :'.$count_files($ent_tree).'\n';
+
 ?>
