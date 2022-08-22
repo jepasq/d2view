@@ -14,10 +14,10 @@ Try to to nested list or use an API.
 CLOCK: [2022-08-07 dim. 18:12]--[2022-08-07 dim. 18:37] =>  0:25
 :END:
 - [X] Must find how to use VPKReader, using require once include dirs etc...
-- [ ] First, count file found in archives
+- [ ] First, count file found in archive
 - [ ] May try find a way to get nested element clickables
 - [ ] Maybe rename as d2quizz
-**** TODO Correct project setup
+**** DONE Correct project setup
 :LOGBOOK:
 CLOCK: [2022-08-19 ven. 18:27]--[2022-08-19 ven. 18:47] =>  0:20
 CLOCK: [2022-08-18 jeu. 13:35]--[2022-08-18 jeu. 14:07] =>  0:32
@@ -33,5 +33,5 @@ CLOCK: [2022-08-10 mer. 12:32]--[2022-08-10 mer. 13:11] =>  0:39
     Apache is running a threaded MPM, but your PHP Module is not compiled to
     be threadsafe.  You need to recompile PHP.
   - [X] Forbidden access
-- [ ] May rename main source index.php  
-- [ ] Make the repo public  
+- [X] Make the repo public  
+- [X] May rename main source index.php  
