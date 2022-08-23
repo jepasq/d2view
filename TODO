@@ -4,6 +4,7 @@ d2view - AGPLv3 - A DotA2 local data viewer and quizz generator.
     (8 items by revision)
 
 * v0.0.0-1 (29 Jul. 2022 - ???)
-- (3) Move actual source to index.php
+- (4) Start to implement D2view class
+- Move actual source to index.php
 - Add AGPLv3 license file
 - Got DotA file location using home env var

@@ -3,6 +3,7 @@
 * v1.0.0
 ** v0.1.0
 *** v0.0.1
+**** May add unit tets
 **** If saving some stats, use D3 to show graphs
 **** Find heroes data and make our first quizz
 Show the menu image of the hero and let choose 3 heroes name
@@ -11,13 +12,18 @@ File is to big to be read using chromium (30Mo)
 Try to create a nested list or use an API.
 **** TODO Must read local data
 :LOGBOOK:
+CLOCK: [2022-08-23 mar. 15:41]--[2022-08-23 mar. 16:10] =>  0:29
 CLOCK: [2022-08-07 dim. 18:12]--[2022-08-07 dim. 18:37] =>  0:25
 :END:
 - [X] Must find how to use VPKReader, using require once include dirs etc...
 - [X] Maybe rename as d2quizz : no, freed as d2view
+- [ ] Create a centralized class to compute all needed values in only one loop
+- [ ] Improve homepage with a menubar etc...
+  - [ ] May include bootstrap
 - [ ] First, count file found in archive
   Started but total seems spurious
-- [ ] May try find a way to get nested element clickables
+- [ ] May try to find a way to get nested element clickables
+- [ ] Handle a D2view class cache
 **** DONE Correct project setup
 :LOGBOOK:
 CLOCK: [2022-08-19 ven. 18:27]--[2022-08-19 ven. 18:47] =>  0:20

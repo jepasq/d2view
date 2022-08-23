@@ -1,9 +1,4 @@
 <?php
-include('VPKReader/Exception.php');
-include('VPKReader/VPKHeader.php');
-include('VPKReader/VPKDirectoryEntry.php');
-include('VPKReader/VPKFile.php');
-include('VPKReader/VPK.php');
 
 /*
 echo get_include_path();
@@ -38,49 +33,8 @@ echo '<link href="style.css" rel="stylesheet" type="text/css">
 echo '<html><div id="chaps">';
 
 
-$print_tree = function($node, $pwd='') use (&$print_tree){
-    $hide='';
-    if (is_countable($node)) {
-        if(!is_null($node) && count($node) > 0) {
-            if(is_array($node)){
-                echo "<ul class='assignments $hide'>";
-                foreach($node as $name=>$subn) {
-                    $fp = "$pwd/$name";
-                    echo "<li>$fp";
-                    /*                    $hide='hide';
-                    $print_tree($subn, $fp);
-                    $hide='';
-                    */
-                    echo "</li>\n";
-                }
-                echo '</ul>';
-            }else{ // Node
-                echo " | size: $node->size bytes";
-            }
-        } else { // !countable
-            echo "Not countable\n";
-        }
-    }
-};
-//$print_tree($ent_tree);
 
 
-$count_files=function($node, $pwd='') use (&$count_files){
-    $count=0;
-    if (is_countable($node)) {
-        if(!is_null($node) && count($node) > 0) {
-            if(is_array($node)){
-                foreach($node as $name=>$subn) {
-                    $count++;       
-                }
-            }else{ // Node
-                $count++;
-            }
-        } else { // !countable
-        }
-    }
-    return $count;
-};
 
 
 echo '</div></html></head>';
