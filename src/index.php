@@ -28,12 +28,18 @@ $("#chaps > li").click(function() {
 
 echo "home is ".$home;
 
+echo "<p>  is readable : ".   btos(is_readable($dota));
+echo "<p>  is writable : ".    btos(is_writable($dota));
+echo "<p>  is executable : ". btos(is_executable($dota));
+
 echo '<link href="style.css" rel="stylesheet" type="text/css">
 </head>';
 
 echo '<html><div id="chaps">';
 
-
+function btos($b) {
+    return  $b ? "yes" : "no";
+}
 
 
 $d2 = new D2View($dota);
