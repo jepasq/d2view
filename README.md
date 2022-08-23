@@ -10,6 +10,16 @@ A DotA2 local data viewer and quizz generator.
 license found. It is included in src source tree and not as a git submodule
 to make further debugging/modification easier.
 
+## config.php
+
+In the top-level directory, you must create and feed a config file containing
+home directory of the user that installed and keep updated DotA2. It should
+looks like that :
+
+	<?php
+	$home="/home/<your_username_here>/";
+	?>
+
 ## Running
 
 	cd src
@@ -57,3 +67,5 @@ https://wiki.archlinux.org/title/Apache_HTTP_Server
 	</VirtualHost>
 
 Now, you can start (or restart apache) : `sudo systemctl start httpd.service`.
+
+
