@@ -6,3 +6,7 @@ body {
   display: none;
 }
 
+.alert {
+    width: 75%;
+    margin: auto;
+}

@@ -12,6 +12,7 @@ File is to big to be read using chromium (30Mo)
 Try to create a nested list or use an API.
 **** TODO Must read local data
 :LOGBOOK:
+CLOCK: [2022-08-24 mer. 12:47]--[2022-08-24 mer. 12:57] =>  0:10
 CLOCK: [2022-08-23 mar. 16:40]--[2022-08-23 mar. 16:54] =>  0:14
 CLOCK: [2022-08-23 mar. 15:41]--[2022-08-23 mar. 16:10] =>  0:29
 CLOCK: [2022-08-07 dim. 18:12]--[2022-08-07 dim. 18:37] =>  0:25
@@ -19,6 +20,7 @@ CLOCK: [2022-08-07 dim. 18:12]--[2022-08-07 dim. 18:37] =>  0:25
 - [X] Must find how to use VPKReader, using require once include dirs etc...
 - [X] Maybe rename as d2quizz : no, freed as d2view
 - [X] $home is no more valid (executed as a service)
+- [X] May show a danger boostrap notification if can't extract
 - [ ] We now have a file permission issue
   Try to change this without breaking Dota
 - [ ] Create a centralized class to compute all needed values in only one loop
