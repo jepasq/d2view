@@ -12,6 +12,7 @@ File is to big to be read using chromium (30Mo)
 Try to create a nested list or use an API.
 **** TODO Must read local data
 :LOGBOOK:
+CLOCK: [2022-08-24 mer. 13:09]--[2022-08-24 mer. 13:18] =>  0:09
 CLOCK: [2022-08-24 mer. 12:47]--[2022-08-24 mer. 12:57] =>  0:10
 CLOCK: [2022-08-23 mar. 16:40]--[2022-08-23 mar. 16:54] =>  0:14
 CLOCK: [2022-08-23 mar. 15:41]--[2022-08-23 mar. 16:10] =>  0:29
@@ -21,15 +22,17 @@ CLOCK: [2022-08-07 dim. 18:12]--[2022-08-07 dim. 18:37] =>  0:25
 - [X] Maybe rename as d2quizz : no, freed as d2view
 - [X] $home is no more valid (executed as a service)
 - [X] May show a danger boostrap notification if can't extract
+- [X] May include bootstrap
+- [X] Improve homepage with a menubar etc...
 - [ ] We now have a file permission issue
   Try to change this without breaking Dota
 - [ ] Create a centralized class to compute all needed values in only one loop
-- [ ] Improve homepage with a menubar etc...
-  - [ ] May include bootstrap
 - [ ] First, count file found in archive
   Started but total seems spurious
 - [ ] May try to find a way to get nested element clickables
 - [ ] Handle a D2view class cache
+- [ ] May add an icon to navbar
+  Maybe the D2 icon in background with D2V in foreground with offset
 **** DONE Correct project setup
 :LOGBOOK:
 CLOCK: [2022-08-19 ven. 18:27]--[2022-08-19 ven. 18:47] =>  0:20
