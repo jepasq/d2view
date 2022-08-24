@@ -1,0 +1,9 @@
+* v0.0.0-1 (29 Jul. 2022 - 24 Aug. 2022) SLOC 375
+- Add a bootstrap-based navbar
+- Have a danger notification if can't execute Dota directory
+- Print dota directory file permissions
+- Add the config.cfg thing
+- Start to implement D2view class
+- Move actual source to index.php
+- Add AGPLv3 license file
+- Got DotA file location using home env var

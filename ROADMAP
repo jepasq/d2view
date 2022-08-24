@@ -29,10 +29,12 @@ CLOCK: [2022-08-07 dim. 18:12]--[2022-08-07 dim. 18:37] =>  0:25
 - [ ] Create a centralized class to compute all needed values in only one loop
 - [ ] First, count file found in archive
   Started but total seems spurious
+- [ ] Add an alert if config.php can't be found or if dota path is empty
 - [ ] May try to find a way to get nested element clickables
 - [ ] Handle a D2view class cache
 - [ ] May add an icon to navbar
   Maybe the D2 icon in background with D2V in foreground with offset
+- [ ] Add version and revision in menubar and add this update info in TODO  
 **** DONE Correct project setup
 :LOGBOOK:
 CLOCK: [2022-08-19 ven. 18:27]--[2022-08-19 ven. 18:47] =>  0:20
