@@ -15,8 +15,7 @@ class D2view{
         $this->vpk_file = $dota_path.'pak01_dir.vpk';
         $this->nb_files = 0;
 
-        $vpk_file = $dota_path.'pak01_dir.vpk';
-        $vpk = new VPKReader\VPK($vpk_file);
+        $vpk = new VPKReader\VPK($this->vpk_file);
         $ent_tree = $vpk->vpk_entries;
         
         $print_tree = function($node, $pwd='') use (&$print_tree){

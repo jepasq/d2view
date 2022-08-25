@@ -36,11 +36,19 @@ function alert($msg) {
 
 function alert_exe($path) {
     if (!is_executable($path)) {
-        alert("DotA directory (<em>'$path'</em>) isn\'t executable. ".
+        alert("DotA directory (<em>'$path'</em>) has permissions errors. ".
               "You may have issues running this.");
     }
 }
 
+function file_perms($dir) {
+    echo "<div class='perms'>";
+    echo "Tested dir is  is <tt>$dir</tt>";
+    echo "<br>&nbsp;&nbsp;is readable : ".   btos(is_readable($dir));
+    //    echo "<br>&nbsp;&nbsp;is writable : ".   btos(is_writable($dir));
+    echo "<br>&nbsp;&nbsp;is executable : ". btos(is_executable($dir));
+    echo "</div>";
+}
 
 /*
 echo get_include_path();
@@ -68,13 +76,14 @@ echo '</head><body>';
 
 navbar();
 alert_exe($dota);
+file_perms($dota);
+$f=$dota;
+for ($i=0; $i<7; $i++) {
+    $f=dirname($f);
+    file_perms($f);
+}
 
-echo "home is ".$home;
-echo "<p>  is readable : ".   btos(is_readable($dota));
-echo "<p>  is writable : ".    btos(is_writable($dota));
-echo "<p>  is executable : ". btos(is_executable($dota));
-
-echo '<link href="style.css?1" rel="stylesheet" type="text/css">
+echo '<link href="style.css?3" rel="stylesheet" type="text/css">
 </head>';
 
 echo '<div id="chaps">';
@@ -85,15 +94,15 @@ function btos($b) {
 
 try {
     $d2 = new D2View($dota);
+    echo "<p>Total files :$d2->nb_files.</p>";
+    echo '</div>';
 } catch (VPKReader\Exception $e) {
     alert($e->getMessage());
 }
 
-echo '</div>';
 echo '<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>';
 
 echo '</body></html>';
 
-echo 'Total files :'.$d2->nb_files.'\n';
 
 ?>

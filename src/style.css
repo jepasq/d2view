@@ -10,3 +10,9 @@ body {
     width: 75%;
     margin: auto;
 }
+
+.perms {
+    border: 1px solid brown;
+    margin: 20px;
+    padding: 5px;
+}
