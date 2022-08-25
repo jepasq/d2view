@@ -5,6 +5,7 @@ d2view - AGPLv3 - A DotA2 local data viewer and quizz generator.
     SLOC is the number of Physical sloc in src/ from npm sloc package
 
 * v0.0.0-2 (24 Aug. 2022 - ???) SLOC ???
+- (4) Add an alert if config file not found
 - (3) Explain the file permission issue and fixed it
 - Improve the file permissions reporting function
 - Add a general alert() function

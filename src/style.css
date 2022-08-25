@@ -16,3 +16,16 @@ body {
     margin: 20px;
     padding: 5px;
 }
+
+.navbar-custom  {
+    background-color: #000080;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text{
+    color: white;
+}
+
+.nav-link{
+    color: white;
+}

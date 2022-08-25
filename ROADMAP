@@ -12,6 +12,7 @@ File is to big to be read using chromium (30Mo)
 Try to create a nested list or use an API.
 **** TODO Must read local data
 :LOGBOOK:
+CLOCK: [2022-08-25 jeu. 15:34]--[2022-08-25 jeu. 15:47] =>  0:13
 CLOCK: [2022-08-25 jeu. 11:02]--[2022-08-25 jeu. 11:14] =>  0:12
 CLOCK: [2022-08-24 mer. 13:09]--[2022-08-24 mer. 13:18] =>  0:09
 CLOCK: [2022-08-24 mer. 12:47]--[2022-08-24 mer. 12:57] =>  0:10
@@ -27,12 +28,12 @@ CLOCK: [2022-08-07 dim. 18:12]--[2022-08-07 dim. 18:37] =>  0:25
 - [X] Improve homepage with a menubar etc...
 - [X] We now have a file permission issue
   Try to change this without breaking Dota
-  Tried a chmod o+w *.vpk
+- [X] Add an alert if config.php can't be found or if dota path is empty
 - [ ] Create a centralized class to compute all needed values in only one loop
 - [ ] First, count file found in archive
   Started but total seems spurious
-- [ ] Add an alert if config.php can't be found or if dota path is empty
 - [ ] May try to find a way to get nested element clickables
+- [ ] Add a favicon
 - [ ] Handle a D2view class cache
 - [ ] May add an icon to navbar
   Maybe the D2 icon in background with D2V in foreground with offset
