@@ -30,12 +30,14 @@ function navbar() {
 </nav>';
 }
 
+function alert($msg) {
+    echo "<div class='alert alert-danger' role='alert'>$msg</div>";
+}
+
 function alert_exe($path) {
     if (!is_executable($path)) {
-        echo '<div class="alert alert-danger" role="alert">
-  DotA directory (<em>'.$path.
-            '</em>) isn\'t executable. You may have issues running this.
-</div>';
+        alert("DotA directory (<em>'$path'</em>) isn\'t executable. ".
+              "You may have issues running this.");
     }
 }
 
@@ -81,9 +83,11 @@ function btos($b) {
     return  $b ? "yes" : "no";
 }
 
-
-$d2 = new D2View($dota);
-
+try {
+    $d2 = new D2View($dota);
+} catch (VPKReader\Exception $e) {
+    alert($e->getMessage());
+}
 
 echo '</div>';
 echo '<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>';
