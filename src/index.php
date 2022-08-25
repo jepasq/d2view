@@ -42,12 +42,16 @@ function alert_exe($path) {
 }
 
 function file_perms($dir) {
-    echo "<div class='perms'>";
-    echo "Tested dir is  is <tt>$dir</tt>";
-    echo "<br>&nbsp;&nbsp;is readable : ".   btos(is_readable($dir));
-    //    echo "<br>&nbsp;&nbsp;is writable : ".   btos(is_writable($dir));
-    echo "<br>&nbsp;&nbsp;is executable : ". btos(is_executable($dir));
-    echo "</div>";
+    $r=is_readable($dir);
+    $x=is_executable($dir);
+    if (!($x&&$r)) {
+        echo "<div class='perms'>";
+        echo "Tested dir is  is <tt>$dir</tt>";
+        echo "<br>&nbsp;&nbsp;is readable : ".   btos($r);
+        //    echo "<br>&nbsp;&nbsp;is writable : ".   btos(is_writable($dir));
+        echo "<br>&nbsp;&nbsp;is executable : ". btos($x);
+        echo "</div>";
+    }
 }
 
 /*
@@ -78,7 +82,7 @@ navbar();
 alert_exe($dota);
 file_perms($dota);
 $f=$dota;
-for ($i=0; $i<7; $i++) {
+for ($i=0; $i<6; $i++) {
     $f=dirname($f);
     file_perms($f);
 }
