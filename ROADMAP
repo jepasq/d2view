@@ -30,9 +30,9 @@ CLOCK: [2022-08-07 dim. 18:12]--[2022-08-07 dim. 18:37] =>  0:25
   Try to change this without breaking Dota
 - [X] Add an alert if config.php can't be found or if dota path is empty
 - [X] Add a favicon 32x32 or 16x16
-- [ ] Create a centralized class to compute all needed values in only one loop
-- [ ] First, count file found in archive
+- [X] First, count file found in archive
   Started but total seems spurious
+- [ ] Create a centralized class to compute all needed values in only one loop
 - [ ] May try to find a way to get nested element clickables
 - [ ] Handle a D2view class cache
 - [ ] May add an icon to navbar

@@ -25,15 +25,22 @@ class D2view{
                     if(is_array($node)){
                         foreach($node as $name=>$subn) {
                             $fp = "$pwd/$name";
-                            $this->nb_files++;     
+                            // Only print top-level items
+                            if ($pwd=='') {
+                                //    echo $fp . "<br>";
+                            }
+                            $this->nb_files++;
+                            $print_tree($subn, $pwd);
+                            
                         }
                     }else{ // Node
+                        //                            echo $fp;
                     }
                 } else { // !countable
                 }
             }
         };
-        //$print_tree($ent_tree);
+        $print_tree($ent_tree);
         
         
     }
