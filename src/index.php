@@ -69,13 +69,9 @@ echo $data;
 
 // Based on https://stackoverflow.com/a/31685070
 echo '<html><head>';
-echo '<script type="text/javascript">
-$("#chaps > li").click(function() {
-  $(this).find("ul.assignments").toggleClass("hide");
-});
-</script>';
 echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">';
-echo '<link href="style.css?5" rel="stylesheet" type="text/css">';
+echo '<link rel="icon" type="image/x-icon" href="../media/favicon.ico">';
+echo '<link rel="stylesheet" type="text/css" href="style.css?5">';
 echo '</head><body>';
 
 navbar();

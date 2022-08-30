@@ -29,11 +29,11 @@ CLOCK: [2022-08-07 dim. 18:12]--[2022-08-07 dim. 18:37] =>  0:25
 - [X] We now have a file permission issue
   Try to change this without breaking Dota
 - [X] Add an alert if config.php can't be found or if dota path is empty
+- [X] Add a favicon 32x32 or 16x16
 - [ ] Create a centralized class to compute all needed values in only one loop
 - [ ] First, count file found in archive
   Started but total seems spurious
 - [ ] May try to find a way to get nested element clickables
-- [ ] Add a favicon
 - [ ] Handle a D2view class cache
 - [ ] May add an icon to navbar
   Maybe the D2 icon in background with D2V in foreground with offset
