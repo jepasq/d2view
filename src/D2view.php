@@ -27,10 +27,10 @@ class D2view{
                             $fp = "$pwd/$name";
                             // Only print top-level items
                             if ($pwd=='') {
-                                //    echo $fp . "<br>";
+                                echo $fp . "<br>";
                             }
                             $this->nb_files++;
-                            $print_tree($subn, $pwd);
+                            //$print_tree($subn, $pwd);
                             
                         }
                     }else{ // Node
