@@ -7,14 +7,19 @@ include('VPKReader/VPK.php');
 
 class D2view{
     public
-        $nb_files, //!< The number of paths in the DotA archive
+        /** The number of paths in the DotA archive. If -1, Not yet computed */
+        $nb_files, 
         $vpk_file; //!< The first .vpk file to be opened in dota_path
     
     
     function __construct($dota_path){
         $this->vpk_file = $dota_path.'pak01_dir.vpk';
-        $this->nb_files = 0;
+        $this->nb_files = -1;
 
+    }
+
+    function list_files($pwd) {
+        $this->nb_files=0;
         $vpk = new VPKReader\VPK($this->vpk_file);
         $ent_tree = $vpk->vpk_entries;
         
@@ -26,9 +31,7 @@ class D2view{
                         foreach($node as $name=>$subn) {
                             $fp = "$pwd/$name";
                             // Only print top-level items
-                            if ($pwd=='') {
-                                echo $fp . "<br>";
-                            }
+        echo "<a href='explorer.php?pwd=$fp'>$fp</a><br>";
                             $this->nb_files++;
                             //$print_tree($subn, $pwd);
                             
@@ -40,7 +43,7 @@ class D2view{
                 }
             }
         };
-        $print_tree($ent_tree);
+        $print_tree($ent_tree . $pwd);
         
         
     }

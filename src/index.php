@@ -1,8 +1,9 @@
 <?php
 
 
-include('page_layout.php');
-include('D2view.php');
+include_once('page_layout.php');
+include_once('d2view.php');
+include_once('global.php');
 
 
 function alert_exe($path) {
@@ -25,18 +26,8 @@ function file_perms($dir) {
     }
 }
 
-
 head();
 navbar();
-
-$cfg = '../config.php';
-if (file_exists($cfg)) {
-    include($cfg);
-} else {
-    alert("<em>$cfg</em> file can't be found. You <b>must</b> create it.");
-    exit(1);
-}
-$dota = "$home/.steam/steam/steamapps/common/dota 2 beta/game/dota/";
 
 
 alert_exe($dota);
@@ -52,13 +43,6 @@ function btos($b) {
     return  $b ? "yes" : "no";
 }
 
-try {
-    $d2 = new D2View($dota);
-    echo "<p>Total files :$d2->nb_files.</p>";
-    echo '</div>';
-} catch (VPKReader\Exception $e) {
-    alert($e->getMessage());
-}
 
 
 footer();
