@@ -1,5 +1,7 @@
 <?php
 
+$version="0.0.0-3";
+
 // Based on https://stackoverflow.com/a/31685070
 function head() {
     echo '<!DOCTYPE html><html><head>';
@@ -12,7 +14,10 @@ function head() {
 function navbar() {
     echo '<nav class="navbar navbar-expand-lg navbar-light navbar-custom">
   <a class="navbar-brand" href="#">d2view</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="version">'.$version.'</span>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" 
+    data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" 
+    aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">

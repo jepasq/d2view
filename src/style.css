@@ -29,3 +29,8 @@ body {
 .nav-link{
     color: white;
 }
+
+.version {
+    font-size: 8px;
+    font-style: italic;
+}
