@@ -4,8 +4,6 @@ A DotA2 local data viewer and quizz generator.
 
 ## dependencies
 
-	#pacman -S php
-
 `src/VPKReader` is from https://github.com/Aphexx/php-vpk-reader but no
 license found. It is included in src source tree and not as a git submodule
 to make further debugging/modification easier.
@@ -19,14 +17,6 @@ looks like that :
 	<?php
 	$home="/home/<your_username_here>/";
 	?>
-
-## Running
-
-	cd src
-	php test.php > out.html
-
-Then, open the `out.html` with your favorite browser. This file may be huge
-(>30Mo).
 
 ## Install on apache
 
@@ -45,9 +35,14 @@ https://wiki.archlinux.org/title/Apache_HTTP_Server
 
 	127.0.0.1  d2view.localhost
 
-4.Enable virtual hosts. Open */etc/httpd/conf/httpd.conf* file and uncomment :
+4.Enable *virtual hosts* and *php* apache features. Open 
+*/etc/httpd/conf/httpd.conf* file and uncomment or add this statements :
 
 	Include conf/extra/httpd-vhosts.conf
+	Include conf/extra/php_module.conf
+	...
+	LoadModule php_module modules/libphp.so
+	AddHandler php-script .php
 
 5.Open The vhost configuration file `/etc/httpd/conf/extra/httpd-vhosts.conf`,
 	and add this content. Be sure to change both directory path if needed :
@@ -67,6 +62,15 @@ https://wiki.archlinux.org/title/Apache_HTTP_Server
 	</VirtualHost>
 
 Now, you can start (or restart apache) : `sudo systemctl start httpd.service`.
+
+If you keep the directory in your home one, you may have a 
+*access to / denied ... because search permissions are missing on a component*
+*of the path*. You may need to call
+
+	chmod +x ~
+
+and restart `apache` to fix this issue. It is used to let the webserver user
+traverse (i.e. read content) of your directory.
 
 ## Steam file permission issues
 
