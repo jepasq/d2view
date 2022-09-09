@@ -18,13 +18,16 @@ Try to create a nested list or use an API.
 - [X] Move index function to page_layout.php
 - [X] Within explorer.php, pass pwd as URL parameter for exemple pwd='/'
 - [ ] Must handle navbar current item (as a navbar() function paramater)
-**** Better data handling
+**** TODO Better data handling
+:LOGBOOK:
+CLOCK: [2022-09-09 ven. 05:09]--[2022-09-09 ven. 05:28] =>  0:19
+:END:
+- [X] Better active menubar handling
+  Actual active one is always Home. May be passed as a navbar() functtion
+  parameter
 - [ ] Create a centralized class to compute all needed values in only one loop
 - [ ] May try to find a way to get nested element clickables
 - [ ] Handle a D2view class cache
-- [ ] Better active menubar handling
-  Actual active one is always Home. May be passed as a navbar() functtion
-  parameter
 - [ ] May add an icon to navbar
   Maybe the D2 icon in background with D2V in foreground with offset
 **** DONE Must read local data

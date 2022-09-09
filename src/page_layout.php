@@ -11,7 +11,23 @@ function head() {
     echo '</head><body>';
 }
 
-function navbar() {
+function navbar_item($active, $label, $href) {
+    if ($active) {
+        echo '<li class="nav-item active">';
+    } else {
+        echo '<li class="nav-item">';
+    }
+    echo "<a class='nav-link' href='$href'>$label</a></li>";
+
+}
+
+/** Print the navbar code
+ *
+ *  \param $active_item The activate item slug (one of 'home', 'explorer'
+ *                      etc...).
+ *
+ */
+function navbar($active_item) {
     global $version;
     echo '<nav class="navbar navbar-expand-lg navbar-light navbar-custom">
         <a class="navbar-brand" href="/">
@@ -19,21 +35,17 @@ function navbar() {
             <span class="version">v'.$version.'</span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" 
-    data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" 
-    aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="/">Home
-<!--          <span class="sr-only">(current)</span> -->
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="explorer.php?pwd=/">Explorer</a>
-      </li>
-      <li class="nav-item">
+        data-target="#navbarNav" aria-controls="navbarNav"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">';
+    
+    navbar_item($active_item=="home",     "Home",     '/');
+    navbar_item($active_item=="explorer", "Explorer", 'explorer.php?pwd=/');
+    
+     echo '<li class="nav-item">
         <a class="nav-link" href="#">Pricing</a>
       </li>
     </ul>

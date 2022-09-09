@@ -5,7 +5,7 @@ include_once('d2view.php');
 include_once('global.php');
 
 head();
-navbar();
+navbar("explorer");
 
 $pwd = $_GET['pwd'];
 

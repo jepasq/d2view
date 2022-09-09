@@ -27,7 +27,7 @@ function file_perms($dir) {
 }
 
 head();
-navbar();
+navbar("home");
 
 
 alert_exe($dota);
