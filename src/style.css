@@ -19,11 +19,13 @@ body {
 
 .navbar-custom  {
     background-color: #000080;
+    padding: 0;
 }
 
 .navbar-custom .navbar-brand,
 .navbar-custom .navbar-text{
     color: white;
+    margin-left: 10px;
 }
 
 .nav-link{
@@ -31,6 +33,13 @@ body {
 }
 
 .version {
+    display: block;
     font-size: 8px;
     font-style: italic;
+    color: white;
+    text-align: right;
+}
+
+.active {
+    background-color: #ACC;
 }

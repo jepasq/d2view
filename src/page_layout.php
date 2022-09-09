@@ -7,15 +7,18 @@ function head() {
     echo '<!DOCTYPE html><html><head>';
     echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">';
     echo '<link rel="icon" type="image/x-icon" href="../media/favicon.ico">';
-    echo '<link rel="stylesheet" type="text/css" href="style.css?5">';
+    echo '<link rel="stylesheet" type="text/css" href="style.css?6">';
     echo '</head><body>';
 }
 
 function navbar() {
+    global $version;
     echo '<nav class="navbar navbar-expand-lg navbar-light navbar-custom">
-  <a class="navbar-brand" href="#">d2view</a>
-    <span class="version">'.$version.'</span>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" 
+        <a class="navbar-brand" href="/">
+            <span>d2view</span>
+            <span class="version">v'.$version.'</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" 
     data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" 
     aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -23,8 +26,8 @@ function navbar() {
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home
-          <span class="sr-only">(current)</span>
+        <a class="nav-link" href="/">Home
+<!--          <span class="sr-only">(current)</span> -->
         </a>
       </li>
       <li class="nav-item">

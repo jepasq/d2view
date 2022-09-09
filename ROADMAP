@@ -18,8 +18,18 @@ Try to create a nested list or use an API.
 - [X] Move index function to page_layout.php
 - [X] Within explorer.php, pass pwd as URL parameter for exemple pwd='/'
 - [ ] Must handle navbar current item (as a navbar() function paramater)
-**** TODO Must read local data
+**** Better data handling
+- [ ] Create a centralized class to compute all needed values in only one loop
+- [ ] May try to find a way to get nested element clickables
+- [ ] Handle a D2view class cache
+- [ ] Better active menubar handling
+  Actual active one is always Home. May be passed as a navbar() functtion
+  parameter
+- [ ] May add an icon to navbar
+  Maybe the D2 icon in background with D2V in foreground with offset
+**** DONE Must read local data
 :LOGBOOK:
+CLOCK: [2022-09-09 ven. 04:50]--[2022-09-09 ven. 04:59] =>  0:09
 CLOCK: [2022-09-06 mar. 06:08]--[2022-09-06 mar. 06:20] =>  0:12
 CLOCK: [2022-08-25 jeu. 15:34]--[2022-08-25 jeu. 15:47] =>  0:13
 CLOCK: [2022-08-25 jeu. 11:02]--[2022-08-25 jeu. 11:14] =>  0:12
@@ -42,11 +52,6 @@ CLOCK: [2022-08-07 dim. 18:12]--[2022-08-07 dim. 18:37] =>  0:25
 - [X] First, count file found in archive
   Started but total seems spurious
 - [X] Add version and revision in menubar and add this update info in TODO  
-- [ ] Create a centralized class to compute all needed values in only one loop
-- [ ] May try to find a way to get nested element clickables
-- [ ] Handle a D2view class cache
-- [ ] May add an icon to navbar
-  Maybe the D2 icon in background with D2V in foreground with offset
 **** DONE Correct project setup
 :LOGBOOK:
 CLOCK: [2022-08-19 ven. 18:27]--[2022-08-19 ven. 18:47] =>  0:20
