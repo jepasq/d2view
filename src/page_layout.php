@@ -1,13 +1,19 @@
 <?php
 
-$version="0.0.0-3";
+define("VERSION", "0.0.0-3");
+define("APPNAME", "d2view");
 
 // Based on https://stackoverflow.com/a/31685070
-function head() {
+function head($title) {
     echo '<!DOCTYPE html><html><head>';
     echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">';
     echo '<link rel="icon" type="image/x-icon" href="../media/favicon.ico">';
     echo '<link rel="stylesheet" type="text/css" href="style.css?6">';
+    if (empty($title)) {
+        echo "<title>".APPNAME."</title>";
+    } else {
+        echo "<title>$title - ".APPNAME."</title>";
+    }
     echo '</head><body>';
 }
 
@@ -28,11 +34,10 @@ function navbar_item($active, $label, $href) {
  *
  */
 function navbar($active_item) {
-    global $version;
     echo '<nav class="navbar navbar-expand-lg navbar-light navbar-custom">
         <a class="navbar-brand" href="/">
             <span>d2view</span>
-            <span class="version">v'.$version.'</span>
+            <span class="version">v'.VERSION.'</span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" 
         data-target="#navbarNav" aria-controls="navbarNav"

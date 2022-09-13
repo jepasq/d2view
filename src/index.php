@@ -26,7 +26,7 @@ function file_perms($dir) {
     }
 }
 
-head();
+head("Home");
 navbar("home");
 
 

@@ -20,11 +20,15 @@ Try to create a nested list or use an API.
 - [ ] Must handle navbar current item (as a navbar() function paramater)
 **** TODO Better data handling
 :LOGBOOK:
+CLOCK: [2022-09-13 mar. 07:37]--[2022-09-13 mar. 07:48] =>  0:11
 CLOCK: [2022-09-09 ven. 05:09]--[2022-09-09 ven. 05:28] =>  0:19
 :END:
 - [X] Better active menubar handling
   Actual active one is always Home. May be passed as a navbar() functtion
   parameter
+- [ ] Must add a title
+- [ ] Must fix code standard (maybe add it to README ?)
+    https://stackoverflow.com/a/45254824
 - [ ] Create a centralized class to compute all needed values in only one loop
 - [ ] May try to find a way to get nested element clickables
 - [ ] Handle a D2view class cache
