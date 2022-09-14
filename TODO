@@ -6,7 +6,8 @@ d2view - AGPLv3 - A DotA2 local data viewer and quizz generator.
     Update Version and Revision in src/page_layout.php
 
 * v0.0.0-3 (01 Sep. 2022 - ???) SLOC ???
-- (5) Add explorer path to browser title if not empty
+- (6) Add a brand icon in navbar
+- Add explorer path to browser title if not empty
 - Add a dynamic page title
 - Active menubar item handling
 - Better brand and version placement in navbar

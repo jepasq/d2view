@@ -43,3 +43,7 @@ body {
 .active {
     background-color: #ACC;
 }
+
+.brandicon {
+    width:46px;
+}

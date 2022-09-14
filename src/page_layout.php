@@ -8,7 +8,7 @@ function head($title) {
     echo '<!DOCTYPE html><html><head>';
     echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">';
     echo '<link rel="icon" type="image/x-icon" href="../media/favicon.ico">';
-    echo '<link rel="stylesheet" type="text/css" href="style.css?6">';
+    echo '<link rel="stylesheet" type="text/css" href="style.css?7">';
     if (empty($title)) {
         echo "<title>".APPNAME."</title>";
     } else {
@@ -35,6 +35,7 @@ function navbar_item($active, $label, $href) {
  */
 function navbar($active_item) {
     echo '<nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+        <img type="image/x-icon" src="../media/favicon.ico" class="brandicon">
         <a class="navbar-brand" href="/">
             <span>d2view</span>
             <span class="version">v'.VERSION.'</span>
