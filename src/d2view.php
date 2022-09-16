@@ -39,11 +39,10 @@ class D2view{
                     }else{ // Node
                         //                            echo $fp;
                     }
-                } else { // !countable
                 }
             }
         };
-        $print_tree($ent_tree . $pwd);
+        $print_tree($ent_tree, $pwd);
         
         
     }
