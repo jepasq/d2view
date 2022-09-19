@@ -66,9 +66,15 @@ function alert($msg) {
 }
 
 
-function footer() {
+function footer($start_time) {
     echo '<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>';
 
+    // From http://talkerscode.com/webtricks/get-page-loading-time-using-php.php
+    $end_time = microtime(TRUE);
+    $time_taken =($end_time - $start_time)*1000;
+    $time_taken = round($time_taken,5);
+
+    echo 'Page generated in '.$time_taken.' seconds.';
     echo '</body></html>';
 }
 

@@ -1,5 +1,6 @@
 <?php
 
+$start_time = microtime(TRUE);
 
 include_once('page_layout.php');
 include_once('d2view.php');
@@ -53,6 +54,6 @@ echo "<section class='welcome'>
   explore the content of the game archive</p>
     </section>";
 
-footer();
+footer($start_time);
 
 ?>
