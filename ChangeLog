@@ -1,3 +1,13 @@
+* v0.0.0-3 (01 Sep. 2022 - 19 Sep. 2022) SLOC 510
+- Add basic homepage content
+- Fix actual explorer array handling issue
+- Add a brand icon in navbar
+- Add explorer path to browser title if not empty
+- Add a dynamic page title
+- Active menubar item handling
+- Better brand and version placement in navbar
+- Add version and revision in menubar
+
 * v0.0.0-2 (24 Aug. 2022 - 01 Sep. 2022) SLOC 447
 - Listed files are linkes to explorer
 - Add basic explorer link and page
