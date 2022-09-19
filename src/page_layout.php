@@ -8,7 +8,7 @@ function head($title) {
     echo '<!DOCTYPE html><html><head>';
     echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">';
     echo '<link rel="icon" type="image/x-icon" href="../media/favicon.ico">';
-    echo '<link rel="stylesheet" type="text/css" href="style.css?7">';
+    echo '<link rel="stylesheet" type="text/css" href="style.css?8">';
     if (empty($title)) {
         echo "<title>".APPNAME."</title>";
     } else {

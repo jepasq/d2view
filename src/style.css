@@ -47,3 +47,10 @@ body {
 .brandicon {
     width:46px;
 }
+
+/* Content Sections */
+.welcome {
+    padding: 20px;
+    font-size: 125%;
+    font-family: serif;
+}

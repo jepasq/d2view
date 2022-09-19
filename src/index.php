@@ -26,6 +26,10 @@ function file_perms($dir) {
     }
 }
 
+function btos($b) {
+    return  $b ? "yes" : "no";
+}
+
 head("Home");
 navbar("home");
 
@@ -38,12 +42,16 @@ for ($i=0; $i<6; $i++) {
     file_perms($f);
 }
 
-
-function btos($b) {
-    return  $b ? "yes" : "no";
-}
-
-
+// Homepage text
+echo "<section class='welcome'>
+      <p>Welcome to <em>d2view</em>, A
+      <strong>DotA2</strong> local data viewer and
+      quizz generator. You need a local installation of the game to
+      use this.</p>
+      <p>The first and only implemented feature as now is the
+      <a href='explorer.php?pwd=/'>Explorer</a> that let's you
+  explore the content of the game archive</p>
+    </section>";
 
 footer();
 
