@@ -6,4 +6,5 @@ d2view - AGPLv3 - A DotA2 local data viewer and quizz generator.
     Update Version and Revision in src/page_layout.php
 
 * v0.0.0-4 (19 Sep. 2022 - ???) SLOC ???
-- (1) Add page loading time computation
+- (2) Change D2view's print_tree function definition
+- Add page loading time computation

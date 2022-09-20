@@ -59,8 +59,6 @@ function navbar($active_item) {
 </nav>';
 }
 
-
-
 function alert($msg) {
     echo "<div class='alert alert-danger' role='alert'>$msg</div>";
 }

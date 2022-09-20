@@ -18,33 +18,37 @@ class D2view{
 
     }
 
+    function print_tree($node, $pwd=''){
+        $hide='';
+        if (is_countable($node)) {
+            if(!is_null($node) && count($node) > 0) {
+                if(is_array($node)){
+                    foreach($node as $name=>$subn) {
+                        $fp = "$pwd/$name";
+                        // Only print top-level items
+                        echo "<a href='explorer.php?pwd=$fp'>$fp</a><br>";
+                        $this->nb_files++;
+                        //$print_tree($subn, $pwd);
+                        
+                    }
+                }else{ // Node
+                    echo "$node<br>";
+                    //                            echo $fp;
+                }
+            }
+        }
+    }
+
+    
     function list_files($pwd) {
         $this->nb_files=0;
         $vpk = new VPKReader\VPK($this->vpk_file);
         $ent_tree = $vpk->vpk_entries;
         
-        $print_tree = function($node, $pwd='') use (&$print_tree){
-            $hide='';
-            if (is_countable($node)) {
-                if(!is_null($node) && count($node) > 0) {
-                    if(is_array($node)){
-                        foreach($node as $name=>$subn) {
-                            $fp = "$pwd/$name";
-                            // Only print top-level items
-        echo "<a href='explorer.php?pwd=$fp'>$fp</a><br>";
-                            $this->nb_files++;
-                            //$print_tree($subn, $pwd);
-                            
-                        }
-                    }else{ // Node
-                        //                            echo $fp;
-                    }
-                }
-            }
-        };
-        $print_tree($ent_tree, $pwd);
+        $this->print_tree($ent_tree, $pwd);
         
         
     }
+
 };
 ?>
