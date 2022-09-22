@@ -16,14 +16,18 @@ if (empty($pwd)) {
 navbar("explorer");
 
 
-echo "<p>Current working dir : $pwd</p>";
-echo "<p>Content :</p>";
+echo "<section class='explorer-header'>
+    <p>Current working dir : $pwd</p></section>";
+echo "<section class='explorer'>
+    <div class='explorer-content-header''>Content :</div>";
 
 try {
     $d2 = new D2View($dota);
     $d2->list_files($pwd);
+    echo '</section>';
+    echo '<section class="explorer-footer">';
     echo "<p>Total files :$d2->nb_files.</p>";
-    echo '</div>';
+    echo '</section>';
 } catch (VPKReader\Exception $e) {
     alert($e->getMessage());
 }
