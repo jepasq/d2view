@@ -39,15 +39,24 @@ class D2view{
         }
     }
 
-    
+    /** List all files found in an archive directory
+     *
+     * \param $pwd The working dir
+     *
+     */
     function list_files($pwd) {
         $this->nb_files=0;
         $vpk = new VPKReader\VPK($this->vpk_file);
         $ent_tree = $vpk->vpk_entries;
+
+        $arr= '/';
         
-        $this->print_tree($ent_tree, $pwd);
-        
-        
+        if ($pwd != '/') {
+            $arr = $vpk->get_entry($pwd);
+        } else {
+            $arr = $ent_tree;
+        }
+        $this->print_tree($arr, $pwd);
     }
 
 };
