@@ -6,7 +6,8 @@ d2view - AGPLv3 - A DotA2 local data viewer and quizz generator.
     Update Version and Revision in src/page_layout.php
 
 * v0.0.0-4 (19 Sep. 2022 - ???) SLOC ???
-- (4) Explorer uses sections
+- (5) Add Doxyfile file
+- Explorer uses sections
 - Explorer correctly shows subdirectory entries
 - Change D2view's print_tree function definition
 - Add page loading time computation

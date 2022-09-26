@@ -3,3 +3,7 @@
 out.html
 
 config.php
+
+doxygen.log
+html/
+latex/

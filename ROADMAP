@@ -10,8 +10,10 @@
 Show the menu image of the hero and let choose 3 heroes name
 - [ ] Must fix code standard (maybe add it to README ?)
     https://stackoverflow.com/a/45254824
+**** Handle doxygen documentation
 **** TODO First a local data explorer
 :LOGBOOK:
+CLOCK: [2022-09-26 lun. 09:42]--[2022-09-26 lun. 10:08] =>  0:26
 CLOCK: [2022-09-22 jeu. 03:31]--[2022-09-22 jeu. 03:52] =>  0:21
 CLOCK: [2022-09-16 ven. 03:59]--[2022-09-16 ven. 04:18] =>  0:19
 CLOCK: [2022-09-01 jeu. 02:42]--[2022-09-01 jeu. 03:09] =>  0:27
