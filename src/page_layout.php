@@ -50,13 +50,11 @@ function navbar($active_item) {
     
     navbar_item($active_item=="home",     "Home",     '/');
     navbar_item($active_item=="explorer", "Explorer", 'explorer.php?pwd=/');
+    navbar_item($active_item=="vpktest", "VPKtest", 'vpktest.php');
     
-     echo '<li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
-      </li>
-    </ul>
-  </div>
-</nav>';
+     echo '</ul>
+       </div>
+     </nav>';
 }
 
 function alert($msg) {
