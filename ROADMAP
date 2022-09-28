@@ -13,6 +13,7 @@ Show the menu image of the hero and let choose 3 heroes name
 **** Handle doxygen documentation
 **** TODO First a local data explorer
 :LOGBOOK:
+CLOCK: [2022-09-28 mer. 04:57]--[2022-09-28 mer. 05:35] =>  0:38
 CLOCK: [2022-09-27 mar. 05:05]--[2022-09-27 mar. 05:23] =>  0:18
 CLOCK: [2022-09-26 lun. 09:42]--[2022-09-26 lun. 10:08] =>  0:26
 CLOCK: [2022-09-22 jeu. 03:31]--[2022-09-22 jeu. 03:52] =>  0:21
@@ -29,10 +30,11 @@ Try to create a nested list or use an API.
 - [X] Current explorer   doesn't work
   Always have 0 items. = Array to string conversion in d2view.php:46)
 - [X] Exlorer could use section
-- [-] Current explorer only show directories
+- [X] Current explorer only show directories
   - [X] Should show files
-  - [ ] Files shouldn't be clickable
-- [ ] Add a vpkreader test    
+  - [X] Files shouldn't be clickable
+- [ ] May remove the vpkreader test page
+- [ ] Explorer should provide a .. link
 **** DONE Better data handling
 :LOGBOOK:
 CLOCK: [2022-09-22 jeu. 02:25]--[2022-09-22 jeu. 03:02] =>  0:37

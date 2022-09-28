@@ -32,7 +32,6 @@ try {
     alert($e->getMessage());
 }
 
-
 footer($start_time);
 
 ?>

@@ -6,7 +6,8 @@ d2view - AGPLv3 - A DotA2 local data viewer and quizz generator.
     Update Version and Revision in src/page_layout.php
 
 * v0.0.0-4 (19 Sep. 2022 - ???) SLOC ???
-- (6) Add a vpktest page to re-test archive read
+- (7) Files in Explorer are not links
+- Add a vpktest page to re-test archive read
 - Add Doxyfile file
 - Explorer uses sections
 - Explorer correctly shows subdirectory entries
