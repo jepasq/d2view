@@ -50,7 +50,7 @@ function navbar($active_item) {
     
     navbar_item($active_item=="home",     "Home",     '/');
     navbar_item($active_item=="explorer", "Explorer", 'explorer.php?pwd=/');
-    navbar_item($active_item=="vpktest", "VPKtest", 'vpktest.php');
+    navbar_item($active_item=="viewer", "Viewer", 'viewer.php');
     
      echo '</ul>
        </div>

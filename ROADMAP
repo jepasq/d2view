@@ -11,8 +11,13 @@ Show the menu image of the hero and let choose 3 heroes name
 - [ ] Must fix code standard (maybe add it to README ?)
     https://stackoverflow.com/a/45254824
 **** Handle doxygen documentation
+**** We should have a File content viewer
+At least one for text and one for image
+Handle type and path URL params
+- [ ] May add a [view] link in explorer
 **** TODO First a local data explorer
 :LOGBOOK:
+CLOCK: [2022-09-28 mer. 05:40]--[2022-09-28 mer. 05:55] =>  0:15
 CLOCK: [2022-09-28 mer. 04:57]--[2022-09-28 mer. 05:35] =>  0:38
 CLOCK: [2022-09-27 mar. 05:05]--[2022-09-27 mar. 05:23] =>  0:18
 CLOCK: [2022-09-26 lun. 09:42]--[2022-09-26 lun. 10:08] =>  0:26
@@ -33,7 +38,7 @@ Try to create a nested list or use an API.
 - [X] Current explorer only show directories
   - [X] Should show files
   - [X] Files shouldn't be clickable
-- [ ] May remove the vpkreader test page
+- [X] May remove the vpkreader test page. Replaced with a base viewer
 - [ ] Explorer should provide a .. link
 **** DONE Better data handling
 :LOGBOOK:
