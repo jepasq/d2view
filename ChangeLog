@@ -1,3 +1,13 @@
+* v0.0.0-4 (19 Sep. 2022 - 28 Sep. 2022) SLOC 599
+- Replace vpktest page with a basic empty viewer
+- Files in Explorer are not links
+- Add a vpktest page to re-test archive read
+- Add Doxyfile file
+- Explorer uses sections
+- Explorer correctly shows subdirectory entries
+- Change D2view's print_tree function definition
+- Add page loading time computation
+
 * v0.0.0-3 (01 Sep. 2022 - 19 Sep. 2022) SLOC 510
 - Add basic homepage content
 - Fix actual explorer array handling issue
