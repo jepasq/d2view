@@ -17,6 +17,7 @@ Handle type and path URL params
 - [ ] May add a [view] link in explorer
 **** TODO First a local data explorer
 :LOGBOOK:
+CLOCK: [2022-09-30 ven. 04:27]--[2022-09-30 ven. 04:46] =>  0:19
 CLOCK: [2022-09-28 mer. 05:40]--[2022-09-28 mer. 05:55] =>  0:15
 CLOCK: [2022-09-28 mer. 04:57]--[2022-09-28 mer. 05:35] =>  0:38
 CLOCK: [2022-09-27 mar. 05:05]--[2022-09-27 mar. 05:23] =>  0:18
@@ -39,6 +40,7 @@ Try to create a nested list or use an API.
   - [X] Should show files
   - [X] Files shouldn't be clickable
 - [X] May remove the vpkreader test page. Replaced with a base viewer
+- [X] Remove pwd from explorer
 - [ ] Explorer should provide a .. link
 **** DONE Better data handling
 :LOGBOOK:

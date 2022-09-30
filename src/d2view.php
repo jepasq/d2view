@@ -39,6 +39,7 @@ class D2view{
         $hide='';
         if(is_array($node)){
             // $name will contain path name
+            
             // $subn the sub array
             foreach($node as $name=>$subn) {
                 $fp = "$pwd/$name";
@@ -46,12 +47,13 @@ class D2view{
                     $fp = $pwd.$name;
                 }
                 if (is_countable($subn)) {
-                    // Only print top-level items
-                    echo "<a href='explorer.php?pwd=$fp'>$fp</a>&nbsp;:".
-                        count($subn)." elements<br>";
-                    $this->nb_files++;
-                    //$print_tree($subn, $pwd);
-                    
+                    if (!empty(rtrim($name))) {
+                        // Only print top-level items
+                        echo "<a href='explorer.php?pwd=$fp'>$fp</a>&nbsp;:".
+                            count($subn)." elements<br>";
+                        $this->nb_files++;
+                        //$print_tree($subn, $pwd);
+                    }
                 } else {
                     echo "$fp <br>";
 /*                echo "<pre>";
@@ -84,6 +86,10 @@ class D2view{
         } else {
             $arr = $ent_tree;
         }
+
+
+        echo "<a href='explorer.php?pwd=$pwd'>.</a><br>";
+        
         $this->print_tree($arr, $pwd);
 /*        echo "<pre>";
         print_r($arr);
