@@ -89,6 +89,13 @@ class D2view{
 
 
         echo "<a href='explorer.php?pwd=$pwd'>.</a><br>";
+
+        if ($pwd != "/") {
+            $zze = dirname($pwd);
+            echo "<a href='explorer.php?pwd=$zze'>..</a><br>";
+        }
+        
+        echo "<br>";
         
         $this->print_tree($arr, $pwd);
 /*        echo "<pre>";
