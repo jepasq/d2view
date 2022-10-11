@@ -61,6 +61,9 @@ https://wiki.archlinux.org/title/Apache_HTTP_Server
 		</Directory>
 	</VirtualHost>
 
+You may also need to uncomment *mpm_prefork_module* LoadModule statement
+and comment other mpm configuration like *mpm_event_module*.
+
 Now, you can start (or restart apache) : `sudo systemctl start httpd.service`.
 
 If you keep the directory in your home one, you may have a 
