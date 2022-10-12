@@ -46,22 +46,23 @@ class D2view{
                 if ($pwd == "/") {
                     $fp = $pwd.$name;
                 }
+                echo '<tr>';
                 if (is_countable($subn)) {
                     if (!empty(rtrim($name))) {
                         // Only print top-level items
-                        echo "<a href='explorer.php?pwd=$fp'>$fp</a>&nbsp;:".
-                            count($subn)." elements<br>";
+                        echo "<td><a href='explorer.php?pwd=$fp'>$fp</a>&nbsp;:".
+                            count($subn)." elements<td>";
                         $this->nb_files++;
                         //$print_tree($subn, $pwd);
                     }
                 } else {
-                    echo "$fp <br>";
+                    
+                    echo "<td>$fp</td><td><a href='viewer.php?file=$fp'>[view]</a></td>";
 /*                echo "<pre>";
                 print_r($subn);
                 echo "</pre>";*/
                 }
-
-                    
+                echo '</tr>';
             }
         }else{ // is_array
             echo "$node is not an array<br>";
@@ -87,21 +88,21 @@ class D2view{
             $arr = $ent_tree;
         }
 
-
         echo "<a href='explorer.php?pwd=$pwd'>.</a><br>";
-
         if ($pwd != "/") {
             $zze = dirname($pwd);
             echo "<a href='explorer.php?pwd=$zze'>..</a><br>";
         }
         
         echo "<br>";
-        
+
+        echo '<table>';
         $this->print_tree($arr, $pwd);
 /*        echo "<pre>";
         print_r($arr);
         echo "</pre>";
         */
+        echo '</table>';
     }
 
 };
