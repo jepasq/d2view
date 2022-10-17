@@ -105,5 +105,11 @@ class D2view{
         echo '</table>';
     }
 
+    // Return a VPKFile object
+    function get_file($file) {
+        $vpk = new VPKReader\VPK($this->vpk_file);
+        return $vpk->get_entry($file);
+    }
+    
 };
 ?>

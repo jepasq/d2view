@@ -13,6 +13,7 @@ Show the menu image of the hero and let choose 3 heroes name
 **** Handle doxygen documentation
 **** TODO We should have a File content viewer
 :LOGBOOK:
+CLOCK: [2022-10-17 lun. 12:18]--[2022-10-17 lun. 12:25] =>  0:07
 CLOCK: [2022-10-17 lun. 11:29]--[2022-10-17 lun. 11:56] =>  0:27
 CLOCK: [2022-10-12 mer. 11:21]--[2022-10-12 mer. 11:32] =>  0:11
 :END:
@@ -20,7 +21,8 @@ At least one for text and one for image
 Handle type and path URL params
 - [X] May add a [view] link in explorer
 - [X] Add current file path to viewerpage
-- [ ] Handle TXT file viewer  
+- [ ] Handle TXT file viewer
+  Through D2view::get_file
 **** DONE First a local data explorer
 :LOGBOOK:
 CLOCK: [2022-09-30 ven. 04:27]--[2022-09-30 ven. 04:46] =>  0:19

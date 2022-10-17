@@ -33,6 +33,11 @@ if (empty($file) && empty($type)) {
     echo "</section>";
 }
 
+Echo "Viewer :<br>";
+
+$d2 = new D2View($dota);
+$content = $d2->get_file($file);
+echo $content;
 
 footer($start_time);
 
