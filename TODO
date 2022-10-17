@@ -6,6 +6,7 @@ d2view - AGPLv3 - A DotA2 local data viewer and quizz generator.
     Update Version and Revision in src/page_layout.php
 
 * v0.0.0-5 (28 Sep. 2022 - ???) SLOC ???
-- (3) Add viewer link to files in explorer
+- (4) Add current file and extension to viewer
+- Add viewer link to files in explorer
 - Add parent dir link to explorer
 - Remove actual dir from explorer content
