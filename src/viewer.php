@@ -33,11 +33,17 @@ if (empty($file) && empty($type)) {
     echo "</section>";
 }
 
+$d2 = new D2View($dota);
+$file_struct = $d2->get_file($file);
+$ds = $file_struct->data_size;
+
+echo "File size : $ds b  <br>";
+
 Echo "Viewer :<br>";
 
-$d2 = new D2View($dota);
-$content = $d2->get_file($file);
-echo $content;
+$content = $d2->get_file_content($file, $ds);
+echo "<pre class='viewer'>$content</pre>";
+
 
 footer($start_time);
 

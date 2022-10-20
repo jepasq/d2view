@@ -63,3 +63,9 @@ body {
 .explorer{
     margin-left : 40px;
 }
+
+.viewer {
+    background-color: #CC9;
+    padding: 5px;
+    margin: 20px;
+}

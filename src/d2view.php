@@ -110,6 +110,11 @@ class D2view{
         $vpk = new VPKReader\VPK($this->vpk_file);
         return $vpk->get_entry($file);
     }
+
+    function get_file_content($file, $size) {
+        $vpk = new VPKReader\VPK($this->vpk_file);
+        return $vpk->read_file($file, $size);
+    }
     
 };
 ?>
