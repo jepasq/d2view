@@ -105,12 +105,22 @@ class D2view{
         echo '</table>';
     }
 
-    // Return a VPKFile object
+    /** Return a VPKFile object
+     *
+     * \param $file The full path to the file inside the archive.
+     *
+     */
     function get_file($file) {
         $vpk = new VPKReader\VPK($this->vpk_file);
         return $vpk->get_entry($file);
     }
 
+    /** Return the content of a file. You must know its size.
+     *
+     * \param $file The full path to the file inside the archive.
+     * \param $size The size to the read in bytes.
+     *
+     */
     function get_file_content($file, $size) {
         $vpk = new VPKReader\VPK($this->vpk_file);
         return $vpk->read_file($file, $size);
