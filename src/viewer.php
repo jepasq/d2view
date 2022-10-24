@@ -10,6 +10,11 @@ $file = $_GET['file'];
 $type = $_GET['type']; // Used to force type ?
 
 
+/** Simply return the extension part of the filename using âthinfo()
+ *
+ * \return The 'extension' part of the pathinfo() extracted infos.
+ *
+ */
 function getFileType($filename) {
     $path_parts = pathinfo($filename);
     return $path_parts['extension'];
@@ -39,11 +44,16 @@ $ds = $file_struct->data_size;
 
 echo "File size : $ds b  <br>";
 
-Echo "Viewer :<br>";
+if ($ype == '.txt') {
 
+Echo "Text viewer :<br>";
 $content = $d2->get_file_content($file, $ds);
 echo "<pre class='viewer'>$content</pre>";
 
+} else {
+    alert("Can't find a suitable viewer for '$type' file extension.");
+    
+}
 
 footer($start_time);
 

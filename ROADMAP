@@ -15,6 +15,7 @@ Show the menu image of the hero and let choose 3 heroes name
 - [ ] May add a markdown mainpage 
 **** TODO We should have a File content viewer
 :LOGBOOK:
+CLOCK: [2022-10-24 lun. 10:13]--[2022-10-24 lun. 10:45] =>  0:32
 CLOCK: [2022-10-20 jeu. 07:52]--[2022-10-20 jeu. 08:13] =>  0:21
 CLOCK: [2022-10-20 jeu. 06:55]--[2022-10-20 jeu. 07:20] =>  0:25
 CLOCK: [2022-10-17 lun. 12:18]--[2022-10-17 lun. 12:25] =>  0:07
@@ -27,6 +28,8 @@ Handle type and path URL params
 - [X] Add current file path to viewerpage
 - [ ] Handle TXT file viewer
   Through D2view::get_file
+- [ ] Explorer shoudn't show 'view' link for all types, only for viewable ones
+- [ ] Evzn for text viewer, we must check for data size
 **** DONE First a local data explorer
 :LOGBOOK:
 CLOCK: [2022-09-30 ven. 04:27]--[2022-09-30 ven. 04:46] =>  0:19
