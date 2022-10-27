@@ -31,9 +31,10 @@ Handle type and path URL params
 - [X] Even for text viewer, we must check for data size
 - [X] Handle TXT file viewer
   Through D2view::get_file
-- [ ] Explorer shoudn't show 'view' link for all types, only for viewable ones
+- [X] Explorer shoudn't show 'view' link for all types, only for viewable ones
   otherwise, show a 'force view' link
   We can test .txt/.lst in /cfg
+- [ ] Find an image in the dota archive and implement an image viewer
 **** DONE First a local data explorer
 :LOGBOOK:
 CLOCK: [2022-09-30 ven. 04:27]--[2022-09-30 ven. 04:46] =>  0:19
