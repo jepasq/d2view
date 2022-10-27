@@ -82,6 +82,6 @@ on linux, steam in installed as a symbolic link to `~/.local/share/Steam`, it
 seems top be the source of this issue. A simple :
 
 	chmod a+r ~/.local/share/Steam
-	chmod a+x ~/.local/share/Steam	
+	chmod a+x ~/.local/share/Steam
 
 It should fix the issue and do not prevent steam from working.

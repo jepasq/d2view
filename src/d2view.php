@@ -56,13 +56,12 @@ class D2view{
                         //$print_tree($subn, $pwd);
                     }
                 } else {
-                    
-                    echo "<td>$fp</td><td><a href='viewer.php?file=$fp'>[view]</a></td>";
+                    $this->viewer_link($fp);
+                }
 /*                echo "<pre>";
                 print_r($subn);
                 echo "</pre>";*/
-                }
-                echo '</tr>';
+                    echo '</tr>';
             }
         }else{ // is_array
             echo "$node is not an array<br>";
@@ -125,6 +124,24 @@ class D2view{
         $vpk = new VPKReader\VPK($this->vpk_file);
         return $vpk->read_file($file, $size);
     }
-    
+
+
+    function viewer_link($file) {
+        $path_parts = pathinfo($file);
+        $exts = array("txt", "vert_c");
+        $ext = $path_parts["extension"];
+        echo $ext;
+        if (in_array($ext, $exts)) {
+        
+            echo "<td>$file</td>
+                <td><a href='viewer.php?file=$file'>[view]</a></td>";
+            
+        } else {
+            echo "<td>$file</td>
+            <td></td>
+            <td><a href='viewer.php?file=$file'>[force view]</a></td>";
+
+        }
+    }
 };
 ?>
