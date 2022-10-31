@@ -13,6 +13,13 @@ Show the menu image of the hero and let choose 3 heroes name
 **** Handle doxygen documentation
 - [ ] Document undocumented members
 - [ ] May add a markdown mainpage 
+**** TODO Implement a way to search for file by name
+:LOGBOOK:
+CLOCK: [2022-10-31 lun. 12:32]--[2022-10-31 lun. 12:33] =>  0:01
+:END:
+- [X] Add Search in menu between Explorer and Viewer items
+- [ ] Add a search.php with a Query input widget
+- [ ] Widget reload with the "?q=..." URL paramater
 **** TODO We should have a File content viewer
 :LOGBOOK:
 CLOCK: [2022-10-27 jeu. 09:19]--[2022-10-27 jeu. 09:40] =>  0:21
