@@ -16,11 +16,14 @@ Show the menu image of the hero and let choose 3 heroes name
 **** Find an image in the dota archive and implement an image viewer
 **** TODO Implement a way to search for file by name
 :LOGBOOK:
+CLOCK: [2022-11-01 mar. 10:51]--[2022-11-01 mar. 11:21] =>  0:30
 CLOCK: [2022-10-31 lun. 12:32]--[2022-10-31 lun. 12:33] =>  0:01
 :END:
 - [X] Add Search in menu between Explorer and Viewer items
-- [ ] Add a search.php with a Query input widget
-- [ ] Widget reload with the "?q=..." URL paramater
+- [X] Add a search.php with a Query input widget
+  Basic file 
+- [ ] Search form reload with the "?q=..." URL paramater
+  In a first form group (may implement more than search by type)
 *** DONE v0.0.1
 **** DONE We should have a File content viewer
 :LOGBOOK:
