@@ -2,7 +2,7 @@
 
 * v1.0.0
 ** v0.1.0
-*** v0.0.1
+*** TODO v0.0.2
 **** Handle a D2view class cache
 **** May add unit tets
 **** If saving some stats, use D3 to show graphs
@@ -13,6 +13,7 @@ Show the menu image of the hero and let choose 3 heroes name
 **** Handle doxygen documentation
 - [ ] Document undocumented members
 - [ ] May add a markdown mainpage 
+**** Find an image in the dota archive and implement an image viewer
 **** TODO Implement a way to search for file by name
 :LOGBOOK:
 CLOCK: [2022-10-31 lun. 12:32]--[2022-10-31 lun. 12:33] =>  0:01
@@ -20,7 +21,8 @@ CLOCK: [2022-10-31 lun. 12:32]--[2022-10-31 lun. 12:33] =>  0:01
 - [X] Add Search in menu between Explorer and Viewer items
 - [ ] Add a search.php with a Query input widget
 - [ ] Widget reload with the "?q=..." URL paramater
-**** TODO We should have a File content viewer
+*** DONE v0.0.1
+**** DONE We should have a File content viewer
 :LOGBOOK:
 CLOCK: [2022-10-27 jeu. 09:19]--[2022-10-27 jeu. 09:40] =>  0:21
 CLOCK: [2022-10-24 lun. 12:39]--[2022-10-24 lun. 12:49] =>  0:10
@@ -41,7 +43,6 @@ Handle type and path URL params
 - [X] Explorer shoudn't show 'view' link for all types, only for viewable ones
   otherwise, show a 'force view' link
   We can test .txt/.lst in /cfg
-- [ ] Find an image in the dota archive and implement an image viewer
 **** DONE First a local data explorer
 :LOGBOOK:
 CLOCK: [2022-09-30 ven. 04:27]--[2022-09-30 ven. 04:46] =>  0:19
