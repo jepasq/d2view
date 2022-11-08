@@ -4,7 +4,6 @@
 ** v0.1.0
 *** TODO v0.0.2
 **** Handle a D2view class cache
-**** May add unit tets
 **** If saving some stats, use D3 to show graphs
 **** Find heroes data and make our first quizz
 Show the menu image of the hero and let choose 3 heroes name
@@ -14,8 +13,19 @@ Show the menu image of the hero and let choose 3 heroes name
 - [ ] Document undocumented members
 - [ ] May add a markdown mainpage 
 **** Find an image in the dota archive and implement an image viewer
+**** TODO May add unit tets
+- [ ] May try phpunit from AUR https://aur.archlinux.org/packages/phpunit
+- [ ] Explain PHPUnit installation on arch in README :
+  git clone https://aur.archlinux.org/phpunit.git
+  cd phpunit
+  less PKGBUILD
+  gpg --keyserver https://sebastian-bergmann.de/gpg.asc --recv-keys 4AA394086372C20A
+  makepkg
+  sudo pamac install phpunit-*-any.pkg.tar.zst
+  
 **** TODO Implement a way to search for file by name
 :LOGBOOK:
+CLOCK: [2022-11-08 mar. 10:28]--[2022-11-08 mar. 10:56] =>  0:28
 CLOCK: [2022-11-03 jeu. 13:21]--[2022-11-03 jeu. 13:42] =>  0:21
 CLOCK: [2022-11-01 mar. 10:51]--[2022-11-01 mar. 11:21] =>  0:30
 CLOCK: [2022-10-31 lun. 12:32]--[2022-10-31 lun. 12:33] =>  0:01

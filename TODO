@@ -6,7 +6,8 @@ d2view - AGPLv3 - A DotA2 local data viewer and quizz generator.
     Update Version and Revision in src/page_layout.php
 
 * v0.0.0-6 (24 Oct. 2022 - ???) SLOC ???
-- (5) Search page handles query parameter and form method
+- (6) Add basic unit tests
+- Search page handles query parameter and form method
 - Add a search form as search.php
 - Bump version to 0.0.1 (Close a fifth ROADMAP section)
 - Add Search menu item to page_layout
