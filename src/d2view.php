@@ -125,7 +125,6 @@ class D2view{
         return $vpk->read_file($file, $size);
     }
 
-
     function viewer_link($file) {
         $path_parts = pathinfo($file);
         $exts = array("txt", "vert_c");
@@ -142,6 +141,21 @@ class D2view{
             <td><a href='viewer.php?file=$file'>[force view]</a></td>";
 
         }
+    }
+
+    /** Returns a list of files whose filename contains the given query
+     *
+     */
+    function queryString($query) {
+        $ret = array();
+        $vpk = new VPKReader\VPK($this->vpk_file);
+        $ent_tree = $vpk->vpk_entries;
+
+        foreach($ent_tree as $name=>$subn) {
+//            print($name);
+            
+        }
+        return $ret;
     }
 };
 ?>

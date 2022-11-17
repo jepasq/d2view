@@ -25,6 +25,7 @@ Show the menu image of the hero and let choose 3 heroes name
   
 **** TODO Implement a way to search for file by name
 :LOGBOOK:
+CLOCK: [2022-11-17 jeu. 03:48]--[2022-11-17 jeu. 04:08] =>  0:20
 CLOCK: [2022-11-11 ven. 14:05]--[2022-11-11 ven. 14:21] =>  0:16
 CLOCK: [2022-11-08 mar. 10:28]--[2022-11-08 mar. 10:56] =>  0:28
 CLOCK: [2022-11-03 jeu. 13:21]--[2022-11-03 jeu. 13:42] =>  0:21
@@ -37,6 +38,7 @@ CLOCK: [2022-10-31 lun. 12:32]--[2022-10-31 lun. 12:33] =>  0:01
 - [X] Search form reload with the "?q=..." URL paramater
   In a first form group (may implement more than search by type)
 - [ ] Implement D2view::queryString() that returns a list
+  Actually, allocate to much memory
 - [ ] Print that returned list  
 *** DONE v0.0.1
 **** DONE We should have a File content viewer
