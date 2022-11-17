@@ -1,3 +1,13 @@
+* v0.0.0-6 (24 Oct. 2022 - 17 Nov. 2022) SLOC 775
+- First queryString failing implementation
+- Add basic D2view::queryString unit test
+- Add basic unit tests
+- Search page handles query parameter and form method
+- Add a search form as search.php
+- Bump version to 0.0.1 (Close a fifth ROADMAP section)
+- Add Search menu item to page_layout
+- First viewer_link() implementation
+
 * v0.0.0-5 (28 Sep. 2022 - 24 Oct. 2022) SLOC 677
 - Add a size check in TXT viewer
 - Handle text viewer onkly for known extensions
