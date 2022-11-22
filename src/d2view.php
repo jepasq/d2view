@@ -143,18 +143,29 @@ class D2view{
         }
     }
 
+
+    /** Feed the $ret array with $entries array entries that contains $query
+     *
+     */
+    function _queryString_Impl($query, $ret, $entries) {
+        foreach($entries as $name=>$subn) {
+            echo "$name\n";
+            array_push($ret, $name);
+        }
+    }
+    
     /** Returns a list of files whose filename contains the given query
      *
      */
     function queryString($query) {
         $ret = array();
+        
         $vpk = new VPKReader\VPK($this->vpk_file);
         $ent_tree = $vpk->vpk_entries;
 
-        foreach($ent_tree as $name=>$subn) {
-//            print($name);
-            
-        }
+        $this->_queryString_Impl($query, $ret, $ent_tree);
+        
+        var_dump(implode(",", $ret));
         return $ret;
     }
 };
