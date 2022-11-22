@@ -1,4 +1,4 @@
 default: check
 
 check:
-	phpunit test/
+	phpunit -d memory_limit=-1 test/ 
