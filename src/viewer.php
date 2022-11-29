@@ -55,7 +55,9 @@ if ($ype == '.txt') {
     }
 
 } else {
-    alert("Can't find a suitable viewer for '$type' file extension.");
+    if (!empty($type)) {
+        alert("Can't find a suitable viewer for '$type' file extension.");
+    }
     
 }
 

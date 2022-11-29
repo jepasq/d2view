@@ -11,9 +11,16 @@ require('config.php'); // Mainly for $home
 $dota = "$home/.steam/steam/steamapps/common/dota 2 beta/game/dota/";
 
 
+/** The D2View class test case
+ *
+ */
 class D2viewTest extends TestCase
 {
-    public function testPushAndPop()
+
+    /** Test that calling the queryString function return a non empty list
+     *
+     */
+    public function testQueryString_png()
     {
         global $dota;
         $d2 = new D2View($dota);

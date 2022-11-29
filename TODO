@@ -6,5 +6,6 @@ d2view - AGPLv3 - A DotA2 local data viewer and quizz generator.
     Update Version and Revision in src/page_layout.php
 
 * v0.0.0-7 (17 Nov. 2022 - ???) SLOC ???
-- (1) Fix phpunit memory_limit-related issue
+- (2) Remove viewer's warning if extension is empty (for newcomers)
+- Fix phpunit memory_limit-related issue
 

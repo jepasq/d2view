@@ -146,6 +146,10 @@ class D2view{
 
     /** Feed the $ret array with $entries array entries that contains $query
      *
+     * \param $query The query string.
+     * \param $ret   The array to be modified and will contain results.
+     * \param $query The query string
+     *
      */
     function _queryString_Impl($query, $ret, $entries) {
         foreach($entries as $name=>$subn) {
@@ -155,6 +159,10 @@ class D2view{
     }
     
     /** Returns a list of files whose filename contains the given query
+     *
+     * \param $query The query string
+     *
+     * \return An array of strings
      *
      */
     function queryString($query) {
