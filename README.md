@@ -85,3 +85,21 @@ seems top be the source of this issue. A simple :
 	chmod a+x ~/.local/share/Steam
 
 It should fix the issue and do not prevent steam from working.
+
+## Unit tests
+
+Unit tests are powered by phpunit wich is, unfortunately, only available on
+AUR. To install this package :
+
+	git clone https://aur.archlinux.org/phpunit.git
+	cd phpunit
+	less PKGBUILD
+	gpg --keyserver https://sebastian-bergmann.de/gpg.asc \
+		--recv-keys 4AA394086372C20A
+	makepkg
+	sudo pamac install phpunit-*-any.pkg.tar.zst
+
+Then, you can run :
+
+	make check
+

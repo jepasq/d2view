@@ -170,6 +170,7 @@ class D2view{
         
         $vpk = new VPKReader\VPK($this->vpk_file);
         $ent_tree = $vpk->vpk_entries;
+        var_dump("ent_tree=".implode(",", $ent_tree));
 
         $this->_queryString_Impl($query, $ret, $ent_tree);
         
