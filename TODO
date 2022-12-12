@@ -6,7 +6,8 @@ d2view - AGPLv3 - A DotA2 local data viewer and quizz generator.
     Update Version and Revision in src/page_layout.php
 
 * v0.0.0-7 (17 Nov. 2022 - ???) SLOC ???
-- (3) Add a second, 'cfg'-based query test for rool level directory
+- (4) _queryString_Impl uses an array reference
+- Add a second, 'cfg'-based query test for rool level directory
 - Remove viewer's warning if extension is empty (for newcomers)
 - Fix phpunit memory_limit-related issue
 

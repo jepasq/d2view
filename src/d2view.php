@@ -146,15 +146,21 @@ class D2view{
 
     /** Feed the $ret array with $entries array entries that contains $query
      *
+     * The test is done using str_contaisn and therefor is case-sensitive.
+     *
      * \param $query The query string.
-     * \param $ret   The array to be modified and will contain results.
+     * \param $ret   The array reference to be modified and will contain
+     *               results.
      * \param $query The query string
      *
      */
-    function _queryString_Impl($query, $ret, $entries) {
+    function _queryString_Impl($query, &$ret, $entries) {
         foreach($entries as $name=>$subn) {
-            echo "$name\n";
-            array_push($ret, $name);
+            if (str_contains($name, $query)) {
+                echo "$name\n";
+                array_push($ret, $name);
+            }
+            //            _queryString_Impl($query, $ret, $subn);
         }
     }
     
@@ -174,7 +180,8 @@ class D2view{
         var_dump(count($ent_tree));
 
         $this->_queryString_Impl($query, $ret, $ent_tree);
-        var_dump( $ret );
+        echo "_queryString_Impl content count :";
+        var_dump( count($ret) );
         
         return $ret;
     }
