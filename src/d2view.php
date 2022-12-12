@@ -170,11 +170,12 @@ class D2view{
         
         $vpk = new VPKReader\VPK($this->vpk_file);
         $ent_tree = $vpk->vpk_entries;
-        var_dump("ent_tree=".implode(",", $ent_tree));
+        echo "ent_tree content count :";
+        var_dump(count($ent_tree));
 
         $this->_queryString_Impl($query, $ret, $ent_tree);
+        var_dump( $ret );
         
-        var_dump(implode(",", $ret));
         return $ret;
     }
 };

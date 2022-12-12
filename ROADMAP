@@ -13,11 +13,12 @@ Show the menu image of the hero and let choose 3 heroes name
 - [ ] Document undocumented members
 - [ ] May add a markdown mainpage 
 **** Find an image in the dota archive and implement an image viewer
-**** TODO May add unit tets
+**** TODO May add unit tests
 - [X] Explain PHPUnit installation on arch in README :  
 - [ ] May try phpunit from AUR https://aur.archlinux.org/packages/phpunit
 **** TODO Implement a way to search for file by name
 :LOGBOOK:
+CLOCK: [2022-12-12 lun. 01:35]--[2022-12-12 lun. 01:45] =>  0:10
 CLOCK: [2022-11-29 mar. 04:24]--[2022-11-29 mar. 04:42] =>  0:18
 CLOCK: [2022-11-29 mar. 03:32]--[2022-11-29 mar. 03:50] =>  0:18
 CLOCK: [2022-11-22 mar. 03:15]--[2022-11-22 mar. 03:53] =>  0:38
@@ -36,6 +37,8 @@ CLOCK: [2022-10-31 lun. 12:32]--[2022-10-31 lun. 12:33] =>  0:01
   In a first form group (may implement more than search by type)
 - [ ] Implement D2view::queryString() that returns a list
   Actually, allocate to much memory
+  - [ ] Must make the cfg test work
+  - [ ] Must be called recursively  
 - [ ] According to new coding standard, other functions should used camelCase
   names
 - [ ] Print that returned list  

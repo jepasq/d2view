@@ -17,6 +17,20 @@ $dota = "$home/.steam/steam/steamapps/common/dota 2 beta/game/dota/";
 class D2viewTest extends TestCase
 {
 
+    /** Test for the first level array content
+     *
+     * The Dota 2 archive is known to have a 'cfg' directory in root folder.
+     *
+     */
+    public function testQueryString_cfg()
+    {
+        global $dota;
+        $d2 = new D2View($dota);
+        $list = $d2->queryString("cfg");
+
+        $this->assertSame(count($list), 1);
+    }
+    
     /** Test that calling the queryString function return a non empty list
      *
      */
