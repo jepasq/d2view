@@ -18,6 +18,7 @@ Show the menu image of the hero and let choose 3 heroes name
 - [ ] May try phpunit from AUR https://aur.archlinux.org/packages/phpunit
 **** TODO Implement a way to search for file by name
 :LOGBOOK:
+CLOCK: [2022-12-14 mer. 03:17]--[2022-12-14 mer. 03:36] =>  0:19
 CLOCK: [2022-12-12 lun. 01:57]--[2022-12-12 lun. 02:09] =>  0:12
 CLOCK: [2022-12-12 lun. 01:35]--[2022-12-12 lun. 01:45] =>  0:10
 CLOCK: [2022-11-29 mar. 04:24]--[2022-11-29 mar. 04:42] =>  0:18
@@ -36,13 +37,17 @@ CLOCK: [2022-10-31 lun. 12:32]--[2022-10-31 lun. 12:33] =>  0:01
   Basic file 
 - [X] Search form reload with the "?q=..." URL paramater
   In a first form group (may implement more than search by type)
-- [-] Implement D2view::queryString() that returns a list
+- [X] Implement D2view::queryString() that returns a list
   Actually, allocate to much memory
   - [X] Must make the cfg test work
-  - [ ] Must be called recursively  
+  - [X] Must be called recursively  
 - [ ] According to new coding standard, other functions should used camelCase
-  names
-- [ ] Print that returned list  
+  names. The following must be renamed :
+  - [ ] print_tree ($node, $pwd='')
+  - [ ] list_files ($pwd)
+  - [ ] get_file ($file)
+  - [ ] get_file_content ($file, $size)
+- [ ] Print that returned list after search box
 *** DONE v0.0.1
 **** DONE We should have a File content viewer
 :LOGBOOK:

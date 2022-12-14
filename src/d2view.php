@@ -159,8 +159,11 @@ class D2view{
             if (str_contains($name, $query)) {
                 echo "$name\n";
                 array_push($ret, $name);
+                
             }
-            //            _queryString_Impl($query, $ret, $subn);
+            if (is_countable($subn)) {
+                $this->_queryString_Impl($query, $ret, $subn);
+            }
         }
     }
     
@@ -177,7 +180,7 @@ class D2view{
         $vpk = new VPKReader\VPK($this->vpk_file);
         $ent_tree = $vpk->vpk_entries;
         echo "ent_tree content count :";
-        var_dump(count($ent_tree));
+//        var_dump(count($ent_tree));
 
         $this->_queryString_Impl($query, $ret, $ent_tree);
         echo "_queryString_Impl content count :";

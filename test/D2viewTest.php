@@ -28,7 +28,9 @@ class D2viewTest extends TestCase
         $d2 = new D2View($dota);
         $list = $d2->queryString("cfg");
 
-        $this->assertSame(count($list), 1);
+//        var_dump(count($list));
+        // There is finally 2 'cfg' occurences (dota_keybinds.cfg, cfg)
+        $this->assertSame(count($list), 2);
     }
     
     /** Test that calling the queryString function return a non empty list
@@ -40,7 +42,7 @@ class D2viewTest extends TestCase
         $d2 = new D2View($dota);
         $list = $d2->queryString(".png");
 
-        $this->assertGreaterThan(count($list), 0);
+        $this->assertGreaterThan(0, count($list));
         // $this->assertSame(0, count($stack));
     }
 }
