@@ -16,7 +16,14 @@ $dota = "$home/.steam/steam/steamapps/common/dota 2 beta/game/dota/";
  */
 class D2viewTest extends TestCase
 {
-
+    public function testPrintTree()
+    {
+        global $dota;
+        $d2 = new D2View($dota);
+        $ret = $d2->printTree($d2->get_files());
+        this->assert(!empty($ret));
+    }
+    
     /** Test for the first level array content
      *
      * The Dota 2 archive is known to have a 'cfg' directory in root folder.

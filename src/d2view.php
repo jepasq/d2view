@@ -35,7 +35,7 @@ class D2view{
      *  \param $pwd  The working dir used to print.
      *
      */
-    function print_tree($node, $pwd=''){
+    function printTree($node, $pwd=''){
         $hide='';
         if(is_array($node)){
             // $name will contain path name
@@ -53,7 +53,7 @@ class D2view{
                         echo "<td><a href='explorer.php?pwd=$fp'>$fp</a>&nbsp;:".
                             count($subn)." elements<td>";
                         $this->nb_files++;
-                        //$print_tree($subn, $pwd);
+                        //$printTree($subn, $pwd);
                     }
                 } else {
                     $this->viewer_link($fp);
@@ -96,7 +96,7 @@ class D2view{
         echo "<br>";
 
         echo '<table>';
-        $this->print_tree($arr, $pwd);
+        $this->printTree($arr, $pwd);
 /*        echo "<pre>";
         print_r($arr);
         echo "</pre>";
