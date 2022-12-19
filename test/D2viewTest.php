@@ -24,7 +24,7 @@ class D2viewTest extends TestCase
         global $dota;
         $d2 = new D2View($dota);
         $ret = $d2->printTree(["cfg"]);
-        $this->assertFalse(empty($ret));
+        $this->assertTrue(empty($ret));
     }
     
     /** Test for the first level array content
