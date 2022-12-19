@@ -16,12 +16,15 @@ $dota = "$home/.steam/steam/steamapps/common/dota 2 beta/game/dota/";
  */
 class D2viewTest extends TestCase
 {
+    /** Only test that the printTree member can be called
+     *
+     */
     public function testPrintTree()
     {
         global $dota;
         $d2 = new D2View($dota);
-        $ret = $d2->printTree($d2->get_files());
-        this->assert(!empty($ret));
+        $ret = $d2->printTree(["cfg"]);
+        $this->assertFalse(empty($ret));
     }
     
     /** Test for the first level array content
@@ -52,5 +55,26 @@ class D2viewTest extends TestCase
         $this->assertGreaterThan(0, count($list));
         // $this->assertSame(0, count($stack));
     }
+
+    /** Shouldn't fire an error if no extension
+     *
+     */
+    public function testViewerLink_withoutExtension()
+    {
+        global $dota;
+        $d2 = new D2View($dota);
+        $this->assertFalse($d2->viewer_link('ext'));
+    }
+
+    /** viewer_link should return true with an usable extension
+     *
+     */
+    public function testViewerLink_withExtension()
+    {
+        global $dota;
+        $d2 = new D2View($dota);
+        $this->assertTrue($d2->viewer_link('filename.ext'));
+    }
+
 }
 ?>

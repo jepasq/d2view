@@ -125,9 +125,17 @@ class D2view{
         return $vpk->read_file($file, $size);
     }
 
+    /** Prints a viewer link
+     *
+     * \return false If we can't retrieve file extension. true otherwise.
+     *
+     */
     function viewer_link($file) {
         $path_parts = pathinfo($file);
         $exts = array("txt", "vert_c");
+        if (!array_key_exists("extension",$path_parts)){
+            return false;    
+        }
         $ext = $path_parts["extension"];
         echo $ext;
         if (in_array($ext, $exts)) {
@@ -139,8 +147,8 @@ class D2view{
             echo "<td>$file</td>
             <td></td>
             <td><a href='viewer.php?file=$file'>[force view]</a></td>";
-
         }
+        return true;
     }
 
 
@@ -157,7 +165,7 @@ class D2view{
     function _queryString_Impl($query, &$ret, $entries) {
         foreach($entries as $name=>$subn) {
             if (str_contains($name, $query)) {
-                echo "$name\n";
+//                echo "$name\n";
                 array_push($ret, $name);
                 
             }
@@ -179,12 +187,12 @@ class D2view{
         
         $vpk = new VPKReader\VPK($this->vpk_file);
         $ent_tree = $vpk->vpk_entries;
-        echo "ent_tree content count :";
+    //    echo "ent_tree content count :";
 //        var_dump(count($ent_tree));
 
         $this->_queryString_Impl($query, $ret, $ent_tree);
-        echo "_queryString_Impl content count :";
-        var_dump( count($ret) );
+  //      echo "_queryString_Impl content count :";
+//        var_dump( count($ret) );
         
         return $ret;
     }
