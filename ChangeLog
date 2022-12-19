@@ -1,3 +1,13 @@
+* v0.0.0-7 (17 Nov. 2022 - 19 Dev. 2022) SLOC 870
+- Fix the printTree unit test after its rename
+- Add a couple of viewer_link tests to correctly handle extension
+- Rename D2view::print_tree to camelCase version
+- _queryString_Impl is call recursively
+- _queryString_Impl uses an array reference
+- Add a second, 'cfg'-based query test for rool level directory
+- Remove viewer's warning if extension is empty (for newcomers)
+- Fix phpunit memory_limit-related issue
+
 * v0.0.0-6 (24 Oct. 2022 - 17 Nov. 2022) SLOC 775
 - First queryString failing implementation
 - Add basic D2view::queryString unit test
