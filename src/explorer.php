@@ -23,7 +23,7 @@ echo "<section class='explorer'>
 
 try {
     $d2 = new D2View($dota);
-    $d2->list_files($pwd);
+    $d2->listFiles($pwd);
     echo '</section>';
     echo '<section class="explorer-footer">';
     echo "<p>Total files :$d2->nb_files.</p>";

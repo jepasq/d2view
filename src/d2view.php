@@ -74,7 +74,7 @@ class D2view{
      * \param $pwd The working dir
      *
      */
-    function list_files($pwd) {
+    function listFiles($pwd) {
         $this->nb_files=0;
         $vpk = new VPKReader\VPK($this->vpk_file);
         $ent_tree = $vpk->vpk_entries;

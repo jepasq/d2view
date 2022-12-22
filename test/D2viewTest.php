@@ -27,6 +27,19 @@ class D2viewTest extends TestCase
         $this->assertTrue(empty($ret));
     }
     
+
+    /** Only test that the printTree member can be called
+     *
+     */
+    public function testListFiles()
+    {
+        global $dota;
+        $d2 = new D2View($dota);
+        $ret = $d2->listFiles("cfg");
+        $this->assertTrue(empty($ret));
+    }
+    
+
     /** Test for the first level array content
      *
      * The Dota 2 archive is known to have a 'cfg' directory in root folder.
