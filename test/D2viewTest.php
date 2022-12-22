@@ -28,14 +28,22 @@ class D2viewTest extends TestCase
     }
     
 
-    /** Only test that the printTree member can be called
-     *
-     */
     public function testListFiles()
     {
         global $dota;
         $d2 = new D2View($dota);
         $ret = $d2->listFiles("cfg");
+        $this->assertTrue(empty($ret));
+    }
+
+    public function testGetFile()
+    {
+        global $dota;
+        $d2 = new D2View($dota);
+        $ret = $d2->getFile("cfg/frontpage_layout.txt");
+        $this->assertTrue(empty($ret));
+
+        $ret = $d2->getFile("cfg/this_file.doesnt_exist_NYI");
         $this->assertTrue(empty($ret));
     }
     

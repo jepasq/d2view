@@ -39,7 +39,7 @@ if (empty($file) && empty($type)) {
 }
 
 $d2 = new D2View($dota);
-$file_struct = $d2->get_file($file);
+$file_struct = $d2->getFile($file);
 $ds = $file_struct->data_size;
 
 echo "File size : $ds b  <br>";

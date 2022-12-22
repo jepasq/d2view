@@ -109,7 +109,7 @@ class D2view{
      * \param $file The full path to the file inside the archive.
      *
      */
-    function get_file($file) {
+    function getFile($file) {
         $vpk = new VPKReader\VPK($this->vpk_file);
         return $vpk->get_entry($file);
     }

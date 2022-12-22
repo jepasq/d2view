@@ -6,4 +6,5 @@ d2view - AGPLv3 - A DotA2 local data viewer and quizz generator.
     Update Version and Revision in src/page_layout.php
 
 * v0.0.0-8 (19 Dev. 2022 - ???) SLOC ???
-- (1) Rename D2view's list_files to camelCase
+- (2) Rename get_file to getFile
+- Rename D2view's list_files to camelCase
