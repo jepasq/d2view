@@ -120,7 +120,7 @@ class D2view{
      * \param $size The size to the read in bytes.
      *
      */
-    function get_file_content($file, $size) {
+    function getFileContent($file, $size) {
         $vpk = new VPKReader\VPK($this->vpk_file);
         return $vpk->read_file($file, $size);
     }

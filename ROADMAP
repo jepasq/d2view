@@ -18,6 +18,7 @@ Show the menu image of the hero and let choose 3 heroes name
 - [ ] May try phpunit from AUR https://aur.archlinux.org/packages/phpunit
 **** TODO Implement a way to search for file by name
 :LOGBOOK:
+CLOCK: [2022-12-26 lun. 07:51]--[2022-12-26 lun. 08:11] =>  0:20
 CLOCK: [2022-12-22 jeu. 04:28]--[2022-12-22 jeu. 04:39] =>  0:11
 CLOCK: [2022-12-22 jeu. 03:47]--[2022-12-22 jeu. 04:03] =>  0:16
 CLOCK: [2022-12-19 lun. 05:42]--[2022-12-19 lun. 05:43] =>  0:01
@@ -47,15 +48,15 @@ CLOCK: [2022-10-31 lun. 12:32]--[2022-10-31 lun. 12:33] =>  0:01
   Actually, allocate to much memory
   - [X] Must make the cfg test work
   - [X] Must be called recursively  
-- [-] According to new coding standard, other functions should used camelCase
+- [X] According to new coding standard, other functions should used camelCase
   names. The following must be renamed :
   - [X] print_tree ($node, $pwd='')
     Done but must make the associated unit test work
   - [X] list_files ($pwd)
   - [X] get_file ($file)
-  - [ ] get_file_content ($file, $size)
-- [ ] Print that returned list after search box
+  - [X] get_file_content ($file, $size)
 
+- [ ] Print that returned list after search box
 - [ ] D2view->listFiles print everything to output
   it shouldn't because it makes the unit tests output unreadable
 *** DONE v0.0.1

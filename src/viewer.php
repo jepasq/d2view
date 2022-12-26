@@ -47,7 +47,7 @@ echo "File size : $ds b  <br>";
 if ($ype == '.txt') {
     if ($ds < 1000) {
         Echo "Text viewer :<br>";
-        $content = $d2->get_file_content($file, $ds);
+        $content = $d2->getFileContent($file, $ds);
         echo "<pre class='viewer'>$content</pre>";
     } else {
         alert("Can't show a text file bigger than 1000b.");

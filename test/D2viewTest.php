@@ -41,13 +41,20 @@ class D2viewTest extends TestCase
         global $dota;
         $d2 = new D2View($dota);
         $ret = $d2->getFile("cfg/frontpage_layout.txt");
-        $this->assertTrue(empty($ret));
+        $this->assertFalse(empty($ret));
 
         $ret = $d2->getFile("cfg/this_file.doesnt_exist_NYI");
         $this->assertTrue(empty($ret));
     }
     
-
+    public function testGetFileContent()
+    {
+        global $dota;
+        $d2 = new D2View($dota);
+        $ret = $d2->getFileContent("cfg/frontpage_layout.txt", 1024);
+        $this->assertFalse(empty($ret));
+    }
+    
     /** Test for the first level array content
      *
      * The Dota 2 archive is known to have a 'cfg' directory in root folder.
