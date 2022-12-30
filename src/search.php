@@ -28,6 +28,17 @@ echo "<form action='search.php' method='get'>
 
 echo "</section>";
 
+if (!empty($query)) {
+echo "<section>";
+    global $dota;
+    $d2 = new D2View($dota);
+    $list = $d2->queryString($query);
+    foreach ($list as $item) {
+        echo $item."<br>";
+    }
+echo "</section>";
+}
+
 footer($start_time);
 ?>
 
