@@ -162,15 +162,19 @@ class D2view{
      * \param $query The query string
      *
      */
-    function _queryString_Impl($query, &$ret, $entries) {
+    function _queryString_Impl($query, &$ret, $entries, $parent='') {
         foreach($entries as $name=>$subn) {
             if (str_contains($name, $query)) {
-//                echo "$name\n";
-                array_push($ret, $name);
+                //                echo "$name\n";
+                if (empty($parent)) {
+                    array_push($ret, $name);
+                } else {
+                    array_push($ret, $parent.'/'.$name);
+                }
                 
             }
             if (is_countable($subn)) {
-                $this->_queryString_Impl($query, $ret, $subn);
+                $this->_queryString_Impl($query, $ret, $subn, $name);
             }
         }
     }

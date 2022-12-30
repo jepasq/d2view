@@ -81,7 +81,6 @@ class D2viewTest extends TestCase
         $list = $d2->queryString(".png");
 
         $this->assertGreaterThan(0, count($list));
-        // $this->assertSame(0, count($stack));
     }
 
     /** Shouldn't fire an error if no extension
@@ -104,5 +103,18 @@ class D2viewTest extends TestCase
         $this->assertTrue($d2->viewer_link('filename.ext'));
     }
 
+    public function testQueryString_directory_separators()
+    {
+        global $dota;
+        $d2 = new D2View($dota);
+        $list = $d2->queryString(".png");
+
+        // Shoud contain subdirs separator (only keep first elements)
+        $this->assertStringContainsString('/', implode('',
+            array_slice($list, 0, 10)));
+        // $this->assertSame(0, count($stack));
+    }
+
+    
 }
 ?>
