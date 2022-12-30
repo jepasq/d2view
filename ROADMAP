@@ -57,8 +57,9 @@ CLOCK: [2022-10-31 lun. 12:32]--[2022-10-31 lun. 12:33] =>  0:01
   - [X] get_file ($file)
   - [X] get_file_content ($file, $size)
 
-- [ ] Print that returned list after search box
-- [ ] Should also print the number of result  
+- [X] Print that returned list after search box
+- [X] Should also print the number of result
+- [ ] Returned list should contain full paths, not only filename  
 - [ ] D2view->listFiles print everything to output
   it shouldn't because it makes the unit tests output unreadable
 *** DONE v0.0.1
