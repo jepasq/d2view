@@ -5,6 +5,15 @@ include('VPKReader/VPKDirectoryEntry.php');
 include('VPKReader/VPKFile.php');
 include('VPKReader/VPK.php');
 
+/** A conditionnal echo that only prints if first argument is True
+ *
+ */
+function _echo($print, $msg) {
+    if ($print) {
+        echo $msg;
+    }
+}
+
 /** A central class to handle DotA2 VPK file
  *
  *  Mainly based on included VPKReader/ source code.
@@ -35,7 +44,7 @@ class D2view{
      *  \param $pwd  The working dir used to print.
      *
      */
-    function printTree($node, $pwd=''){
+    function printTree($node, $pwd='', $print=true){
         $hide='';
         if(is_array($node)){
             // $name will contain path name
@@ -46,26 +55,23 @@ class D2view{
                 if ($pwd == "/") {
                     $fp = $pwd.$name;
                 }
-                echo '<tr>';
+                _echo ($print, '<tr>');
                 if (is_countable($subn)) {
                     if (!empty(rtrim($name))) {
                         // Only print top-level items
-                        echo "<td><a href='explorer.php?pwd=$fp'>$fp</a>&nbsp;:".
-                            count($subn)." elements<td>";
+                        $msg= "<td><a href='explorer.php?pwd=$fp'>$fp".
+                            "</a>&nbsp;:".count($subn)." elements<td>";
+                        _echo ($print, $msg);
                         $this->nb_files++;
                         //$printTree($subn, $pwd);
                     }
                 } else {
                     $this->viewer_link($fp);
                 }
-/*                echo "<pre>";
-                print_r($subn);
-                echo "</pre>";*/
-                    echo '</tr>';
+                    _echo($print, '</tr>');
             }
         }else{ // is_array
-            echo "$node is not an array<br>";
-            //            echo "$node : $node->size bytes<br>";
+            _echo ($print, "$node is not an array<br>");
         }
     }
 
@@ -74,7 +80,7 @@ class D2view{
      * \param $pwd The working dir
      *
      */
-    function listFiles($pwd) {
+    function listFiles($pwd, $print=true) {
         $this->nb_files=0;
         $vpk = new VPKReader\VPK($this->vpk_file);
         $ent_tree = $vpk->vpk_entries;
@@ -87,21 +93,21 @@ class D2view{
             $arr = $ent_tree;
         }
 
-        echo "<a href='explorer.php?pwd=$pwd'>.</a><br>";
+        _echo ($print, "<a href='explorer.php?pwd=$pwd'>.</a><br>");
         if ($pwd != "/") {
             $zze = dirname($pwd);
-            echo "<a href='explorer.php?pwd=$zze'>..</a><br>";
+            _echo ($print, "<a href='explorer.php?pwd=$zze'>..</a><br>");
         }
         
-        echo "<br>";
+        _echo ($print, "<br>");
 
-        echo '<table>';
-        $this->printTree($arr, $pwd);
-/*        echo "<pre>";
+        _echo ($print, '<table>');
+        $this->printTree($arr, $pwd, $print);
+/*        _echo ($print, "<pre>");
         print_r($arr);
-        echo "</pre>";
+        _echo ($print, "</pre>");
         */
-        echo '</table>';
+        _echo ($print, '</table>');
     }
 
     /** Return a VPKFile object

@@ -18,6 +18,7 @@ Show the menu image of the hero and let choose 3 heroes name
 - [ ] May try phpunit from AUR https://aur.archlinux.org/packages/phpunit
 **** TODO Implement a way to search for file by name
 :LOGBOOK:
+CLOCK: [2023-01-05 jeu. 06:40]--[2023-01-05 jeu. 06:57] =>  0:17
 CLOCK: [2022-12-30 ven. 07:19]--[2022-12-30 ven. 07:24] =>  0:05
 CLOCK: [2022-12-30 ven. 03:52]--[2022-12-30 ven. 04:02] =>  0:10
 CLOCK: [2022-12-26 lun. 07:51]--[2022-12-26 lun. 08:11] =>  0:20
@@ -61,8 +62,10 @@ CLOCK: [2022-10-31 lun. 12:32]--[2022-10-31 lun. 12:33] =>  0:01
 - [X] Print that returned list after search box
 - [X] Should also print the number of result
 - [X] Returned list should contain full paths, not only filename  
-- [ ] D2view->listFiles print everything to output
+- [X] D2view->listFiles print everything to output
   it shouldn't because it makes the unit tests output unreadable
+  _echo alternative implemented
+- [ ] Same for printTree (called from listFiles)
 *** DONE v0.0.1
 **** DONE We should have a File content viewer
 :LOGBOOK:

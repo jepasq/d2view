@@ -32,7 +32,7 @@ class D2viewTest extends TestCase
     {
         global $dota;
         $d2 = new D2View($dota);
-        $ret = $d2->listFiles("cfg");
+        $ret = $d2->listFiles("cfg", false);
         $this->assertTrue(empty($ret));
     }
 
