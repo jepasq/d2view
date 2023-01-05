@@ -34,7 +34,16 @@ echo "<section>";
     $d2 = new D2View($dota);
     $list = $d2->queryString($query);
 
-    echo "<em>Number of results</em> : <strong>".count($list)."</strong>.<br>";
+    $co = count($list);
+    
+    echo "<em>Number of results for '$query' </em> :
+        <strong>".$co."</strong>.<br>";
+
+    if ($co > 100) {
+        echo "(Only showing first 100 items)<br>";
+
+        $list = array_slice($list, 0, 100);
+    }
     
     foreach ($list as $item) {
         echo $item."<br>";

@@ -6,7 +6,8 @@ d2view - AGPLv3 - A DotA2 local data viewer and quizz generator.
     Update Version and Revision in src/page_layout.php
 
 * v0.0.0-8 (19 Dev. 2022 - ???) SLOC ???
-- (7) Add a conditionnal echo implementation to clean up UT output
+- (8) Only shows first 100 search results
+- Add a conditionnal echo implementation to clean up UT output
 - queryStrign returns full paths
 - Search page prints number of results
 - Print full content of search result as a new section
