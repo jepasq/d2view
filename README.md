@@ -2,25 +2,26 @@
 
 A DotA2 local data viewer and quizz generator.
 
-## dependencies
+## Dependencies
 
 `src/VPKReader` is from https://github.com/Aphexx/php-vpk-reader but no
 license found. It is included in src source tree and not as a git submodule
 to make further debugging/modification easier.
 
-## config.php
+## Configuration
 
-In the top-level directory, you must create and feed a config file containing
-home directory of the user that installed and keep updated DotA2. It should
+In the top-level directory, you must create and feed a configuration file 
+containing home directory of the user that installed and keep updated DotA2. 
+This file **must** be called `config.php` and should
 looks like that :
 
 	<?php
 	$home="/home/<your_username_here>/";
 	?>
 
-## Install on apache
+## Installation example on apache
 
-The following example is what I use on a manjaro box. For more details see
+The following example is what I use on a *manjaro* box. For more details see
 https://wiki.archlinux.org/title/Apache_HTTP_Server
 
 1.Dependencies installation :
