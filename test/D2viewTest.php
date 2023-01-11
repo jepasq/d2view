@@ -23,7 +23,7 @@ class D2viewTest extends TestCase
     {
         global $dota;
         $d2 = new D2View($dota);
-        $ret = $d2->printTree(["cfg"]);
+        $ret = $d2->printTree(["cfg"], '', false);
         $this->assertTrue(empty($ret));
     }
     
