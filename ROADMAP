@@ -10,6 +10,9 @@ Show the menu image of the hero and let choose 3 heroes name
 - [ ] Must fix code standard (maybe add it to README ?)
     https://stackoverflow.com/a/45254824
 **** Handle doxygen documentation
+:LOGBOOK:
+CLOCK: [2023-01-25 mer. 12:27]--[2023-01-25 mer. 12:53] =>  0:26
+:END:
 - [ ] Document undocumented members
 - [ ] May add a markdown mainpage 
 **** Find an image in the dota archive and implement an image viewer

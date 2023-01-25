@@ -10,7 +10,7 @@ $file = $_GET['file'];
 $type = $_GET['type']; // Used to force type ?
 
 
-/** Simply return the extension part of the filename using âthinfo()
+/** Simply return the extension part of the filename using pathinfo()
  *
  * \return The 'extension' part of the pathinfo() extracted infos.
  *

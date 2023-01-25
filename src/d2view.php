@@ -40,8 +40,10 @@ class D2view{
 
     /** Print files from the given node
      *
-     *  \param $node The parent node array.
-     *  \param $pwd  The working dir used to print.
+     *  \param $node  The parent node array.
+     *  \param $pwd   The working dir used to print.
+     *  \param $print A boolean (default to true) telling if echo must be used.
+     *     If false, the output will be quiet.
      *
      */
     function printTree($node, $pwd='', $print=true){
@@ -77,7 +79,9 @@ class D2view{
 
     /** List all files found in an archive directory
      *
-     * \param $pwd The working dir
+     * \param $pwd   The working dir
+     * \param $print A boolean (default to true) telling if echo must be used.
+     *     If false, the output will be quiet.
      *
      */
     function listFiles($pwd, $print=true) {
@@ -133,6 +137,8 @@ class D2view{
 
     /** Prints a viewer link
      *
+     * \param $file The filename to be tested.
+     *
      * \return false If we can't retrieve file extension. true otherwise.
      *
      */
@@ -152,12 +158,13 @@ class D2view{
 
     /** Feed the $ret array with $entries array entries that contains $query
      *
-     * The test is done using str_contaisn and therefor is case-sensitive.
+     * The test is done using str_contains and therefor is case-sensitive.
      *
-     * \param $query The query string.
-     * \param $ret   The array reference to be modified and will contain
-     *               results.
-     * \param $query The query string
+     * \param $query   The query string.
+     * \param $ret     The array reference to be modified and will contain
+     *                 results.
+     * \param $entries The array containining directory entries.
+     * \param $parent  The parent string used to print ful path.
      *
      */
     function _queryString_Impl($query, &$ret, $entries, $parent='') {
