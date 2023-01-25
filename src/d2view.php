@@ -137,15 +137,7 @@ class D2view{
      *
      */
     function viewer_link($file) {
-        $path_parts = pathinfo($file);
-        $exts = array("txt", "vert_c");
-        if (!array_key_exists("extension",$path_parts)){
-            return false;    
-        }
-        $ext = $path_parts["extension"];
-        echo $ext;
-        if (in_array($ext, $exts)) {
-        
+        if ($this->canHandleExtension($file)) {       
             echo "<td>$file</td>
                 <td><a href='viewer.php?file=$file'>[view]</a></td>";
             
