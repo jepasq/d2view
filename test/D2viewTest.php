@@ -123,6 +123,11 @@ class D2viewTest extends TestCase
         $this->assertTrue($d2->canHandleExtension('aze.txt'));
         $this->assertFalse($d2->canHandleExtension('aze.nottxt'));
 
+        // If no extension
+        $this->assertFalse($d2->canHandleExtension('azenot_tex'));
+
+        // Should handle relative files
+        $this->assertTrue($d2->canHandleExtension('subdir/name_aze.vert_c'));
     }
 }
 ?>

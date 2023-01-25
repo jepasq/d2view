@@ -215,7 +215,13 @@ class D2view{
      *
      */
     function canHandleExtension($filename) {
-
+        $path_parts = pathinfo($filename);
+        $exts = array("txt", "vert_c");
+        if (!array_key_exists("extension",$path_parts)){
+            return false;    
+        }
+        $ext = $path_parts["extension"];
+        return in_array($ext, $exts);
     }
 };
 ?>
