@@ -17,6 +17,13 @@ Show the menu image of the hero and let choose 3 heroes name
 - [X] Explain PHPUnit installation on arch in README :  
 - [ ] May try phpunit from AUR https://aur.archlinux.org/packages/phpunit
 **** TODO Continue the search page
+:LOGBOOK:
+CLOCK: [2023-01-25 mer. 11:10]--[2023-01-25 mer. 11:18] =>  0:08
+:END:
+- [ ] If the type is known to be viewable, filename in result must be a
+  link
+  - [ ] Implement an D2view::canHandleExtension(filen)
+  - [ ] D2view::viewLink can use this function  
 **** DONE Implement a way to search for file by name
 :LOGBOOK:
 CLOCK: [2023-01-11 mer. 07:04]--[2023-01-11 mer. 07:22] =>  0:18

@@ -206,5 +206,16 @@ class D2view{
         
         return $ret;
     }
+
+    /** Return true if we can correctly handle (i.e. view) filename extension
+     *
+     * \param $filename The filename to be tested.
+     *
+     * \return A boolean.
+     *
+     */
+    function canHandleExtension($filename) {
+
+    }
 };
 ?>

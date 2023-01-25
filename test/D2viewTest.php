@@ -115,6 +115,14 @@ class D2viewTest extends TestCase
         // $this->assertSame(0, count($stack));
     }
 
-    
+    /// Test the new canHandleExtension() function implementation
+    public function testCanHandleExtension()
+    {
+        global $dota;
+        $d2 = new D2View($dota);
+        $this->assertTrue($d2->canHandleExtension('aze.txt'));
+        $this->assertFalse($d2->canHandleExtension('aze.nottxt'));
+
+    }
 }
 ?>
