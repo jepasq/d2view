@@ -44,10 +44,14 @@ echo "<section>";
 
         $list = array_slice($list, 0, 100);
     }
-    
+
+    echo '<table>';
     foreach ($list as $item) {
-        echo $item."<br>";
+        echo '<tr>';
+        $d2->viewer_link($item);//        echo $item."<br>";
+        echo '</tr>';
     }
+    echo '</table>';
 echo "</section>";
 }
 

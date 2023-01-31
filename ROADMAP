@@ -21,6 +21,7 @@ CLOCK: [2023-01-25 mer. 12:27]--[2023-01-25 mer. 12:53] =>  0:26
 - [ ] May try phpunit from AUR https://aur.archlinux.org/packages/phpunit
 **** TODO Continue the search page
 :LOGBOOK:
+CLOCK: [2023-01-31 mar. 10:54]--[2023-01-31 mar. 11:01] =>  0:07
 CLOCK: [2023-01-31 mar. 09:21]--[2023-01-31 mar. 09:54] =>  0:33
 CLOCK: [2023-01-25 mer. 12:14]--[2023-01-25 mer. 12:17] =>  0:03
 CLOCK: [2023-01-25 mer. 11:52]--[2023-01-25 mer. 12:02] =>  0:10
@@ -30,7 +31,8 @@ CLOCK: [2023-01-25 mer. 11:10]--[2023-01-25 mer. 11:18] =>  0:08
   link
   - [X] Implement D2view::canHandleExtension(filen)
   - [X] D2view::viewLink can use this function
-- [ ] Change searched file result in link using D2view::canHandleExtension
+- [X] Change searched file result in link using D2view::canHandleExtension
+- [ ] Handle pagination when more than 100 results  
 - [ ] Explorer's 'Current working dir' could be multiple links to parent dirs
 **** DONE Implement a way to search for file by name
 :LOGBOOK:

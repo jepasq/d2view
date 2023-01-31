@@ -215,7 +215,7 @@ class D2view{
      */
     function canHandleExtension($filename) {
         $path_parts = pathinfo($filename);
-        $exts = array("txt", "vert_c");
+        $exts = array("txt", "vert_c", "png");
         if (!array_key_exists("extension",$path_parts)){
             return false;    
         }
