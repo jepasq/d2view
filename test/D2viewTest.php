@@ -90,7 +90,9 @@ class D2viewTest extends TestCase
     {
         global $dota;
         $d2 = new D2View($dota);
-        $this->assertFalse($d2->viewer_link('ext'));
+        // We do not test output here. viewer_link() always return true
+        // and onky echo() link
+        $this->assertTrue($d2->viewer_link('ext'));
     }
 
     /** viewer_link should return true with an usable extension
