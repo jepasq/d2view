@@ -1,3 +1,13 @@
+* v0.0.0-9 (05 Jan. 2023 - 03 Feb. 2023) SLOC 1,001
+- Fix GetFileContentException unit test
+- Fix the parent bug in search result
+- Start to implement png file viewer
+- Use view_link function to print search results
+- Fix a failing view_link unittest
+- D2View::viewLink use canHandleExtension function
+- Add failing unit tests for new D2view::canHandleExtension function
+- Better printTree call from unit tests
+
 * v0.0.0-8 (19 Dec. 2022 - 05 Jan. 2023) SLOC 943
 - Only shows first 100 search results
 - Add a conditionnal echo implementation to clean up UT output
