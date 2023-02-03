@@ -164,7 +164,7 @@ class D2view{
      * \param $ret     The array reference to be modified and will contain
      *                 results.
      * \param $entries The array containining directory entries.
-     * \param $parent  The parent string used to print ful path.
+     * \param $parent  The parent string used to print full path.
      *
      */
     function _queryString_Impl($query, &$ret, $entries, $parent='') {
@@ -179,7 +179,8 @@ class D2view{
                 
             }
             if (is_countable($subn)) {
-                $this->_queryString_Impl($query, $ret, $subn, $name);
+                $this->_queryString_Impl($query, $ret, $subn,
+                $parent .'/'.$name);
             }
         }
     }

@@ -137,8 +137,10 @@ class D2viewTest extends TestCase
     {
         global $dota;
         $d2 = new D2View($dota);
+        // Real name is prepend with '/materials'
         $filen = "achievements/dota_achievement_placeholder.png";
         $ret = $d2->getFileContent($filen, 1024);
+        $this->expectException(VPKReader\Exception);
         $this->assertFalse(empty($ret));
     }
     

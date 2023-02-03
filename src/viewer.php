@@ -58,7 +58,7 @@ else if ($type == 'png') {
     Echo "PNG Image viewer :<br>";
     try {
         $content = $d2->getFileContent($file, $ds);
-        echo "<pre class='viewer'>$content</pre>";
+        echo "<img src='data:image/png;base64, $content' />";
     } catch (Exception $e) {
         echo 'Exception : <em>',  $e->getMessage(), "</em>\n";
     }
