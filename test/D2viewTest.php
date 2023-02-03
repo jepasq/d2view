@@ -46,13 +46,25 @@ class D2viewTest extends TestCase
         $ret = $d2->getFile("cfg/this_file.doesnt_exist_NYI");
         $this->assertTrue(empty($ret));
     }
-    
+
+   
     public function testGetFileContent()
     {
         global $dota;
         $d2 = new D2View($dota);
         $ret = $d2->getFileContent("cfg/frontpage_layout.txt", 1024);
         $this->assertFalse(empty($ret));
+    }
+
+    /// We had some issue with this particular file
+    public function testGetFileContentException()
+    {
+        global $dota;
+        $d2 = new D2View($dota);
+        // Real name is prepend with '/materials'
+        $filen = "achievements/dota_achievement_placeholder.png";
+        $this->expectException('VPKReader\Exception');
+        $ret = $d2->getFileContent($filen, 1024);
     }
     
     /** Test for the first level array content
@@ -130,18 +142,6 @@ class D2viewTest extends TestCase
 
         // Should handle relative files
         $this->assertTrue($d2->canHandleExtension('subdir/name_aze.vert_c'));
-    }
-
-    /// We had some issue with this particular file
-    public function testGetFileContentAchievementPlaceholder()
-    {
-        global $dota;
-        $d2 = new D2View($dota);
-        // Real name is prepend with '/materials'
-        $filen = "achievements/dota_achievement_placeholder.png";
-        $ret = $d2->getFileContent($filen, 1024);
-        $this->expectException(VPKReader\Exception);
-        $this->assertFalse(empty($ret));
     }
     
 }
