@@ -131,5 +131,16 @@ class D2viewTest extends TestCase
         // Should handle relative files
         $this->assertTrue($d2->canHandleExtension('subdir/name_aze.vert_c'));
     }
+
+    /// We had some issue with this particular file
+    public function testGetFileContentAchievementPlaceholder()
+    {
+        global $dota;
+        $d2 = new D2View($dota);
+        $filen = "achievements/dota_achievement_placeholder.png";
+        $ret = $d2->getFileContent($filen, 1024);
+        $this->assertFalse(empty($ret));
+    }
+    
 }
 ?>

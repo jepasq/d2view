@@ -44,7 +44,7 @@ $ds = $file_struct->data_size;
 
 echo "File size : $ds b  <br>";
 
-if ($ype == '.txt') {
+if ($type == '.txt') {
     if ($ds < 1000) {
         Echo "Text viewer :<br>";
         $content = $d2->getFileContent($file, $ds);
@@ -53,7 +53,16 @@ if ($ype == '.txt') {
         alert("Can't show a text file bigger than 1000b.");
 
     }
-
+}
+else if ($type == 'png') {
+    Echo "PNG Image viewer :<br>";
+    try {
+        $content = $d2->getFileContent($file, $ds);
+        echo "<pre class='viewer'>$content</pre>";
+    } catch (Exception $e) {
+        echo 'Exception : <em>',  $e->getMessage(), "</em>\n";
+    }
+        
 } else {
     if (!empty($type)) {
         alert("Can't find a suitable viewer for '$type' file extension.");
