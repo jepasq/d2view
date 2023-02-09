@@ -24,8 +24,24 @@ class PaginationTest extends TestCase
 
         $pag = new Pagination($l, 10, 1); // 3 Args version
         $this->assertFalse(empty($pag));
+        
+        $pag = new Pagination($l);        // 1 Args version
+        $this->assertFalse(empty($pag));
+
     }
 
+    public function testResultPerPage()
+    {
+        $l = array(1,1,2);
+        $pag = new Pagination($l, 10);
+        $this->assertEquals($pag->rpp, 10);
+
+        $pag = new Pagination($l);       // Gloab default value
+        $this->assertEquals($pag->rpp, 100);
+
+        
+    }
+    
 };
 
 ?>

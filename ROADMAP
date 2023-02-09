@@ -21,6 +21,7 @@ CLOCK: [2023-01-25 mer. 12:27]--[2023-01-25 mer. 12:53] =>  0:26
 - [ ] May try phpunit from AUR https://aur.archlinux.org/packages/phpunit
 **** TODO Continue the search page
 :LOGBOOK:
+CLOCK: [2023-02-09 jeu. 11:47]--[2023-02-09 jeu. 11:53] =>  0:06
 CLOCK: [2023-02-09 jeu. 10:35]--[2023-02-09 jeu. 11:03] =>  0:28
 CLOCK: [2023-02-03 ven. 10:53]--[2023-02-03 ven. 10:59] =>  0:06
 CLOCK: [2023-02-03 ven. 10:32]--[2023-02-03 ven. 10:45] =>  0:13
@@ -42,7 +43,9 @@ CLOCK: [2023-01-25 mer. 11:10]--[2023-01-25 mer. 11:18] =>  0:08
   other parents and only show the last one.
 - [X] Actually a unit test fails because I can't catch an exception
   
-- [ ] Handle pagination when more than 100 results  
+- [-] Implement Pagination class
+  - [X] Second argument (result per page) could by optional if defined globally
+  - [ ] Check if first argument is an array  
 - [ ] Explorer's 'Current working dir' could be multiple links to parent dirs
 **** DONE Implement a way to search for file by name
 :LOGBOOK:
