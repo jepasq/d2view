@@ -48,6 +48,19 @@ class PaginationTest extends TestCase
         $this->expectException(InvalidArgumentException::class);
         $pag = new Pagination($l);
     }
+
+    /// Test that it throws an exception if 1st arg is not an array
+    public function testGetPage()
+    {
+        $l = range(0,9);
+
+        
+        $pag = new Pagination($l);
+$p1 = $pag->getPage(0);
+$this->assertTrue(is_array($p1));
+
+    }
+
 };
 
 ?>
