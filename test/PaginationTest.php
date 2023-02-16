@@ -49,18 +49,27 @@ class PaginationTest extends TestCase
         $pag = new Pagination($l);
     }
 
-    /// Test that it throws an exception if 1st arg is not an array
     public function testGetPage()
     {
         $l = range(0,9);
 
-        
         $pag = new Pagination($l);
-$p1 = $pag->getPage(0);
-$this->assertTrue(is_array($p1));
-
+        $p1 = $pag->getPage(0);
+        $this->assertTrue(is_array($p1));
     }
 
+    // Check the result array length
+    public function testGetPage_ResultPage()
+    {
+        $l = range(0,9);
+        $len = 3;
+        
+        $pag = new Pagination($l, $len);
+        $p1 = $pag->getPage(0);
+        $this->assertEquals(count($p1), $len);
+    }
+
+    
 };
 
 ?>
