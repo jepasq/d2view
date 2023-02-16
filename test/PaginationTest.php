@@ -38,10 +38,16 @@ class PaginationTest extends TestCase
 
         $pag = new Pagination($l);       // Gloab default value
         $this->assertEquals($pag->rpp, 100);
-
-        
     }
-    
+
+    /// Test that it throws an exception if 1st arg is not an array
+    public function testNotAnArray()
+    {
+        $l = "Not an array";
+        
+        $this->expectException(InvalidArgumentException::class);
+        $pag = new Pagination($l);
+    }
 };
 
 ?>
