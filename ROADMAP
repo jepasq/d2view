@@ -21,6 +21,7 @@ CLOCK: [2023-01-25 mer. 12:27]--[2023-01-25 mer. 12:53] =>  0:26
 - [ ] May try phpunit from AUR https://aur.archlinux.org/packages/phpunit
 **** TODO Continue the search page
 :LOGBOOK:
+CLOCK: [2023-02-22 mer. 16:14]--[2023-02-22 mer. 16:32] =>  0:18
 CLOCK: [2023-02-16 jeu. 12:47]--[2023-02-16 jeu. 12:56] =>  0:09
 CLOCK: [2023-02-16 jeu. 12:26]--[2023-02-16 jeu. 12:41] =>  0:15
 CLOCK: [2023-02-16 jeu. 12:07]--[2023-02-16 jeu. 12:20] =>  0:13
@@ -49,7 +50,7 @@ CLOCK: [2023-01-25 mer. 11:10]--[2023-01-25 mer. 11:18] =>  0:08
 - [-] Implement Pagination class
   - [X] Second argument (result per page) could by optional if defined globally
   - [X] Check if first argument is an array
-  - [ ] Must return a given page
+  - [X] Must return a given page
   - [ ] May compute max page  
 - [ ] Explorer's 'Current working dir' could be multiple links to parent dirs
 **** DONE Implement a way to search for file by name

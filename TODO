@@ -6,7 +6,8 @@ d2view - AGPLv3 - A DotA2 local data viewer and quizz generator.
     Update Version and Revision in src/page_layout.php
 
 * v0.0.0-10 (03 Feb. 2023 - ???) SLOC ?,???
-- (4) Start Pagination::getPage basic implementation
+- (5) Add Pagination getPage unit test and fix implementation
+- Start Pagination::getPage basic implementation
 - Pagination constructor check first argument is an array
 - Add a default result per page to Pagination
 - Add empty Pagination class and ctor unit tests

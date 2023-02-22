@@ -23,7 +23,7 @@ class Pagination {
     }
 
     function getPage($num) {
-        $offset = $num + $this->rpp;
+        $offset = ($num + $this->rpp) -1 ;
         return array_slice($this->list, $offset, $this->rpp);
     }
     

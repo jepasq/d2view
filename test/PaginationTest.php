@@ -69,6 +69,19 @@ class PaginationTest extends TestCase
         $this->assertEquals(count($p1), $len);
     }
 
+    // Check the second page content
+    public function testGetPage_SecondPage()
+    {
+        $l = range(0,9);
+        $len = 3;
+        
+        $pag = new Pagination($l, $len);
+        $p2 = $pag->getPage(1);
+        $should_be = range(3, 5);
+        $diff = array_diff($p2, $should_be);
+        $this->assertEquals(count($diff), 0);
+    }
+    
     
 };
 
