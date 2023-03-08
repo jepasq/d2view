@@ -1,3 +1,13 @@
+* v0.0.0-10 (03 Feb. 2023 - 08 Mar. 2023) SLOC 1,159
+- Pagination::getPageLinks returns a string
+- Close a search page-related ROADMAP section
+- Add getMaxPage unit test and function implementation
+- Add Pagination getPage unit test and fix implementation
+- Start Pagination::getPage basic implementation
+- Pagination constructor check first argument is an array
+- Add a default result per page to Pagination
+- Add empty Pagination class and ctor unit tests
+
 * v0.0.0-9 (05 Jan. 2023 - 03 Feb. 2023) SLOC 1,001
 - Fix GetFileContentException unit test
 - Fix the parent bug in search result
