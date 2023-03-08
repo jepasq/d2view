@@ -19,7 +19,18 @@ CLOCK: [2023-01-25 mer. 12:27]--[2023-01-25 mer. 12:53] =>  0:26
 **** TODO May add unit tests
 - [X] Explain PHPUnit installation on arch in README :  
 - [ ] May try phpunit from AUR https://aur.archlinux.org/packages/phpunit
-**** TODO Continue the search page
+**** TODO Continue the Pagination work and other ideas
+:LOGBOOK:
+CLOCK: [2023-03-08 mer. 07:28]--[2023-03-08 mer. 07:32] =>  0:04
+:END:
+
+- [ ] Must return PagesLinks
+  Given a basic link, we return the same link for each page in a styled
+  div :  1 2 3 4 5 6 etc... With arrow for next and previous, first and last
+  and eventually a direct page widget with 'go' button
+
+- [ ] Explorer's 'Current working dir' could be multiple links to parent dirs
+**** DONE Continue the search page
 :LOGBOOK:
 CLOCK: [2023-03-08 mer. 06:44]--[2023-03-08 mer. 07:01] =>  0:17
 CLOCK: [2023-03-08 mer. 06:35]--[2023-03-08 mer. 06:41] =>  0:06
@@ -56,7 +67,6 @@ CLOCK: [2023-01-25 mer. 11:10]--[2023-01-25 mer. 11:18] =>  0:08
   - [X] May compute max page
     Unit test added, must now implement
     
-- [ ] Explorer's 'Current working dir' could be multiple links to parent dirs
 **** DONE Implement a way to search for file by name
 :LOGBOOK:
 CLOCK: [2023-01-11 mer. 07:04]--[2023-01-11 mer. 07:22] =>  0:18
