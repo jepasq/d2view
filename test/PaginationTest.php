@@ -94,6 +94,18 @@ class PaginationTest extends TestCase
         $pag = new Pagination($l2, 8);
         $this->assertEquals($pag->getMaxPage(), 3);
     }
+
+    public function testGetPageLinsk_IsAString()
+    {
+        $l1 = range(0,9);
+        $len = 3;
+        $pag = new Pagination($l1, $len);
+        $pl = $pag->getPageLinks("baselink/");
+        $this->assertTrue(is_string($pl));
+
+    }
+    
+    
 };
 
 ?>

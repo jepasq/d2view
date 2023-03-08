@@ -33,5 +33,15 @@ class Pagination {
     function getMaxPage() {
         return ceil(count($this->list)/$this->rpp);
     }
+
+    /** Returns a styled HTML div containing links to the pages
+     *
+     * It simply adds URL parameter for the page based on the base link.
+     * It will return '$baselink?page=xxx'.
+     *
+     */
+    function getPageLinks($baselink) {
+        return "";
+    }
 };
 ?>
