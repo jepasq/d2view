@@ -26,6 +26,12 @@ class Pagination {
         $offset = ($num + $this->rpp) -1 ;
         return array_slice($this->list, $offset, $this->rpp);
     }
-    
-    };
+
+    /** Get the id of the last page
+     *
+     */
+    function getMaxPage() {
+        return ceil(count($this->list)/$this->rpp);
+    }
+};
 ?>
