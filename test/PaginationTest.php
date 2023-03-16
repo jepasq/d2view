@@ -102,7 +102,18 @@ class PaginationTest extends TestCase
         $pag = new Pagination($l1, $len);
         $pl = $pag->getPageLinks("baselink/");
         $this->assertTrue(is_string($pl));
+    }
 
+    // Must individually contain 1, 2 and 3 characters
+    public function testGetPageLinsk_Contains_123()
+    {
+        $l1 = range(0,9);
+        $len = 3;
+        $pag = new Pagination($l1, $len);
+        $pl = $pag->getPageLinks("baselink/");
+        $this->assertTrue(str_contains($pl, "1"));
+        $this->assertTrue(str_contains($pl, "2"));
+        $this->assertTrue(str_contains($pl, "3"));
     }
     
     
