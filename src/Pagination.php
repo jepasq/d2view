@@ -41,7 +41,13 @@ class Pagination {
      *
      */
     function getPageLinks($baselink) {
-        return "";
+        $ret=" ";
+        // Using a foreach-based loop in prevision of link building strategy
+        foreach(range(1, $this->getMaxPage()) as $idx) {
+            $ret = $ret . strval($idx) . " ";
+            }
+        
+        return $ret;
     }
 };
 ?>
