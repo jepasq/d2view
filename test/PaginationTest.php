@@ -95,7 +95,7 @@ class PaginationTest extends TestCase
         $this->assertEquals($pag->getMaxPage(), 3);
     }
 
-    public function testGetPageLinsk_IsAString()
+    public function testGetPageLinks_IsAString()
     {
         $l1 = range(0,9);
         $len = 3;
@@ -105,7 +105,7 @@ class PaginationTest extends TestCase
     }
 
     // Must individually contain 1, 2 and 3 characters
-    public function testGetPageLinsk_Contains_123()
+    public function testGetPageLinks_Contains_123()
     {
         $l1 = range(0,9);
         $len = 3;
@@ -114,6 +114,26 @@ class PaginationTest extends TestCase
         $this->assertTrue(str_contains($pl, "1"));
         $this->assertTrue(str_contains($pl, "2"));
         $this->assertTrue(str_contains($pl, "3"));
+    }
+
+    // Check that returned string has at least one page as URL parameter
+    public function testGetPageLinks_HasAPageParam()
+    {
+        $l1 = range(0,9);
+        $len = 3;
+        $pag = new Pagination($l1, $len);
+        $pl = $pag->getPageLinks("baselink/");
+        $this->assertTrue(str_contains($pl, "page="));
+    }
+
+    // Check that we return exactly onr param parameter per page
+    public function testGetPageLinks_PageParamCount()
+    {
+        $l1 = range(0,9);
+        $len = 3;
+        $pag = new Pagination($l1, $len);
+        $pl = $pag->getPageLinks("baselink/");
+        $this->assertEqual(substr_count($pl, "page="), $pag->getMaxPage());
     }
     
     
