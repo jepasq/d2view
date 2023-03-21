@@ -133,7 +133,7 @@ class PaginationTest extends TestCase
         $len = 3;
         $pag = new Pagination($l1, $len);
         $pl = $pag->getPageLinks("baselink/");
-        $this->assertEqual(substr_count($pl, "page="), $pag->getMaxPage());
+        $this->assertEquals(substr_count($pl, "page="), $pag->getMaxPage());
     }
     
     

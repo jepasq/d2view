@@ -34,6 +34,11 @@ class Pagination {
         return ceil(count($this->list)/$this->rpp);
     }
 
+    function _pageLink($baselink, $pagenumber) {
+        
+    return "<a href='$baselink?page=$pagenumber'>$pagenumber</a>";
+    }
+    
     /** Returns a styled HTML div containing links to the pages
      *
      * It simply adds URL parameter for the page based on the base link.
@@ -44,7 +49,7 @@ class Pagination {
         $ret=" ";
         // Using a foreach-based loop in prevision of link building strategy
         foreach(range(1, $this->getMaxPage()) as $idx) {
-            $ret = $ret . strval($idx) . " ";
+            $ret = $ret . $this->_pageLink($baselink, $idx) . "&nbsp;";
             }
         
         return $ret;
