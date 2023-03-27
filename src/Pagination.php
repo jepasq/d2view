@@ -1,5 +1,12 @@
 <?php
 
+
+/** Handles pagination and related page linkes
+ *
+ * When result of a search is more that a page lenght, create links to
+ * all pages.
+ *
+ */
 class Pagination {
     public
     $current_page,
@@ -7,6 +14,10 @@ class Pagination {
     $rpp;   // Result per page
 
     /** The Pagination constructor
+     *
+     * \param $list The list to be paginated.
+     * \param $result_per_page
+     * \param $start_page
      *
      */
     function __construct($list, $result_per_page=100, $start_page=0){
@@ -22,6 +33,13 @@ class Pagination {
         
     }
 
+    /** Get the conetnt of the given page
+     *
+     * \param $num The page number (starting at 0).
+     *
+     * \return The list sliced to only give the give page.
+     *
+     */
     function getPage($num) {
         $offset = ($num + $this->rpp) -1 ;
         return array_slice($this->list, $offset, $this->rpp);
