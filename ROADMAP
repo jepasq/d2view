@@ -11,10 +11,11 @@ Show the menu image of the hero and let choose 3 heroes name
     https://stackoverflow.com/a/45254824
 **** Handle doxygen documentation
 :LOGBOOK:
+CLOCK: [2023-04-03 lun. 12:13]--[2023-04-03 lun. 12:39] =>  0:26
 CLOCK: [2023-03-27 lun. 09:58]--[2023-03-27 lun. 10:19] =>  0:21
 CLOCK: [2023-01-25 mer. 12:27]--[2023-01-25 mer. 12:53] =>  0:26
 :END:
-- [ ] Document undocumented members
+- [X] Document undocumented members
 - [ ] May add a markdown mainpage
 - [ ] Must call =doxygen -u= from time to time
 **** Find an image in the dota archive and implement an image viewer
@@ -23,6 +24,7 @@ CLOCK: [2023-01-25 mer. 12:27]--[2023-01-25 mer. 12:53] =>  0:26
 - [ ] May try phpunit from AUR https://aur.archlinux.org/packages/phpunit
 **** TODO Continue the Pagination work and other ideas
 :LOGBOOK:
+CLOCK: [2023-04-03 lun. 10:42]--[2023-04-03 lun. 10:52] =>  0:10
 CLOCK: [2023-03-27 lun. 09:55]--[2023-03-27 lun. 09:58] =>  0:03
 CLOCK: [2023-03-21 mar. 07:41]--[2023-03-21 mar. 07:47] =>  0:06
 CLOCK: [2023-03-21 mar. 07:06]--[2023-03-21 mar. 07:12] =>  0:06
@@ -38,7 +40,7 @@ CLOCK: [2023-03-08 mer. 07:28]--[2023-03-08 mer. 07:32] =>  0:04
   and eventually a direct page widget with 'go' button
   - [X] Check it contains numbers
   - [X] Chack that we add a page= param
-  - [ ] Check each number is a link  
+  - [ ] Check each number is a link : maybe the number of links ?
   
 - [ ] Explorer's 'Current working dir' could be a 'breadcrumb'
   See https://getbootstrap.com/docs/4.0/components/breadcrumb/

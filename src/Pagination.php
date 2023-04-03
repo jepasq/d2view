@@ -9,9 +9,12 @@
  */
 class Pagination {
     public
+    /** The current page index starting at 0. */
     $current_page,
+    /** The list of element to be paginated. */
     $list,
-    $rpp;   // Result per page
+    /** Result per page  */
+    $rpp;   
 
     /** The Pagination constructor
      *
@@ -52,15 +55,23 @@ class Pagination {
         return ceil(count($this->list)/$this->rpp);
     }
 
+    /** Returns the link markup for a given page number
+     *
+     * \param $baselink   The base link URL.
+     * \param $pagenumber The page number.
+     *
+     */
     function _pageLink($baselink, $pagenumber) {
-        
-    return "<a href='$baselink?page=$pagenumber'>$pagenumber</a>";
+        return "<a href='$baselink?page=$pagenumber'>$pagenumber</a>";
     }
     
     /** Returns a styled HTML div containing links to the pages
      *
      * It simply adds URL parameter for the page based on the base link.
      * It will return '$baselink?page=xxx'.
+     *
+     * \param $baselink The page to redirect page links to. An URL parameter
+     *                  will be added.
      *
      */
     function getPageLinks($baselink) {
