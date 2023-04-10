@@ -11,6 +11,7 @@ $query=$_GET['query'];
 if (empty($query)) {
     head("Search");
 } else {
+    include_once('Pagination.php');
     head($query." - Search");
 }
 
@@ -29,7 +30,7 @@ echo "<form action='search.php' method='get'>
 echo "</section>";
 
 if (!empty($query)) {
-echo "<section>";
+    echo "<section>";
     global $dota;
     $d2 = new D2View($dota);
     $list = $d2->queryString($query);
@@ -39,10 +40,11 @@ echo "<section>";
     echo "<em>Number of results for '$query' </em> :
         <strong>".$co."</strong>.<br>";
 
+    $pag = new Pagination($list);
     if ($co > 100) {
         echo "(Only showing first 100 items)<br>";
 
-        $list = array_slice($list, 0, 100);
+        $list = $pag->getPage(0);
     }
 
     echo '<table>';
@@ -52,7 +54,9 @@ echo "<section>";
         echo '</tr>';
     }
     echo '</table>';
-echo "</section>";
+    echo "</section>";
+
+    echo($pag->getPageLinks("search.php?query=$query"));
 }
 
 footer($start_time);
