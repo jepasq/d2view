@@ -75,11 +75,13 @@ class Pagination {
      *
      */
     function getPageLinks($baselink) {
-        $ret=" ";
+        $ret="<section>";
         // Using a foreach-based loop in prevision of link building strategy
         foreach(range(1, $this->getMaxPage()) as $idx) {
             $ret = $ret . $this->_pageLink($baselink, $idx) . "&nbsp;";
             }
+
+        $ret = $ret . "</section>";
         
         return $ret;
     }

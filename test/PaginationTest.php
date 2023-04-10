@@ -136,7 +136,16 @@ class PaginationTest extends TestCase
         $this->assertEquals(substr_count($pl, "page="), $pag->getMaxPage());
     }
     
-    
+    public function testGetPageLinks_HasSection()
+    {
+        $l1 = range(0,9);
+        $len = 3;
+        $pag = new Pagination($l1, $len);
+        // Here I do not add closing tag to allow a class name
+        $this->assertTrue(str_contains($pag->getPageLinks(""), "<section"));
+        $this->assertTrue(str_contains($pag->getPageLinks(""), "</section>"));
+
+    }
 };
 
 ?>
