@@ -1,3 +1,13 @@
+* v0.0.0-11 (08 Mar. 2023 - 13 Apr. 2023) SLOC 1,261
+- Add URL parameter unit test for Pagination
+- Pagination's page links are nested in a section block
+- Search result uses Pagination and page links
+- Update doxygen configuration file and improve documentation
+- More pagelink implementation to fix unit tests
+- Add 2 failing Pagination unit tests
+- PageLinks returns page numbers as string
+- Add a failing pagination links-related unit test
+
 * v0.0.0-10 (03 Feb. 2023 - 08 Mar. 2023) SLOC 1,159
 - Pagination::getPageLinks returns a string
 - Close a search page-related ROADMAP section
