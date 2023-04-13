@@ -144,8 +144,24 @@ class PaginationTest extends TestCase
         // Here I do not add closing tag to allow a class name
         $this->assertTrue(str_contains($pag->getPageLinks(""), "<section"));
         $this->assertTrue(str_contains($pag->getPageLinks(""), "</section>"));
+    }
+
+    public function testGetPageLinks_BaselinkHasParam()
+    {
+        $l1 = range(0,9);
+        $len = 3;
+        $pag = new Pagination($l1, $len);
+
+        // If base link is a standard URL, add page with '?'
+        $this->assertTrue(str_contains($pag->getPageLinks("http://url"),
+        "?page"));
+        
+        // If base link already has a parameter, add with '&'
+        $this->assertTrue(str_contains($pag->getPageLinks("url.com?param"),
+        "&page"));
 
     }
+    
 };
 
 ?>
