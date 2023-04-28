@@ -62,7 +62,12 @@ class Pagination {
      *
      */
     function _pageLink($baselink, $pagenumber) {
-        return "<a href='$baselink?page=$pagenumber'>$pagenumber</a>";
+        $sep = "?";
+        if (str_contains($baselink, '?')) {
+            $sep = "&";
+            }
+        
+        return "<a href='$baselink".$sep."page=$pagenumber'>$pagenumber</a>";
     }
     
     /** Returns a styled HTML div containing links to the pages
