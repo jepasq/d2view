@@ -65,7 +65,7 @@ class Pagination {
         $sep = "?";
         if (str_contains($baselink, '?')) {
             $sep = "&";
-            }
+        }
         
         return "<a href='$baselink".$sep."page=$pagenumber'>$pagenumber</a>";
     }

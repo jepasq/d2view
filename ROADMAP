@@ -24,6 +24,7 @@ CLOCK: [2023-01-25 mer. 12:27]--[2023-01-25 mer. 12:53] =>  0:26
 - [ ] May try phpunit from AUR https://aur.archlinux.org/packages/phpunit
 **** TODO Continue the Pagination work and other ideas
 :LOGBOOK:
+CLOCK: [2023-05-09 mar. 11:00]--[2023-05-09 mar. 11:06] =>  0:06
 CLOCK: [2023-04-28 ven. 05:50]--[2023-04-28 ven. 06:04] =>  0:14
 CLOCK: [2023-04-13 jeu. 12:04]--[2023-04-13 jeu. 12:11] =>  0:07
 CLOCK: [2023-04-10 lun. 10:30]--[2023-04-10 lun. 10:49] =>  0:19
@@ -47,7 +48,7 @@ CLOCK: [2023-03-08 mer. 07:28]--[2023-03-08 mer. 07:32] =>  0:04
   - [X] Check it contains numbers
   - [X] Chack that we add a page= param
   - [X] Page links should be in a section  
-  - [ ] When getting pagelinks, to create URL, if '?' alread present, use '&'
+  - [X] When getting pagelinks, to create URL, if '?' alread present, use '&'
     Unit test added
   - [ ] Check each number is a link : maybe the number of links ?
 - [ ] Explorer's 'Current working dir' could be a 'breadcrumb'
