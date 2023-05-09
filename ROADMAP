@@ -19,6 +19,12 @@ CLOCK: [2023-01-25 mer. 12:27]--[2023-01-25 mer. 12:53] =>  0:26
 - [ ] May add a markdown mainpage
 - [ ] Must call =doxygen -u= from time to time
 **** Find an image in the dota archive and implement an image viewer
+:LOGBOOK:
+CLOCK: [2023-05-09 mar. 11:33]--[2023-05-09 mar. 11:50] =>  0:17
+:END:
+- [ ] Can't simple print file content as base64
+  - [ ] Try to save the content to a file to test it with the =file= tool
+    The written file should be in =/var/tmp/systemd-private-*-httpd.service-*/tmp/testpng=
 **** TODO May add unit tests
 - [X] Explain PHPUnit installation on arch in README :  
 - [ ] May try phpunit from AUR https://aur.archlinux.org/packages/phpunit

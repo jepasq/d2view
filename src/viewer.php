@@ -58,7 +58,16 @@ else if ($type == 'png') {
     Echo "PNG Image viewer :<br>";
     try {
         $content = $d2->getFileContent($file, $ds);
-        echo "<img src='data:image/png;base64, $content' />";
+        #        echo "<img src='data:image/png;base64,$content' />";
+
+        # Trying to write file to disk
+        $filename = "/tmp/testpng";
+        $ret = file_put_contents($filename, $content);
+        if (!$ret) {
+            echo "Error writing image to '$filename'";
+        } else {
+            echo "Writing image to '$filename' with $ret bytes of content";
+        }
     } catch (Exception $e) {
         echo 'Exception : <em>',  $e->getMessage(), "</em>\n";
     }
