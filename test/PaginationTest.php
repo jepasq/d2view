@@ -159,6 +159,15 @@ class PaginationTest extends TestCase
         // If base link already has a parameter, add with '&'
         $this->assertTrue(str_contains($pag->getPageLinks("url.com?param"),
         "&page"));
+    }
+
+    public function testGetPageLinks_NbLinks()
+    {
+        $l1 = range(0,9);
+        $len = 3;
+        $pag = new Pagination($l1, $len);
+        $stack = $pag->getPageLinks("http://url");
+        $this->assertEquals(substr_count($stack, "//url"), 4);
 
     }
     

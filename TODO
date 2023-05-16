@@ -6,5 +6,6 @@ d2view - AGPLv3 - A DotA2 local data viewer and quizz generator.
     Update Version and Revision in src/page_layout.php
 
 * v0.0.0-12 (13 Apr. 2023 - ???) SLOC ?,???
-- (2) Trying to write image to /tmp
+- (3) Check the Pagination number of links generated
+- Trying to write image to /tmp
 - Fix the param-related pagination unit test
