@@ -20,6 +20,20 @@ function getFileType($filename) {
     return $path_parts['extension'];
 }
 
+if ( !function_exists('sys_get_temp_dir')) {
+  function sys_get_temp_dir() {
+    if (!empty($_ENV['TMP'])) { return realpath($_ENV['TMP']); }
+    if (!empty($_ENV['TMPDIR'])) { return realpath( $_ENV['TMPDIR']); }
+    if (!empty($_ENV['TEMP'])) { return realpath( $_ENV['TEMP']); }
+    $tempfile=tempnam(__FILE__,'');
+    if (file_exists($tempfile)) {
+      unlink($tempfile);
+      return realpath(dirname($tempfile));
+    }
+    return null;
+  }
+}
+
 if (empty($file)) {
     head("Viewer");
 } else {
@@ -61,12 +75,16 @@ else if ($type == 'png') {
         #        echo "<img src='data:image/png;base64,$content' />";
 
         # Trying to write file to disk
-        $filename = "/tmp/testpng";
-        $ret = file_put_contents($filename, $content);
+        $file = tmpfile();
+        $path = stream_get_meta_data($file)['uri'];
+        #        $ret = file_put_contents($filename, $content);
+        $ret = fwrite($file, $content);
         if (!$ret) {
-            echo "Error writing image to '$filename'";
+            echo "Error writing image to '$path'";
         } else {
-            echo "Writing image to '$filename' with $ret bytes of content";
+            echo "Writing image to '$path' with $ret bytes of content<br>";
+            $ttmp=sys_get_temp_dir();
+            echo "TMP is $ttmp<br>";
         }
     } catch (Exception $e) {
         echo 'Exception : <em>',  $e->getMessage(), "</em>\n";
