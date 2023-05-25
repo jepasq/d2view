@@ -20,14 +20,18 @@ CLOCK: [2023-01-25 mer. 12:27]--[2023-01-25 mer. 12:53] =>  0:26
 - [ ] Must call =doxygen -u= from time to time
 **** Find an image in the dota archive and implement an image viewer
 :LOGBOOK:
+CLOCK: [2023-05-25 jeu. 03:41]--[2023-05-25 jeu. 04:10] =>  0:29
 CLOCK: [2023-05-17 mer. 02:25]--[2023-05-17 mer. 03:13] =>  0:48
 CLOCK: [2023-05-09 mar. 11:33]--[2023-05-09 mar. 11:50] =>  0:17
 :END:
 - [X] Can we simply print the created file name ?
   Trying with php's tmpfile(). Can't even find it.
-- [ ] Can't simple print file content as base64
-  - [ ] Try to save the content to a file to test it with the =file= tool
-    The written file should be in =/var/tmp/systemd-private-*-httpd.service-*/tmp/testpng=
+- [ ] Try to save the content to a file to test it with the =file= tool
+  The written file should be in =/var/tmp/systemd-private-*-httpd.service-*/tmp/testpng=
+  We have home directory, try to write there
+- [ ] Can't simply print file content as base64 why ?
+- [ ] Add some popular recherche items to, viewer header : for example .png
+  *search.php?query=.png*
 **** TODO May add unit tests
 - [X] Explain PHPUnit installation on arch in README :  
 - [ ] May try phpunit from AUR https://aur.archlinux.org/packages/phpunit
@@ -50,7 +54,6 @@ CLOCK: [2023-03-08 mer. 07:28]--[2023-03-08 mer. 07:32] =>  0:04
 :END:
 
 - [X] Search result uses pagination
-   
 - [X] Must return PagesLinks
   Given a basic link, we return the same link for each page in a styled
   div :  1 2 3 4 5 6 etc... With arrow for next and previous, first and last
@@ -62,6 +65,8 @@ CLOCK: [2023-03-08 mer. 07:28]--[2023-03-08 mer. 07:32] =>  0:04
     Unit test added
   - [X] Check each number is a link : maybe the number of links ?
     Checking with substr_count
+- [ ] Should have a max number of pages before and after actual one
+  Continue with triple dots (=&mldr;=)
 - [ ] Explorer's 'Current working dir' could be a 'breadcrumb'
   See https://getbootstrap.com/docs/4.0/components/breadcrumb/
 **** DONE Continue the search page

@@ -75,8 +75,11 @@ else if ($type == 'png') {
         #        echo "<img src='data:image/png;base64,$content' />";
 
         # Trying to write file to disk
-        $file = tmpfile();
-        $path = stream_get_meta_data($file)['uri'];
+        $path = "/var/tmp/dotaimage.png"; //stream_get_meta_data($file)['uri'];
+        if (!is_writable($path)) {
+            echo "Error : $path is not writtable";
+        }
+        $file = fopen($path, 'w');
         #        $ret = file_put_contents($filename, $content);
         $ret = fwrite($file, $content);
         if (!$ret) {
@@ -85,6 +88,7 @@ else if ($type == 'png') {
             echo "Writing image to '$path' with $ret bytes of content<br>";
             $ttmp=sys_get_temp_dir();
             echo "TMP is $ttmp<br>";
+            echo "<img src='$ttmp'>";
         }
     } catch (Exception $e) {
         echo 'Exception : <em>',  $e->getMessage(), "</em>\n";
