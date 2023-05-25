@@ -17,7 +17,15 @@ looks like that :
 
 	<?php
 	$home="/home/<your_username_here>/";
+	$extractdir="$home/d2view-extract";
 	?>
+
+The $extractdir directpry must be writable by your http server (a+w).
+Use `ls -lhd` to know actual flags and `chmod a+w` to add writting permissions
+to everybody.
+
+Also remember that, to be writable, all parents to this directory must also be
+writtable.
 
 ## Installation example on apache
 

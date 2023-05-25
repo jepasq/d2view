@@ -75,7 +75,7 @@ else if ($type == 'png') {
         #        echo "<img src='data:image/png;base64,$content' />";
 
         # Trying to write file to disk
-        $path = "/var/tmp/dotaimage.png"; //stream_get_meta_data($file)['uri'];
+        $path = "$extractdir/dotaimage.png";
         if (!is_writable($path)) {
             echo "Error : $path is not writtable";
         }
@@ -86,7 +86,7 @@ else if ($type == 'png') {
             echo "Error writing image to '$path'";
         } else {
             echo "Writing image to '$path' with $ret bytes of content<br>";
-            $ttmp=sys_get_temp_dir();
+            $ttmp=$path;
             echo "TMP is $ttmp<br>";
             echo "<img src='$ttmp'>";
         }

@@ -6,7 +6,8 @@ d2view - AGPLv3 - A DotA2 local data viewer and quizz generator.
     Update Version and Revision in src/page_layout.php
 
 * v0.0.0-12 (13 Apr. 2023 - ???) SLOC ?,???
-- (5) Test if tmp file is writtable before writing it
+- (6) Add extractdir to config file
+- Test if tmp file is writtable before writing it
 - Trying to save to-be-viewed image to php's tmpfile
 - Check the Pagination number of links generated
 - Trying to write image to /tmp
