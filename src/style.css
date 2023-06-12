@@ -76,3 +76,9 @@ section {
     margin: 10px;
     padding: 5px;
 }
+
+/** A subsection used in search page to link for some popular ones */
+.popsearch {
+    padding-left: 25px;
+    margin-bottom: 10px;
+}

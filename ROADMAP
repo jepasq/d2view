@@ -18,8 +18,9 @@ CLOCK: [2023-01-25 mer. 12:27]--[2023-01-25 mer. 12:53] =>  0:26
 - [X] Document undocumented members
 - [ ] May add a markdown mainpage
 - [ ] Must call =doxygen -u= from time to time
-**** Find an image in the dota archive and implement an image viewer
+**** TODO Find an image in the dota archive and implement an image viewer
 :LOGBOOK:
+CLOCK: [2023-06-12 lun. 01:34]--[2023-06-12 lun. 02:02] =>  0:28
 CLOCK: [2023-05-25 jeu. 04:17]--[2023-05-25 jeu. 04:32] =>  0:15
 CLOCK: [2023-05-25 jeu. 03:41]--[2023-05-25 jeu. 04:10] =>  0:29
 CLOCK: [2023-05-17 mer. 02:25]--[2023-05-17 mer. 03:13] =>  0:48
@@ -27,15 +28,17 @@ CLOCK: [2023-05-09 mar. 11:33]--[2023-05-09 mar. 11:50] =>  0:17
 :END:
 - [X] Can we simply print the created file name ?
   Trying with php's tmpfile(). Can't even find it.
+- [X] Can't simply print file content as base64 why ?
+- [X] Add some popular recherche items to viewer header : for example .png
+  *search.php?query=.png*
 - [-] Try to save the content to a file to test it with the =file= tool
   The written file should be in =/var/tmp/systemd-private-*-httpd.service-*/tmp/testpng=
   We have home directory, try to write there
   - [X] Add this extract dir to config.php and document it : ok, the file is now
     viewable with an image viewer
   - [ ] Make this extractdir viewable with the webserver  
-- [ ] Can't simply print file content as base64 why ?
-- [ ] Add some popular recherche items to, viewer header : for example .png
-  *search.php?query=.png*
+- [ ] Must have a extractdir check (must be writable and viewable)
+  Maybe a new  configuration page ?
 **** TODO May add unit tests
 - [X] Explain PHPUnit installation on arch in README :  
 - [ ] May try phpunit from AUR https://aur.archlinux.org/packages/phpunit

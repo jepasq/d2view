@@ -58,7 +58,7 @@ $ds = $file_struct->data_size;
 
 echo "File size : $ds b  <br>";
 
-if ($type == '.txt') {
+if ($type == '.txt' || $type == 'vpcf_c') {
     if ($ds < 1000) {
         Echo "Text viewer :<br>";
         $content = $d2->getFileContent($file, $ds);

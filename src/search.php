@@ -17,9 +17,13 @@ if (empty($query)) {
 
 navbar("search");
 
-
 echo "<section>
-    <p>Search by file name :</p>";
+    <div>Search by file name :</div>
+    <div class='popsearch'><em>Popular search<em> :
+      <a href='search.php?query=.png' title='All PNG images'>.png</a>, 
+      <a href='search.php?query=.vpcf_c' title='Source 2 particles source'>
+          .vpcf_c</a>
+    </div>";
 echo "<form action='search.php' method='get'>
     <label for='query'>File name pattern :
     <input type='text' name='query' id='query' value='$query'
