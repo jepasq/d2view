@@ -8,7 +8,7 @@ function head($title) {
     echo '<!DOCTYPE html><html><head>';
     echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">';
     echo '<link rel="icon" type="image/x-icon" href="../media/favicon.ico">';
-    echo '<link rel="stylesheet" type="text/css" href="style.css?v12">';
+    echo '<link rel="stylesheet" type="text/css" href="style.css?v13">';
     if (empty($title)) {
         echo "<title>".APPNAME."</title>";
     } else {
@@ -17,14 +17,19 @@ function head($title) {
     echo '</head><body>';
 }
 
-function navbar_item($active, $label, $href) {
+/** Handle the active class of a navigation item, i.e. a link.
+ *
+ * Params :
+ * \param $styles An optional string of additional css class(es).
+ *
+ */
+function navbar_item($active, $label, $href, $styles='') {
     if ($active) {
-        echo '<li class="nav-item active">';
+        echo "<li class='nav-item active $styles'>";
     } else {
-        echo '<li class="nav-item">';
+        echo "<li class='nav-item $styles'>";
     }
     echo "<a class='nav-link' href='$href'>$label</a></li>";
-
 }
 
 /** Print the navbar code
@@ -52,6 +57,9 @@ function navbar($active_item) {
     navbar_item($active_item=="explorer", "Explorer", 'explorer.php?pwd=/');
     navbar_item($active_item=="search",   "Search",   'search.php');
     navbar_item($active_item=="viewer",   "Viewer",   'viewer.php');
+
+    navbar_item($active_item=="admin",   "Admin/",   'admin/', 'adminlink');
+
     
      echo '</ul>
        </div>

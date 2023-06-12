@@ -18,8 +18,15 @@ CLOCK: [2023-01-25 mer. 12:27]--[2023-01-25 mer. 12:53] =>  0:26
 - [X] Document undocumented members
 - [ ] May add a markdown mainpage
 - [ ] Must call =doxygen -u= from time to time
+**** Improve admin/ interface
+- [-] Must have a extractdir check (must be writable and viewable)
+  - [X] Maybe in an admin/ index page so we can protect the full subdir
+    with an htaccess file
+  - [ ] Maybe a new  configuration page ?
+  - [ ] Add configuration vars
 **** TODO Find an image in the dota archive and implement an image viewer
 :LOGBOOK:
+CLOCK: [2023-06-12 lun. 05:28]--[2023-06-12 lun. 05:46] =>  0:18
 CLOCK: [2023-06-12 lun. 01:34]--[2023-06-12 lun. 02:02] =>  0:28
 CLOCK: [2023-05-25 jeu. 04:17]--[2023-05-25 jeu. 04:32] =>  0:15
 CLOCK: [2023-05-25 jeu. 03:41]--[2023-05-25 jeu. 04:10] =>  0:29
@@ -37,8 +44,6 @@ CLOCK: [2023-05-09 mar. 11:33]--[2023-05-09 mar. 11:50] =>  0:17
   - [X] Add this extract dir to config.php and document it : ok, the file is now
     viewable with an image viewer
   - [ ] Make this extractdir viewable with the webserver  
-- [ ] Must have a extractdir check (must be writable and viewable)
-  Maybe a new  configuration page ?
 **** TODO May add unit tests
 - [X] Explain PHPUnit installation on arch in README :  
 - [ ] May try phpunit from AUR https://aur.archlinux.org/packages/phpunit

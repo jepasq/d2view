@@ -84,6 +84,13 @@ If you keep the directory in your home one, you may have a
 and restart `apache` to fix this issue. It is used to let the webserver user
 traverse (i.e. read content) of your directory.
 
+## Admin section
+
+The *admin/* subdir contains page that can display sensitive informations.
+We can suggest you use a *htaccess* file to protect it is your site is
+accessible : 
+https://httpd.apache.org/docs/2.4/en/howto/htaccess.html
+
 ## Steam file permission issues
 
 First time you run this script, it may conplain about file permissions. At least
