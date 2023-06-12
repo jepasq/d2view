@@ -5,12 +5,5 @@ d2view - AGPLv3 - A DotA2 local data viewer and quizz generator.
     SLOC is the number of Physical sloc in src/ and test/ from npm sloc package
     Update Version and Revision in src/page_layout.php
 
-* v0.0.0-12 (13 Apr. 2023 - ???) SLOC ?,???
-- (8) Add a new Admin/ section and menu item
-- Add a couple of popular search item
-- Add extractdir to config file
-- Test if tmp file is writtable before writing it
-- Trying to save to-be-viewed image to php's tmpfile
-- Check the Pagination number of links generated
-- Trying to write image to /tmp
-- Fix the param-related pagination unit test
+* v0.0.0-13 (12 Jun. 2023 - ???) SLOC ?,???
+
