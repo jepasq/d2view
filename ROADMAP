@@ -18,12 +18,17 @@ CLOCK: [2023-01-25 mer. 12:27]--[2023-01-25 mer. 12:53] =>  0:26
 - [X] Document undocumented members
 - [ ] May add a markdown mainpage
 - [ ] Must call =doxygen -u= from time to time
-**** Improve admin/ interface
-- [-] Must have a extractdir check (must be writable and viewable)
+**** Improve the admin/ interface
+:LOGBOOK:
+CLOCK: [2023-06-20 mar. 07:32]--[2023-06-20 mar. 07:45] =>  0:13
+:END:
+- [X] Must have a extractdir check (must be writable and viewable)
   - [X] Maybe in an admin/ index page so we can protect the full subdir
     with an htaccess file
-  - [ ] Maybe a new  configuration page ?
-  - [ ] Add configuration vars
+- [X] Print back page
+- [ ] Add an alert to explain the content can show sensitive data.    
+- [ ] Maybe a new  configuration page ?
+- [ ] Add configuration vars
 **** TODO Find an image in the dota archive and implement an image viewer
 :LOGBOOK:
 CLOCK: [2023-06-12 lun. 05:28]--[2023-06-12 lun. 05:46] =>  0:18
