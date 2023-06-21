@@ -18,8 +18,9 @@ CLOCK: [2023-01-25 mer. 12:27]--[2023-01-25 mer. 12:53] =>  0:26
 - [X] Document undocumented members
 - [ ] May add a markdown mainpage
 - [ ] Must call =doxygen -u= from time to time
-**** Improve the admin/ interface
+**** TODO Improve the admin/ interface
 :LOGBOOK:
+CLOCK: [2023-06-21 mer. 07:16]--[2023-06-21 mer. 07:30] =>  0:14
 CLOCK: [2023-06-20 mar. 08:00]--[2023-06-20 mar. 08:12] =>  0:12
 CLOCK: [2023-06-20 mar. 07:32]--[2023-06-20 mar. 07:45] =>  0:13
 :END:
@@ -28,8 +29,9 @@ CLOCK: [2023-06-20 mar. 07:32]--[2023-06-20 mar. 07:45] =>  0:13
     with an htaccess file
 - [X] Print back page
 - [X] Add an alert to explain the content can show sensitive data.    
-- [ ] Maybe a new  configuration page ?
+- [X] Maybe a new  configuration page ?
 - [ ] Add configuration vars
+  Can't show vars content
 **** TODO Find an image in the dota archive and implement an image viewer
 :LOGBOOK:
 CLOCK: [2023-06-12 lun. 05:28]--[2023-06-12 lun. 05:46] =>  0:18
