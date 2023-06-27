@@ -6,7 +6,8 @@ d2view - AGPLv3 - A DotA2 local data viewer and quizz generator.
     Update Version and Revision in src/page_layout.php
 
 * v0.0.0-13 (12 Jun. 2023 - ???) SLOC ?,???
-- (4) Close a pagination-related ROADMAP section
+- (5) Add an ellipsis property to Pagination class
+- Close a pagination-related ROADMAP section
 - Add show vars admin section
 - Add a sensitive data alert to the admin page
 - Correctly print admin page

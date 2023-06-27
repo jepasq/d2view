@@ -56,6 +56,10 @@ CLOCK: [2023-05-09 mar. 11:33]--[2023-05-09 mar. 11:50] =>  0:17
 - [X] Explain PHPUnit installation on arch in README :  
 - [ ] May try phpunit from AUR https://aur.archlinux.org/packages/phpunit
 **** TODO Pagination may have an ellipsis if too much pages
+:LOGBOOK:
+CLOCK: [2023-06-27 mar. 09:08]--[2023-06-27 mar. 09:23] =>  0:15
+:END:
+- [X] Add an ellipsis property to Pagination class (true by default)
 - [ ] Should have a max number of pages before and after actual one
   Continue with triple dots (=&mldr;=) : it's called an ellipsis
 - [ ] Explorer's 'Current working dir' could be a 'breadcrumb'

@@ -14,7 +14,9 @@ class Pagination {
     /** The list of element to be paginated. */
     $list,
     /** Result per page  */
-    $rpp;   
+    $rpp,
+    /** Shoulod we add three continuation dots if too much pages ? */
+    $ellipsis;   
 
     /** The Pagination constructor
      *
@@ -33,6 +35,7 @@ class Pagination {
         }
 
         $this->list = $list;
+        $this->ellipsis = true;
         
     }
 
