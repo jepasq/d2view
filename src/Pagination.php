@@ -16,7 +16,8 @@ class Pagination {
     /** Result per page  */
     $rpp,
     /** Shoulod we add three continuation dots if too much pages ? */
-    $ellipsis;   
+    $ellipsis,
+    $ellipsisChar = "&mldr;";   
 
     /** The Pagination constructor
      *

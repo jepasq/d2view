@@ -179,6 +179,27 @@ class PaginationTest extends TestCase
         $this->assertEquals($pag->ellipsis, true);
     }
 
+    public function testElipsisIsModifiable()
+    {
+        $l1 = range(0,9);
+        $len = 3;
+        $pag = new Pagination($l1, $len);
+        $pag->ellipsis = false;
+        $this->assertEquals($pag->ellipsis, false);
+    }
+
+    public function testElipsisChar()
+    {
+        $l1 = range(0,9);
+        $len = 3;
+        $pag = new Pagination($l1, $len);
+        $this->assertEquals($pag->ellipsisChar, "&mldr;");
+
+        // And is modifiable
+        $pag->ellipsisChar = "AAA";
+        $this->assertEquals($pag->ellipsisChar, "AAA");
+    }
+    
     
 };
 
