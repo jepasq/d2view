@@ -11,12 +11,13 @@ Show the menu image of the hero and let choose 3 heroes name
     https://stackoverflow.com/a/45254824
 **** Handle doxygen documentation
 :LOGBOOK:
+CLOCK: [2023-06-28 mer. 07:44]--[2023-06-28 mer. 08:04] =>  0:20
 CLOCK: [2023-04-03 lun. 12:13]--[2023-04-03 lun. 12:39] =>  0:26
 CLOCK: [2023-03-27 lun. 09:58]--[2023-03-27 lun. 10:19] =>  0:21
 CLOCK: [2023-01-25 mer. 12:27]--[2023-01-25 mer. 12:53] =>  0:26
 :END:
 - [X] Document undocumented members
-- [ ] May add a markdown mainpage
+- [X] May add a markdown mainpage
 - [ ] Must call =doxygen -u= from time to time
 **** TODO Improve the admin/ interface
 :LOGBOOK:
