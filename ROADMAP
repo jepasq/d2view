@@ -58,6 +58,7 @@ CLOCK: [2023-05-09 mar. 11:33]--[2023-05-09 mar. 11:50] =>  0:17
 - [ ] May try phpunit from AUR https://aur.archlinux.org/packages/phpunit
 **** TODO Pagination may have an ellipsis if too much pages
 :LOGBOOK:
+CLOCK: [2023-07-10 lun. 14:06]--[2023-07-10 lun. 14:14] =>  0:08
 CLOCK: [2023-07-10 lun. 13:43]--[2023-07-10 lun. 13:53] =>  0:10
 CLOCK: [2023-06-28 mer. 06:52]--[2023-06-28 mer. 07:03] =>  0:11
 CLOCK: [2023-06-27 mar. 09:08]--[2023-06-27 mar. 09:23] =>  0:15
@@ -67,7 +68,8 @@ CLOCK: [2023-06-27 mar. 09:08]--[2023-06-27 mar. 09:23] =>  0:15
 - [-] Should have a max number of pages before and after actual one
   Continue with triple dots (=&mldr;=) : it's called an ellipsis
   - [X] EllispisThreshold property, getter and setter
-  - [ ] Test if then
+  - [X] Test it then
+  - [ ] Fix this failing unit test
 - [ ] Explorer's 'Current working dir' could be a 'breadcrumb'
   See https://getbootstrap.com/docs/4.0/components/breadcrumb/
 **** DONE Continue the Pagination work and other ideas

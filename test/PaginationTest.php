@@ -214,7 +214,15 @@ class PaginationTest extends TestCase
     }
 
     
-    
+    public function testElipsisHasAtLeastOne()
+    {
+        // Has an ellipsisThreshold property
+        $l1 = range(0,9);
+        $len = 3;
+        $pag = new Pagination($l1, $len);
+        $stack = $pag->getPageLinks("http://url");
+        $this->assertGreaterThan(substr_count($stack, $pag->ellipsisChar), 0);
+    }    
 };
 
 ?>
