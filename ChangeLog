@@ -1,3 +1,13 @@
+* v0.0.0-13 (12 Jun. 2023 - 10 Jul. 2023) SLOC 1,404
+- Add ellipsisThreshold property
+- Add a markdown-based Mainpage to API documentation
+- Add a modifiable ellipsisChar property to Pagination class
+- Add an ellipsis property to Pagination class
+- Close a pagination-related ROADMAP section
+- Add show vars admin section
+- Add a sensitive data alert to the admin page
+- Correctly print admin page
+
 * v0.0.0-12 (13 Apr. 2023 - 12 Jun. 2023) SLOC 1,337
 - Add a new Admin/ section and menu item
 - Add a couple of popular search item
