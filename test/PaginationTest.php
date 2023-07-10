@@ -199,6 +199,20 @@ class PaginationTest extends TestCase
         $pag->ellipsisChar = "AAA";
         $this->assertEquals($pag->ellipsisChar, "AAA");
     }
+
+    public function testElipsisThreshold()
+    {
+        // Has an ellipsisThreshold property
+        $l1 = range(0,9);
+        $len = 3;
+        $pag = new Pagination($l1, $len);
+        $this->assertEquals($pag->ellipsisThreshold, 3);
+
+        // And is modifiable
+        $pag->ellipsisThreshold = 8;
+        $this->assertEquals($pag->ellipsisThreshold, 8);
+    }
+
     
     
 };

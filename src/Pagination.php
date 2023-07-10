@@ -15,9 +15,10 @@ class Pagination {
     $list,
     /** Result per page  */
     $rpp,
-    /** Shoulod we add three continuation dots if too much pages ? */
+    /** Should we add three continuation dots if too much pages ? */
     $ellipsis,
-    $ellipsisChar = "&mldr;";   
+    $ellipsisChar = "&mldr;",
+    $ellipsisThreshold = 3; // How many pages before/after ellipsis
 
     /** The Pagination constructor
      *

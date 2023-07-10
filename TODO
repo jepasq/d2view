@@ -6,7 +6,8 @@ d2view - AGPLv3 - A DotA2 local data viewer and quizz generator.
     Update Version and Revision in src/page_layout.php and Doxyfile
 
 * v0.0.0-13 (12 Jun. 2023 - ???) SLOC ?,???
-- (7) Add a markdown-based Mainpage to API documentation
+- (8) Add ellipsisThreshold property
+- Add a markdown-based Mainpage to API documentation
 - Add a modifiable ellipsisChar property to Pagination class
 - Add an ellipsis property to Pagination class
 - Close a pagination-related ROADMAP section
