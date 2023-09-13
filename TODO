@@ -6,7 +6,8 @@ d2view - AGPLv3 - A DotA2 local data viewer and quizz generator.
     Update Version and Revision in src/page_layout.php and Doxyfile
 
 * v0.0.0-14 (10 Jul. 2023 - ???) SLOC ?,???
-- (4) Add basic github actions phpunit file
+- (5) First try to create config.php on github actions
+- Add basic github actions phpunit file
 - Improve doxygen documentation and main page content
 - Start implementation getPageLinks whif ellispis enabled
 - Add a failing ellipsis-related Pagination unit test

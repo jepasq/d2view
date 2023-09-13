@@ -55,10 +55,15 @@ CLOCK: [2023-05-09 mar. 11:33]--[2023-05-09 mar. 11:50] =>  0:17
     viewable with an image viewer
   - [ ] Make this extractdir viewable with the webserver  
 **** TODO May add unit tests
+:LOGBOOK:
+CLOCK: [2023-09-13 mer. 11:42]--[2023-09-13 mer. 11:57] =>  0:15
+:END:
 - [X] Explain PHPUnit installation on arch in README :  
 - [X] May try phpunit from AUR https://aur.archlinux.org/packages/phpunit
-- [ ] Add to github actions
+- [-] Add to github actions
   We have an error here and can't know why
+  - [X] First try to create config file in github actions
+  - [ ] Not sure we can through  
 **** TODO Pagination may have an ellipsis if too much pages
 :LOGBOOK:
 CLOCK: [2023-07-20 jeu. 14:40]--[2023-07-20 jeu. 15:09] =>  0:29
