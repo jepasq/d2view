@@ -20,7 +20,7 @@ jobs:
       run: sudo apt-get install -y phpunit make
 
     - name: Create config file
-      echo '<?php $home="/home/runner/work/";$extractdir="$home/d2view-extract";?>' > config.php
+      run: echo '<?php $home="/home/runner/work/";$extractdir="$home/d2view-extract";?>' > config.php
       
     - name: check
       run: make check
