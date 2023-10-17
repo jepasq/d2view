@@ -56,6 +56,7 @@ CLOCK: [2023-05-09 mar. 11:33]--[2023-05-09 mar. 11:50] =>  0:17
   - [ ] Make this extractdir viewable with the webserver  
 **** TODO May add unit tests
 :LOGBOOK:
+CLOCK: [2023-10-17 mar. 04:14]--[2023-10-17 mar. 04:33] =>  0:19
 CLOCK: [2023-09-13 mer. 11:42]--[2023-09-13 mer. 11:57] =>  0:15
 :END:
 - [X] Explain PHPUnit installation on arch in README :  
@@ -63,7 +64,10 @@ CLOCK: [2023-09-13 mer. 11:42]--[2023-09-13 mer. 11:57] =>  0:15
 - [-] Add to github actions
   We have an error here and can't know why
   - [X] First try to create config file in github actions
-  - [ ] Not sure we can through  
+  - [ ] Not sure we can through
+- [ ] Local unit tests are now failing : can't open pak01_dir.vpk file
+  from d2view.php:198
+  $dota_path is empty
 **** TODO Pagination may have an ellipsis if too much pages
 :LOGBOOK:
 CLOCK: [2023-10-09 lun. 04:15]--[2023-10-09 lun. 04:29] =>  0:14
