@@ -23,4 +23,4 @@ jobs:
       run: echo '<?php $home="/home/runner/work/";$extractdir="$home/d2view-extract";?>' > config.php
       
     - name: check
-      run: make check
+      run: make check-ngf

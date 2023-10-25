@@ -9,10 +9,15 @@ include_once('src/Pagination.php');
 
 /** The Pagination class test case
  *
+ * Please use the NoGameFiles documentation group to make the test
+ * runnable on CI.
+ *
  */
 class PaginationTest extends TestCase
 {
     /** Only test that the printTree member can be called
+     *
+     * @group NoGameFiles
      *
      */
     public function testCtor()

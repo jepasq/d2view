@@ -25,7 +25,6 @@ class D2view{
     $nb_files, 
     $vpk_file; //!< The first .vpk file to be opened in dota_path
     
-
     /** A path-based constructor
      *
      * Will set vpk_file and nb_files to -1.
@@ -35,9 +34,10 @@ class D2view{
      */
     function __construct($dota_path){
         if (empty($dota_path)) {
-            throw new Exception("`dota_path' variable can't be empty.");
+            throw new Exception("`dota_path' variable can't be empty.
+            Please check the way you call the D2view constructor.");
         }
-        echo "DotA path is ''";
+        echo "DotA path is '$dota_path'";
         $this->vpk_file = $dota_path.'pak01_dir.vpk';
         $this->nb_files = -1;
     }
