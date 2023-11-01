@@ -9,7 +9,6 @@ require('config.php'); // Mainly for $home
 // We're not in the same directory than src/ sources. We can't just use
 // global.php
 $dota = "$home/.steam/steam/steamapps/common/dota 2 beta/game/dota/";
-echo "=> `$dota'";
 
 /** The D2View class test case
  *
@@ -22,6 +21,7 @@ class D2viewTest extends TestCase
     public function testPrintTree()
     {
         global $dota;
+        echo "=> `$dota'\n";
         $d2 = new D2View($dota);
         $ret = $d2->printTree(["cfg"], '', false);
         $this->assertTrue(empty($ret));
