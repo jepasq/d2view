@@ -35,6 +35,11 @@ class PaginationTest extends TestCase
 
     }
 
+    /** Test the result per page member
+     *
+     * @group NoGameFiles
+     *
+     */
     public function testResultPerPage()
     {
         $l = array(1,1,2);
@@ -45,7 +50,11 @@ class PaginationTest extends TestCase
         $this->assertEquals($pag->rpp, 100);
     }
 
-    /// Test that it throws an exception if 1st arg is not an array
+    /** Test that it throws an exception if 1st arg is not an array
+     *
+     * @group NoGameFiles
+     *
+     */
     public function testNotAnArray()
     {
         $l = "Not an array";
@@ -54,6 +63,11 @@ class PaginationTest extends TestCase
         $pag = new Pagination($l);
     }
 
+    /** Test the getPage function
+     *
+     * @group NoGameFiles
+     *
+     */
     public function testGetPage()
     {
         $l = range(0,9);
@@ -63,7 +77,11 @@ class PaginationTest extends TestCase
         $this->assertTrue(is_array($p1));
     }
 
-    // Check the result array length
+    /** Check the getPage() result array length
+     *
+     * @group NoGameFiles
+     *
+     */
     public function testGetPage_ResultPage()
     {
         $l = range(0,9);
@@ -74,7 +92,11 @@ class PaginationTest extends TestCase
         $this->assertEquals(count($p1), $len);
     }
 
-    // Check the second page content
+    /** Check the second page content
+     *
+     * @group NoGameFiles
+     *
+     */
     public function testGetPage_SecondPage()
     {
         $l = range(0,9);
@@ -87,7 +109,11 @@ class PaginationTest extends TestCase
         $this->assertEquals(count($diff), 0);
     }
     
-    // Check the second page content
+    /** Check the getMaxPage() return value
+     *
+     * @group NoGameFiles
+     *
+     */
     public function testGetMaxPage()
     {
         $l1 = range(0,9);
@@ -100,6 +126,11 @@ class PaginationTest extends TestCase
         $this->assertEquals($pag->getMaxPage(), 3);
     }
 
+    /** Check the getPageLinks() returned type
+     *
+     * @group NoGameFiles
+     *
+     */
     public function testGetPageLinks_IsAString()
     {
         $l1 = range(0,9);
@@ -109,7 +140,11 @@ class PaginationTest extends TestCase
         $this->assertTrue(is_string($pl));
     }
 
-    // Must individually contain 1, 2 and 3 characters
+    /** getPaheLinks must individually contain 1, 2 and 3 characters
+     *
+     * @group NoGameFiles
+     *
+     */
     public function testGetPageLinks_Contains_123()
     {
         $l1 = range(0,9);
