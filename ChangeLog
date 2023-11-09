@@ -1,3 +1,13 @@
+* v0.0.0-14 (10 Jul. 2023 - 11 Oct. 2023) SLOC 1,471
+- Add more agination-related tests to the NoGameFiles category
+- Add NoGameFiles test category
+- Throw an exception is dota_path variable is empty
+- First try to create config.php on github actions
+- Add basic github actions phpunit file
+- Improve doxygen documentation and main page content
+- Start implementation getPageLinks whif ellispis enabled
+- Add a failing ellipsis-related Pagination unit test
+
 * v0.0.0-13 (12 Jun. 2023 - 10 Jul. 2023) SLOC 1,404
 - Add ellipsisThreshold property
 - Add a markdown-based Mainpage to API documentation
