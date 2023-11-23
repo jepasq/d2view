@@ -10,3 +10,7 @@ check:
 check-pag:
 	phpunit -d memory_limit=-1 test/PaginationTest.php
 
+check-ptree:
+	phpunit --filter testPrintTree test/D2viewTest.php
+
+

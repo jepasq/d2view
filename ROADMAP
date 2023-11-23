@@ -74,6 +74,7 @@ CLOCK: [2023-06-27 mar. 09:08]--[2023-06-27 mar. 09:23] =>  0:15
   See https://getbootstrap.com/docs/4.0/components/breadcrumb/
 **** TODO [fix_EmptyDotaPath] May add unit tests
 :LOGBOOK:
+CLOCK: [2023-11-23 jeu. 02:34]--[2023-11-23 jeu. 02:53] =>  0:19
 CLOCK: [2023-11-09 jeu. 03:18]--[2023-11-09 jeu. 03:45] =>  0:27
 CLOCK: [2023-11-01 mer. 05:45]--[2023-11-01 mer. 06:21] =>  0:36
 CLOCK: [2023-10-25 mer. 05:13]--[2023-10-25 mer. 05:53] =>  0:40
@@ -86,11 +87,13 @@ CLOCK: [2023-09-13 mer. 11:42]--[2023-09-13 mer. 11:57] =>  0:15
   We have an error here and can't know why
   - [X] First try to create config file in github actions
   - [X] Not sure we can through
+- [X] Maybe two tests catagory (need game files, don't need)
 - [ ] Local unit tests are now failing : can't open pak01_dir.vpk file
   from d2view.php:198
   $dota_path is empty Only occurs in unit tests
-- [ ] Maybe two tests catagory (need game files, don't need)
-  Add more tests to NoGameFiles category
+  - [ ] Maybe due to global usage ? Try to use setup/teardown instead
+    Added the =make test-ptree= for this
+- [ ] Add more tests to NoGameFiles category
 **** DONE Continue the Pagination work and other ideas
 :LOGBOOK:
 CLOCK: [2023-05-17 mer. 01:36]--[2023-05-17 mer. 01:46] =>  0:10

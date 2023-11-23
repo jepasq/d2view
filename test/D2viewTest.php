@@ -15,14 +15,24 @@ $dota = "$home/.steam/steam/steamapps/common/dota 2 beta/game/dota/";
  */
 class D2viewTest extends TestCase
 {
+    protected function setUp(): void {
+        global $dota;
+        echo "=> DOTA path is `$dota'\n";
+        $this->dota = $dota;
+    }
+
+    protected function teardown(): void {
+        global $dota;
+        $dota = $this->dota;
+    }
+
+    
     /** Only test that the printTree member can be called
      *
      */
     public function testPrintTree()
     {
-        global $dota;
-        echo "=> `$dota'\n";
-        $d2 = new D2View($dota);
+        $d2 = new D2View($this->dota);
         $ret = $d2->printTree(["cfg"], '', false);
         $this->assertTrue(empty($ret));
     }
