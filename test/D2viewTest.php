@@ -6,24 +6,25 @@ use PHPUnit\Framework\TestCase;
 include_once('src/d2view.php');
 require('config.php'); // Mainly for $home
 
-// We're not in the same directory than src/ sources. We can't just use
-// global.php
-$dota = "$home/.steam/steam/steamapps/common/dota 2 beta/game/dota/";
 
 /** The D2View class test case
  *
  */
 class D2viewTest extends TestCase
 {
+    /// The path to call D2View constructor with
+    private $dota;
+
+    
     protected function setUp(): void {
-        global $dota;
-        echo "=> DOTA path is `$dota'\n";
-        $this->dota = $dota;
+        global $home;
+        $this->dota = "$home/.steam/steam/steamapps/common/dota 2 beta/game/dota/";;
+        echo "=> DOTA path is `$dota' (based on home '$home')\n";
+        
     }
 
     protected function teardown(): void {
-        global $dota;
-        $dota = $this->dota;
+
     }
 
     
@@ -40,16 +41,14 @@ class D2viewTest extends TestCase
 
     public function testListFiles()
     {
-        global $dota;
-        $d2 = new D2View($dota);
+        $d2 = new D2View($this->dota);
         $ret = $d2->listFiles("cfg", false);
         $this->assertTrue(empty($ret));
     }
 
     public function testGetFile()
     {
-        global $dota;
-        $d2 = new D2View($dota);
+        $d2 = new D2View($this->dota);
         $ret = $d2->getFile("cfg/frontpage_layout.txt");
         $this->assertFalse(empty($ret));
 
@@ -60,8 +59,7 @@ class D2viewTest extends TestCase
    
     public function testGetFileContent()
     {
-        global $dota;
-        $d2 = new D2View($dota);
+        $d2 = new D2View($this->dota);
         $ret = $d2->getFileContent("cfg/frontpage_layout.txt", 1024);
         $this->assertFalse(empty($ret));
     }
@@ -69,8 +67,7 @@ class D2viewTest extends TestCase
     /// We had some issue with this particular file
     public function testGetFileContentException()
     {
-        global $dota;
-        $d2 = new D2View($dota);
+        $d2 = new D2View($this->dota);
         // Real name is prepend with '/materials'
         $filen = "achievements/dota_achievement_placeholder.png";
         $this->expectException('VPKReader\Exception');
@@ -84,8 +81,7 @@ class D2viewTest extends TestCase
      */
     public function testQueryString_cfg()
     {
-        global $dota;
-        $d2 = new D2View($dota);
+        $d2 = new D2View($this->dota);
         $list = $d2->queryString("cfg");
 
 //        var_dump(count($list));
@@ -98,8 +94,7 @@ class D2viewTest extends TestCase
      */
     public function testQueryString_png()
     {
-        global $dota;
-        $d2 = new D2View($dota);
+        $d2 = new D2View($this->dota);
         $list = $d2->queryString(".png");
 
         $this->assertGreaterThan(0, count($list));
@@ -110,8 +105,7 @@ class D2viewTest extends TestCase
      */
     public function testViewerLink_withoutExtension()
     {
-        global $dota;
-        $d2 = new D2View($dota);
+        $d2 = new D2View($this->dota);
         // We do not test output here. viewer_link() always return true
         // and onky echo() link
         $this->assertTrue($d2->viewer_link('ext'));
@@ -122,15 +116,13 @@ class D2viewTest extends TestCase
      */
     public function testViewerLink_withExtension()
     {
-        global $dota;
-        $d2 = new D2View($dota);
+        $d2 = new D2View($this->dota);
         $this->assertTrue($d2->viewer_link('filename.ext'));
     }
 
     public function testQueryString_directory_separators()
     {
-        global $dota;
-        $d2 = new D2View($dota);
+        $d2 = new D2View($this->dota);
         $list = $d2->queryString(".png");
 
         // Shoud contain subdirs separator (only keep first elements)
@@ -142,8 +134,7 @@ class D2viewTest extends TestCase
     /// Test the new canHandleExtension() function implementation
     public function testCanHandleExtension()
     {
-        global $dota;
-        $d2 = new D2View($dota);
+        $d2 = new D2View($this->dota);
         $this->assertTrue($d2->canHandleExtension('aze.txt'));
         $this->assertFalse($d2->canHandleExtension('aze.nottxt'));
 
