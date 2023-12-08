@@ -1,10 +1,11 @@
 <?php
 use PHPUnit\Framework\TestCase;
 
-// Please remenber that tests are called from root directory so, no need
+require('config.php'); // Mainly for $home (needed by d2view)
+// Please remenber that tests are called from root directory so, we need
 // to explicitely call in src/.
 include_once('src/d2view.php');
-require('config.php'); // Mainly for $home
+echo "=> DOTA path is `$dota' (based on home '$home')\n";
 
 
 /** The D2View class test case
@@ -14,13 +15,10 @@ class D2viewTest extends TestCase
 {
     /// The path to call D2View constructor with
     private $dota;
-
     
     protected function setUp(): void {
         global $home;
         $this->dota = "$home/.steam/steam/steamapps/common/dota 2 beta/game/dota/";;
-        echo "=> DOTA path is `$dota' (based on home '$home')\n";
-        
     }
 
     protected function teardown(): void {

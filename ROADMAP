@@ -93,7 +93,7 @@ CLOCK: [2023-09-13 mer. 11:42]--[2023-09-13 mer. 11:57] =>  0:15
   from d2view.php:198
   $dota_path is empty Only occurs in unit tests
   - [ ] Maybe due to global usage ? Try to use setup/teardown instead
-    Added the =make test-ptree= for this
+    Added the =make check-ptree= for this
 - [ ] Add more tests to NoGameFiles category
 **** DONE Continue the Pagination work and other ideas
 :LOGBOOK:
