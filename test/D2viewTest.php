@@ -15,12 +15,19 @@ class D2viewTest extends TestCase
 {
     /// The path to call D2View constructor with
     private $dota;
-    
+
+    /** Setup the test case before executing tests
+     *
+     */
     protected function setUp(): void {
         global $home;
-        $this->dota = "$home/.steam/steam/steamapps/common/dota 2 beta/game/dota/";;
+        $this->dota = "$home/.steam/steam/steamapps/common/dota 2 beta/"
+            ."game/dota/";
     }
 
+    /** Tear down instance members
+     *
+     */
     protected function teardown(): void {
 
     }
@@ -31,6 +38,9 @@ class D2viewTest extends TestCase
      */
     public function testPrintTree()
     {
+        // Should be defined. Only added to make current branch tests fail
+        $this->assertTrue(defined('dota'));
+
         $d2 = new D2View($this->dota);
         $ret = $d2->printTree(["cfg"], '', false);
         $this->assertTrue(empty($ret));
