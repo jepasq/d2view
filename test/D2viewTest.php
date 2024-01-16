@@ -5,7 +5,6 @@ require('config.php'); // Mainly for $home (needed by d2view)
 // Please remenber that tests are called from root directory so, we need
 // to explicitely call in src/.
 include_once('src/d2view.php');
-echo "=> DOTA path is `$dota' (based on home '$home')\n";
 
 
 /** The D2View class test case
@@ -23,13 +22,14 @@ class D2viewTest extends TestCase
         global $home;
         $this->dota = "$home/.steam/steam/steamapps/common/dota 2 beta/"
             ."game/dota/";
+        echo "=> DOTA path is `$this->dota' (based on home '$home')\n";
     }
 
     /** Tear down instance members
      *
      */
     protected function teardown(): void {
-
+        
     }
 
     
@@ -39,13 +39,13 @@ class D2viewTest extends TestCase
     public function testPrintTree()
     {
         // Should be defined. Only added to make current branch tests fail
-        $this->assertTrue(defined('dota'));
+        $this->assertTrue(defined('$this->dota'));
 
         $d2 = new D2View($this->dota);
         $ret = $d2->printTree(["cfg"], '', false);
         $this->assertTrue(empty($ret));
     }
-    
+
 
     public function testListFiles()
     {
