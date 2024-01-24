@@ -39,8 +39,7 @@ class D2viewTest extends TestCase
     public function testPrintTree()
     {
         // Should be defined. Only added to make current branch tests fail
-        $this->assertTrue(defined('$this->dota'));
-
+        $this->assertTrue(isset($this->dota));
         $d2 = new D2View($this->dota);
         $ret = $d2->printTree(["cfg"], '', false);
         $this->assertTrue(empty($ret));
