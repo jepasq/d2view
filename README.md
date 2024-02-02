@@ -16,6 +16,8 @@ This file **must** be called `config.php` and should
 looks like that :
 
 	<?php
+	global $home, $extractdir;
+
 	$home="/home/<your_username_here>/";
 	$extractdir="$home/d2view-extract";
 	?>

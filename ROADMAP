@@ -72,17 +72,19 @@ CLOCK: [2023-06-27 mar. 09:08]--[2023-06-27 mar. 09:23] =>  0:15
   - [ ] Fix this failing unit test
 - [ ] Explorer's 'Current working dir' could be a 'breadcrumb'
   See https://getbootstrap.com/docs/4.0/components/breadcrumb/
-**** TODO [fix_EmptyDotaPath] Try to fix ptree unit test
+**** TODO Try to fix ptree unit test
 :LOGBOOK:
+CLOCK: [2024-02-02 ven. 13:05]--[2024-02-02 ven. 13:25] =>  0:20
 CLOCK: [2024-01-24 mer. 16:52]--[2024-01-24 mer. 17:07] =>  0:15
 CLOCK: [2024-01-16 mar. 12:42]--[2024-01-16 mar. 13:32] =>  0:50
 CLOCK: [2024-01-16 mar. 12:12]--[2024-01-16 mar. 12:21] =>  0:09
 :END:
-- [-] Local unit tests are now failing : can't open pak01_dir.vpk file
+- [X] Local unit tests are now failing : can't open pak01_dir.vpk file
   from d2view.php:198: $dota_path is empty. Only occurs in unit tests.
   - [X] Maybe due to global usage ? Try to use setup/teardown instead
-  - [ ] Now, inside the D2View ctor, $home must have a value
+  - [X] Now, inside the D2View ctor, $home must have a value
     Added the =make check-ptree= for this
+  - [X] Added =global= to config file seems to fix
 - [ ] Add more tests to NoGameFiles category
 **** DONE [fix_EmptyDotaPath] May add unit tests
 :LOGBOOK:
