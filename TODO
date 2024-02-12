@@ -6,7 +6,8 @@ d2view - AGPLv3 - A DotA2 local data viewer and quizz generator.
     Update Version and Revision in src/page_layout.php and Doxyfile
 
 * v0.0.0-15 (11 Oct. 2023 - ???) SLOC ?,???
-- (6) Added global declaration to config file to fix empty dota path issue
+- (7) Better DotA path styling in explorer header
+- Added global declaration to config file to fix empty dota path issue
 - Fix an assert using isset instead of defined
 - Fix the D2viewTest::testPrintTree's defined assertion var name
 - Add a defined-based assert in failing ptree unit test

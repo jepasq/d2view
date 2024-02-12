@@ -37,7 +37,7 @@ class D2view{
             throw new Exception("`dota_path' variable can't be empty.
             Please check the way you call the D2view constructor.");
         }
-        echo "DotA path is '$dota_path'";
+        echo "<strong>DotA</strong> path is '<em>$dota_path</em>'<br>";
         $this->vpk_file = $dota_path.'pak01_dir.vpk';
         $this->nb_files = -1;
     }

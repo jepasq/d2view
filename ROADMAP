@@ -74,6 +74,7 @@ CLOCK: [2023-06-27 mar. 09:08]--[2023-06-27 mar. 09:23] =>  0:15
   See https://getbootstrap.com/docs/4.0/components/breadcrumb/
 **** TODO Try to fix ptree unit test
 :LOGBOOK:
+CLOCK: [2024-02-12 lun. 19:15]--[2024-02-12 lun. 19:34] =>  0:19
 CLOCK: [2024-02-02 ven. 13:05]--[2024-02-02 ven. 13:25] =>  0:20
 CLOCK: [2024-01-24 mer. 16:52]--[2024-01-24 mer. 17:07] =>  0:15
 CLOCK: [2024-01-16 mar. 12:42]--[2024-01-16 mar. 13:32] =>  0:50
@@ -85,6 +86,8 @@ CLOCK: [2024-01-16 mar. 12:12]--[2024-01-16 mar. 12:21] =>  0:09
   - [X] Now, inside the D2View ctor, $home must have a value
     Added the =make check-ptree= for this
   - [X] Added =global= to config file seems to fix
+- [ ] Doesn't work anymore on manjaro/apache
+  No log at all.
 - [ ] Add more tests to NoGameFiles category
 **** DONE [fix_EmptyDotaPath] May add unit tests
 :LOGBOOK:
