@@ -87,7 +87,7 @@ CLOCK: [2024-01-16 mar. 12:12]--[2024-01-16 mar. 12:21] =>  0:09
     Added the =make check-ptree= for this
   - [X] Added =global= to config file seems to fix
 - [ ] Doesn't work anymore on manjaro/apache
-  No log at all.
+  No log at all. Go to /127.0.0.1/ to connect : Don't know why ?
 - [ ] Add more tests to NoGameFiles category
 **** DONE [fix_EmptyDotaPath] May add unit tests
 :LOGBOOK:

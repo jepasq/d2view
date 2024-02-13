@@ -7,3 +7,6 @@ config.php
 doxygen.log
 html/
 latex/
+
+# Created when we upgrade doxyden with `doxygen -u` command
+Doxyfile.bak
