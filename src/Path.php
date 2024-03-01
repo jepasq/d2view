@@ -13,14 +13,15 @@ class Path {
     $path = '';
 
     function __construct($path){
-        $this->path = $start_page;
+        $this->path = $path;
     }
 
     /** Print the current path and add a copy to clipboard button
      */
     function printAndCopy() {
-        return "<tt>$this->path</tt><button <button type='button'
-            onClick='navigator.clipboard.writeText($this->path);'></button>";
+        return "<tt>$this->path</tt><button type='button'
+            onClick='navigator.clipboard.writeText(\"$this->path\");>
+            Copy to Clipboard</button>";
     }
 };
 ?>

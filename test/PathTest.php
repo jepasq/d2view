@@ -25,6 +25,7 @@ class PathTest extends TestCase
         
         $this->assertTrue(str_contains($output, "aze/tjk"));
         $this->assertTrue(str_contains($output, "onClick"));
+        $this->assertTrue(str_contains($output, "Copy to clipboard"));
         
     }    
 };

@@ -95,6 +95,7 @@ CLOCK: [2024-01-16 mar. 12:12]--[2024-01-16 mar. 12:21] =>  0:09
   - It's printed from the D2View ctor
   - [X] Unit test
   - [ ] Implement and fix unit tests
+  - [ ] Add an alert to notify copy  
   - [ ] Use in D2View ctor
 - [ ] May move style.css to public/
 - [ ] Add more tests to NoGameFiles category
