@@ -4,6 +4,7 @@ include('VPKReader/VPKHeader.php');
 include('VPKReader/VPKDirectoryEntry.php');
 include('VPKReader/VPKFile.php');
 include('VPKReader/VPK.php');
+include_once('Path.php');
 
 /** A conditionnal echo that only prints if first argument is True
  *
@@ -37,7 +38,10 @@ class D2view{
             throw new Exception("`dota_path' variable can't be empty.
             Please check the way you call the D2view constructor.");
         }
-        echo "<strong>DotA</strong> path is '<em>$dota_path</em>'<br>";
+        echo "<strong>DotA</strong> path is";
+        $p = new Path($dota_path);
+        echo $p->printAndCopy();
+        echo "'<br>";
         $this->vpk_file = $dota_path.'pak01_dir.vpk';
         $this->nb_files = -1;
     }
