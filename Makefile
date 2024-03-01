@@ -13,4 +13,7 @@ check-pag:
 check-ptree:
 	phpunit --filter testPrintTree test/D2viewTest.php
 
+check-path:
+	phpunit test/PathTest.php
+
 
