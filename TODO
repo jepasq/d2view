@@ -6,7 +6,8 @@ d2view - AGPLv3 - A DotA2 local data viewer and quizz generator.
     Update Version and Revision in src/page_layout.php and Doxyfile
 
 * v0.0.0-16 (13 Feb. 2024 - ???) SLOC ?,???
-- (4) Copy to clipboard shows a notification
+- (5) Improve and fix Path unit tests using assertStringContainsString
+- Copy to clipboard shows a notification
 - Fix copied to clipboard text
 - Unit test and use new Path class
 - Add failing Path unit tests

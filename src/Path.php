@@ -21,7 +21,7 @@ class Path {
     function printAndCopy() {
         return "<tt>$this->path</tt><button type='button'
             onClick='copyToClipboard(\"$this->path\");'>
-            Copy to Clipboard</button>
+            Copy to clipboard</button>
             <span id='copied-to-cb' style='display:none;'>Copied!</span>";
     }
 };

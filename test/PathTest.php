@@ -21,12 +21,12 @@ class PathTest extends TestCase
         $p = new Path('/aze/tjk');
         $output = $p->printAndCopy();
 
-        echo $output;
-        
-        $this->assertTrue(str_contains($output, "aze/tjk"));
-        $this->assertTrue(str_contains($output, "onClick"));
-        $this->assertTrue(str_contains($output, "Copy to clipboard"));
-        
+        $this->assertStringContainsString("aze/tjk", $output);
+        $this->assertStringContainsString("onClick", $output);
+        $this->assertStringContainsString("Copy to clipboard", $output);
+
+        // Must contain the notification span/div
+        $this->assertStringContainsString("id='copied-to-cb'", $output);
     }    
 };
 

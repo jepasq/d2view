@@ -74,6 +74,7 @@ CLOCK: [2023-06-27 mar. 09:08]--[2023-06-27 mar. 09:23] =>  0:15
   See https://getbootstrap.com/docs/4.0/components/breadcrumb/
 **** TODO Try to fix ptree unit test
 :LOGBOOK:
+CLOCK: [2024-03-14 jeu. 05:04]--[2024-03-14 jeu. 05:21] =>  0:17
 CLOCK: [2024-03-14 jeu. 04:27]--[2024-03-14 jeu. 04:54] =>  0:27
 CLOCK: [2024-03-01 ven. 04:24]--[2024-03-01 ven. 04:45] =>  0:21
 CLOCK: [2024-03-01 ven. 04:02]--[2024-03-01 ven. 04:15] =>  0:13
@@ -98,8 +99,8 @@ CLOCK: [2024-01-16 mar. 12:12]--[2024-01-16 mar. 12:21] =>  0:09
   copy dota path. From a path.php file with a print_and_copy function
   - It's printed from the D2View ctor
   - [X] Unit test
-  - [ ] Implement and fix unit tests
-  - [ ] Add an alert to notify copy  
+  - [X] Implement and fix unit tests
+  - [X] Add an alert to notify copy  
   - [ ] Use in D2View ctor
 - [ ] May move style.css to public/
 - [ ] Add more tests to NoGameFiles category
