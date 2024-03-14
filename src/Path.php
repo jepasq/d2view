@@ -20,8 +20,9 @@ class Path {
      */
     function printAndCopy() {
         return "<tt>$this->path</tt><button type='button'
-            onClick='navigator.clipboard.writeText(\"$this->path\");>
-            Copy to Clipboard</button>";
+            onClick='copyToClipboard(\"$this->path\");'>
+            Copy to Clipboard</button>
+            <span id='copied-to-cb' style='display:none;'>Copied!</span>";
     }
 };
 ?>
