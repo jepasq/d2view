@@ -74,6 +74,7 @@ CLOCK: [2023-06-27 mar. 09:08]--[2023-06-27 mar. 09:23] =>  0:15
   See https://getbootstrap.com/docs/4.0/components/breadcrumb/
 **** TODO Try to fix ptree unit test
 :LOGBOOK:
+CLOCK: [2024-03-26 mar. 07:12]--[2024-03-26 mar. 07:16] =>  0:04
 CLOCK: [2024-03-14 jeu. 05:04]--[2024-03-14 jeu. 05:21] =>  0:17
 CLOCK: [2024-03-14 jeu. 04:27]--[2024-03-14 jeu. 04:54] =>  0:27
 CLOCK: [2024-03-01 ven. 04:24]--[2024-03-01 ven. 04:45] =>  0:21
@@ -94,15 +95,15 @@ CLOCK: [2024-01-16 mar. 12:12]--[2024-01-16 mar. 12:21] =>  0:09
   No log at all. Go to /127.0.0.1/ to connect : Don't know why ?
 - [X] Exploreres path is now badly placed
   In fact, the copy button from Path class isn't closed
-  
-- [-] Dota path in explorer could have a 'copy to clipboard' button to
+- [X] Dota path in explorer could have a 'copy to clipboard' button to
   copy dota path. From a path.php file with a print_and_copy function
   - It's printed from the D2View ctor
   - [X] Unit test
   - [X] Implement and fix unit tests
   - [X] Add an alert to notify copy  
-  - [ ] Use in D2View ctor
-- [ ] May move style.css to public/
+  - [X] Use in D2View ctor  
+- [X] May move style.css to public/
+  
 - [ ] Add more tests to NoGameFiles category
 **** DONE [fix_EmptyDotaPath] May add unit tests
 :LOGBOOK:
