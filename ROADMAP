@@ -58,6 +58,7 @@ CLOCK: [2023-05-09 mar. 11:33]--[2023-05-09 mar. 11:50] =>  0:17
 - [ ] Add more tests to NoGameFiles category
 **** TODO Pagination may have an ellipsis if too much pages
 :LOGBOOK:
+CLOCK: [2024-04-08 lun. 06:53]--[2024-04-08 lun. 07:33] =>  0:40
 CLOCK: [2023-10-09 lun. 04:15]--[2023-10-09 lun. 04:29] =>  0:14
 CLOCK: [2023-07-20 jeu. 14:40]--[2023-07-20 jeu. 15:09] =>  0:29
 CLOCK: [2023-07-10 lun. 14:06]--[2023-07-10 lun. 14:14] =>  0:08
@@ -72,8 +73,10 @@ CLOCK: [2023-06-27 mar. 09:08]--[2023-06-27 mar. 09:23] =>  0:15
   - [X] EllispisThreshold property, getter and setter
   - [X] Test it then
   - [ ] Fix this failing unit test
-- [ ] Explorer's 'Current working dir' could be a 'breadcrumb'
+- [-] Explorer's 'Current working dir' could be a 'breadcrumb'
   See https://getbootstrap.com/docs/4.0/components/breadcrumb/
+  - [X] For this, add NogameFiles unittest on Breadcrumb class
+  - [ ] Now, test and add a print function
 *** DONE v0.0.2
 **** DONE Try to fix ptree unit test
 :LOGBOOK:

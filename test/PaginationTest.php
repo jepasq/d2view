@@ -32,7 +32,6 @@ class PaginationTest extends TestCase
         
         $pag = new Pagination($l);        // 1 Args version
         $this->assertFalse(empty($pag));
-
     }
 
     /** Test the result per page member
