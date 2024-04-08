@@ -1,6 +1,6 @@
 <?php
 
-define("VERSION", "0.0.2-15");
+define("VERSION", "0.0.2-16");
 define("APPNAME", "d2view");
 
 // Based on https://stackoverflow.com/a/31685070

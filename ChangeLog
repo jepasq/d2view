@@ -1,3 +1,13 @@
+* v0.0.2-16 (13 Feb. 2024 - 8 Apr. 2024) SLOC 1,628
+- Start to implement Breadcrumb unit tests and class
+- Close ptree-related section and switch to minor version 2
+- Move style.css file to public/
+- Improve and fix Path unit tests using assertStringContainsString
+- Copy to clipboard shows a notification
+- Fix copied to clipboard text
+- Unit test and use new Path class
+- Add failing Path unit tests
+
 * v0.0.0-15 (11 Oct. 2023 - 13 Feb. 2024) SLOC 1,479
 - Upgrade Doxygen file
 - Better DotA path styling in explorer header
