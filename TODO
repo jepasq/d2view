@@ -6,5 +6,6 @@ d2view - AGPLv3 - A DotA2 local data viewer and quizz generator.
     Update Version and Revision in src/page_layout.php and Doxyfile
 
 * v0.0.2-17 (8 Apr. 2024 - ???) SLOC ?,???
-- (2) First BreadCrumb::print implementation
+- (3) Explorer page uses Breadcrumb class to print pwd
+- First BreadCrumb::print implementation
 - Add a couple of failing breadcrumb unit tests

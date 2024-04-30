@@ -28,7 +28,6 @@ class Breadcrumb
 
     function print(){
         $ret = $sep = "/";
-        fwrite(STDERR, print_r($ret, TRUE));
         foreach ($this->paths as $p) {
             if(end($this->paths) === $p) {
 		        $ret .= $p;
@@ -36,7 +35,6 @@ class Breadcrumb
              $ret .= "<a href=''>" . $p . "</a>" . $sep;
          }
         }
-        //fwrite(STDERR,   "\n=>" . $ret . "\n");
         return $ret;
     }
 
