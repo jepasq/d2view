@@ -27,10 +27,34 @@ class BreadcrumbTest extends TestCase
         // With a custom path separator
         $bc = new Breadcrumb(",this,is,a,path", ','); 
         $this->assertFalse(empty($bc));
-
-        
-        
     }
+
+    public function testHrefNumber()
+    {
+        // With should have path number - 1 href
+        $bc = new Breadcrumb("/this/is/a/path");
+        $out = $bc->print();
+        $this->assertEquals(substr_count($out, 'href'), 3);
+
+        $bc = new Breadcrumb("/this/is/a/new/path");
+        $out = $bc->print();
+        $this->assertEquals(substr_count($out, 'href'), 4);
+    }
+
+    public function testPathSeparatorNumber()
+    {
+        $sep = '/';
+        // With should have path number - 1 href
+        $bc = new Breadcrumb("/this/is/a/path");
+        $out = $bc->print();
+        $this->assertEquals(substr_count($out, $sep), 3);
+
+        $bc = new Breadcrumb("/this/is/a/new/path");
+        $out = $bc->print();
+        $this->assertEquals(substr_count($out, $sep), 4);
+    }
+
+    
 };
 
 
