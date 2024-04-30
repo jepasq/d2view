@@ -58,6 +58,7 @@ CLOCK: [2023-05-09 mar. 11:33]--[2023-05-09 mar. 11:50] =>  0:17
 - [ ] Add more tests to NoGameFiles category
 **** TODO Pagination may have an ellipsis if too much pages
 :LOGBOOK:
+CLOCK: [2024-04-30 mar. 17:21]--[2024-04-30 mar. 17:48] =>  0:27
 CLOCK: [2024-04-30 mar. 17:10]--[2024-04-30 mar. 17:19] =>  0:09
 CLOCK: [2024-04-08 lun. 06:53]--[2024-04-08 lun. 07:33] =>  0:40
 CLOCK: [2023-10-09 lun. 04:15]--[2023-10-09 lun. 04:29] =>  0:14
@@ -77,7 +78,8 @@ CLOCK: [2023-06-27 mar. 09:08]--[2023-06-27 mar. 09:23] =>  0:15
 - [-] Explorer's 'Current working dir' could be a 'breadcrumb'
   See https://getbootstrap.com/docs/4.0/components/breadcrumb/
   - [X] For this, add NogameFiles unittest on Breadcrumb class
-  - [ ] Now, test and add a print function
+  - [X] Now, test and add a print function
+  - [ ] Now use it in explorer page  
 *** DONE v0.0.2
 **** DONE Try to fix ptree unit test
 :LOGBOOK:
