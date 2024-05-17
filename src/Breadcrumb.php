@@ -19,11 +19,16 @@ class Breadcrumb
 {
     public
     /** The current page index starting at 0. */
-    $paths;
+    $paths,
+    $pattern;
 
-   
-    function __construct($path = '', $separator = '/'){
+
+    /** \param $pattern The pattern where '%s' will be replaced with
+     *                  individual paths.
+     */
+    function __construct($path = '', $pattern="%s", $separator = '/'){
         $this->paths = remove_empty(explode($separator, $path));
+        $this->pattern = $pattern;
     }
 
     function print(){
