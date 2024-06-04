@@ -29,6 +29,10 @@ class BreadcrumbTest extends TestCase
         $this->assertFalse(empty($bc));
     }
 
+    /*
+    * @group NoGameFiles
+    *
+    */
     public function testHrefNumber()
     {
         // With should have path number - 1 href
@@ -41,6 +45,10 @@ class BreadcrumbTest extends TestCase
         $this->assertEquals(substr_count($out, 'href'), 4);
     }
 
+    /*
+    * @group NoGameFiles
+    *
+    */
     public function testPathSeparatorNumber()
     {
         $sep = '/';
@@ -54,6 +62,10 @@ class BreadcrumbTest extends TestCase
         $this->assertEquals(substr_count($out, $sep), 4);
     }
 
+    /*
+    * @group NoGameFiles
+    *
+    */
     public function testPattern()
     {
         $bc = new Breadcrumb("/this/is/a/new/path", "pattern:%s");
@@ -62,6 +74,10 @@ class BreadcrumbTest extends TestCase
         $this->assertTrue(str_contains($out, 'pattern:/this/is'), 4);
     }
 
+    /*
+    * @group NoGameFiles
+    *
+    */
     public function testhasPatter()
     {
         $bc = new Breadcrumb("/this/is/a/new/path");

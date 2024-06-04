@@ -6,7 +6,8 @@ d2view - AGPLv3 - A DotA2 local data viewer and quizz generator.
     Update Version and Revision in src/page_layout.php and Doxyfile
 
 * v0.0.2-17 (8 Apr. 2024 - ???) SLOC ?,???
-- (5) Improve Breadcrumb href pattern handling
+- (6) Add Breadcrumb tests to NoGameFiles group
+- Improve Breadcrumb href pattern handling
 - Breadcrumb ctor accepts a third pattern parameter
 - Explorer page uses Breadcrumb class to print pwd
 - First BreadCrumb::print implementation
