@@ -60,10 +60,15 @@ class BreadcrumbTest extends TestCase
         $out = $bc->print();
         $this->assertTrue(str_contains($out, 'pattern:/this'), 4);
         $this->assertTrue(str_contains($out, 'pattern:/this/is'), 4);
-
-        
     }
-    
+
+    public function testhasPatter()
+    {
+        $bc = new Breadcrumb("/this/is/a/new/path");
+        $this->assertTrue($bc->hasPattern("aze%sdfg"));
+        $this->assertFalse($bc->hasPattern("azefg"));
+        
+    }    
 };
 
 

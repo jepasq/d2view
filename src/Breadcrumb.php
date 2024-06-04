@@ -22,15 +22,29 @@ class Breadcrumb
     $paths,
     $pattern;
 
-
     /** \param $pattern The pattern where '%s' will be replaced with
      *                  individual paths.
      */
     function __construct($path = '', $pattern="%s", $separator = '/'){
+        $this->setHrefPattern($pattern);
         $this->paths = remove_empty(explode($separator, $path));
-        $this->pattern = $pattern;
     }
 
+    /// Return true if the given string contains a pattern ('%s') string
+    function hasPattern($str) {
+        return str_contains($str, $this->pattern);
+    }
+
+    function setHrefPattern($str) {
+        if ($this->hasPattern($str)) {
+            $this->pattern = $str;
+        }
+        else{
+            throw new Exception("No pattern found");
+        }
+        
+    }
+    
     function print(){
         $ret = $sep = "/";
         foreach ($this->paths as $p) {
