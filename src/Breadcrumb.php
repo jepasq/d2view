@@ -22,9 +22,13 @@ class Breadcrumb
     $paths,
     $pattern;
 
-    /** \param $pattern The pattern where '%s' will be replaced with
-     *                  individual paths.
-     */
+    /** The Breadcrumb constructor
+      *
+      * \param $ath       The path string (default to an empty one).
+      * \param $pattern   The pattern where '%s' will be replaced with
+      *                   individual paths.
+      * \param $separator The character used to split paths into directories.
+      */
     function __construct($path = '', $pattern="%s", $separator = '/'){
         $this->setHrefPattern($pattern);
         $this->paths = remove_empty(explode($separator, $path));

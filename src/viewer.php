@@ -11,10 +11,12 @@ $type = $_GET['type']; // Used to force type ?
 
 
 /** Simply return the extension part of the filename using pathinfo()
- *
- * \return The 'extension' part of the pathinfo() extracted infos.
- *
- */
+  *
+  * \param $filename The string to be used as input.
+  *
+  * \return The 'extension' part of the pathinfo() extracted infos.
+  *
+  */
 function getFileType($filename) {
     $path_parts = pathinfo($filename);
     return $path_parts['extension'];
@@ -72,15 +74,15 @@ else if ($type == 'png') {
     Echo "PNG Image viewer :<br>";
     try {
         $content = $d2->getFileContent($file, $ds);
-        #        echo "<img src='data:image/png;base64,$content' />";
+        // echo "<img src='data:image/png;base64,$content' />";
 
-        # Trying to write file to disk
+        // Trying to write file to disk
         $path = "$extractdir/dotaimage.png";
         if (!is_writable($path)) {
             echo "Error : $path is not writtable";
         }
         $file = fopen($path, 'w');
-        #        $ret = file_put_contents($filename, $content);
+        // $ret = file_put_contents($filename, $content);
         $ret = fwrite($file, $content);
         if (!$ret) {
             echo "Error writing image to '$path'";

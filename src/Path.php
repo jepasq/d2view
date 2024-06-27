@@ -1,17 +1,19 @@
 <?php
 
-
-/** Handles pagination and related page linkes
- *
- * When result of a search is more that a page lenght, create links to
- * all pages.
+/** A class used to print a path with a copy HTML button
  *
  */
 class Path {
     public
 
+    /**The path location. Can be anything, nether tested */
     $path = '';
 
+    /** The Path constructor
+     *
+     * \param $path The current path (non tested).
+     *
+     */
     function __construct($path){
         $this->path = $path;
     }
