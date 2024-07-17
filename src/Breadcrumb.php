@@ -20,11 +20,12 @@ class Breadcrumb
     public
     /** The current page index starting at 0. */
     $paths,
+    /** The pattern where '%s' is replaced with individual path. */
     $pattern;
 
     /** The Breadcrumb constructor
       *
-      * \param $ath       The path string (default to an empty one).
+      * \param $path      The path string (default to an empty one).
       * \param $pattern   The pattern where '%s' will be replaced with
       *                   individual paths.
       * \param $separator The character used to split paths into directories.
@@ -34,11 +35,22 @@ class Breadcrumb
         $this->paths = remove_empty(explode($separator, $path));
     }
 
-    /// Return true if the given string contains a pattern ('%s') string
+    /** Does this instance has a pattern ?
+     *
+     * \param $str The new pattern.
+     *
+     * Return true if the given string contains a pattern ('%s') string
+     *
+     */
     function hasPattern($str) {
         return str_contains($str, $this->pattern);
     }
 
+    /** Set the pattern
+     *
+     * \param $str The pattern the URL will be inserted in.
+     *
+     */
     function setHrefPattern($str) {
         if ($this->hasPattern($str)) {
             $this->pattern = $str;
@@ -48,7 +60,8 @@ class Breadcrumb
         }
         
     }
-    
+
+    /** Return the printed breadcrumb as a string */
     function print(){
         $ret = $sep = "/";
         foreach ($this->paths as $p) {

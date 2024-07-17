@@ -55,7 +55,11 @@ CLOCK: [2023-05-09 mar. 11:33]--[2023-05-09 mar. 11:50] =>  0:17
     viewable with an image viewer
   - [ ] Make this extractdir viewable with the webserver  
 **** TODO Add more unit tests tests to NoGameFiles category
+:LOGBOOK:
+CLOCK: [2024-07-17 mer. 11:44]--[2024-07-17 mer. 12:15] =>  0:31
+:END:
 - [ ] Add more tests to NoGameFiles category
+- [ ] Breadcrumbs ones should fail, even on CI  
 **** TODO Pagination may have an ellipsis if too much pages
 :LOGBOOK:
 CLOCK: [2024-06-27 jeu. 05:37]--[2024-06-27 jeu. 06:07] =>  0:30
@@ -88,7 +92,9 @@ CLOCK: [2023-06-27 mar. 09:08]--[2023-06-27 mar. 09:23] =>  0:15
     Try to replace %s with path
     - [ ] Must be able to check if we have a pattern
     - [ ] Added 3rd arg to constructor
-    - [ ] Maybe a testable function to replace pattern  
+    - [ ] Maybe a testable function to replace pattern
+- [ ] Breadcrumb::print hould be called toString (return and
+  doesn't print)
 *** DONE v0.0.2
 **** DONE Try to fix ptree unit test
 :LOGBOOK:
