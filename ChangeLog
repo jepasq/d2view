@@ -1,3 +1,13 @@
+* v0.0.2-17 (8 Apr. 2024 - 5 Aug. 2024) SLOC 1,750
+- Fix breadcrumb test class function name
+- Improve some undocumented members API documentation
+- Add Breadcrumb tests to NoGameFiles group
+- Improve Breadcrumb href pattern handling
+- Breadcrumb ctor accepts a third pattern parameter
+- Explorer page uses Breadcrumb class to print pwd
+- First BreadCrumb::print implementation
+- Add a couple of failing breadcrumb unit tests
+
 * v0.0.2-16 (13 Feb. 2024 - 8 Apr. 2024) SLOC 1,628
 - Start to implement Breadcrumb unit tests and class
 - Close ptree-related section and switch to minor version 2
