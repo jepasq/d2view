@@ -62,6 +62,7 @@ CLOCK: [2024-07-17 mer. 11:44]--[2024-07-17 mer. 12:15] =>  0:31
 - [ ] Breadcrumbs ones should fail, even on CI  
 **** TODO Pagination may have an ellipsis if too much pages
 :LOGBOOK:
+CLOCK: [2024-08-05 lun. 10:02]--[2024-08-05 lun. 10:06] =>  0:04
 CLOCK: [2024-08-05 lun. 08:42]--[2024-08-05 lun. 09:03] =>  0:21
 CLOCK: [2024-06-27 jeu. 05:37]--[2024-06-27 jeu. 06:07] =>  0:30
 CLOCK: [2024-06-04 mar. 17:25]--[2024-06-04 mar. 18:02] =>  0:37
@@ -84,16 +85,16 @@ CLOCK: [2023-06-27 mar. 09:08]--[2023-06-27 mar. 09:23] =>  0:15
   - [X] EllispisThreshold property, getter and setter
   - [X] Test it then
   - [X] Fix this failing unit test
-- [-] Explorer's 'Current working dir' could be a 'breadcrumb'
+- [X] Explorer's 'Current working dir' could be a 'breadcrumb'
   See https://getbootstrap.com/docs/4.0/components/breadcrumb/
   - [X] For this, add NogameFiles unittest on Breadcrumb class
   - [X] Now, test and add a print function
   - [X] Now use it in explorer page
-  - [-] Now, how to correctly feed href part, with a pattern ?
+  - [X] Now, how to correctly feed href part, with a pattern ?
     Try to replace %s with path
     - [X] Must be able to check if we have a pattern
     - [X] Added 3rd arg to constructor
-    - [ ] Maybe a testable function to replace pattern
+    - [X] Maybe a testable function to replace pattern
 - [ ] Should fix Pagination max number of pages unit test
 - [ ] Breadcrumb::print should be called toString (return and
   doesn't print)

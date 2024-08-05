@@ -66,9 +66,9 @@ class Breadcrumb
         $ret = $sep = "/";
         foreach ($this->paths as $p) {
             if(end($this->paths) === $p) {
-		        $ret .= $p;
+		        $ret .= str_replace('%s', $p, $this->pattern);
 	        } else {
-             $ret .= "<a href=''>" . $p . "</a>" . $sep;
+             $ret .= str_replace('%s', $p, $this->pattern) . $sep;
          }
         }
         return $ret;
