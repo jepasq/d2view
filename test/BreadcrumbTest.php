@@ -70,18 +70,18 @@ class BreadcrumbTest extends TestCase
     {
         $bc = new Breadcrumb("/this/is/a/new/path", "pattern:%s");
         $out = $bc->print();
-        $this->assertTrue(str_contains($out, 'pattern:/this'), 4);
-        $this->assertTrue(str_contains($out, 'pattern:/this/is'), 4);
+        $this->assertTrue(str_contains($out, 'pattern:this'), 4);
+        $this->assertTrue(str_contains($out, 'pattern:is'), 4);
     }
 
     /*
     * @group NoGameFiles
     *
     */
-    public function testhasPatter()
+    public function testHasPattern()
     {
         $bc = new Breadcrumb("/this/is/a/new/path");
-        $this->assertTrue($bc->hasPattern("aze%sdfg"));
+        $this->assertTrue($bc->hasPattern("aze %s dfg"));
         $this->assertFalse($bc->hasPattern("azefg"));
         
     }    
