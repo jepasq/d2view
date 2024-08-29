@@ -60,7 +60,11 @@ CLOCK: [2024-07-17 mer. 11:44]--[2024-07-17 mer. 12:15] =>  0:31
 :END:
 - [ ] Add more tests to NoGameFiles category
 - [ ] Breadcrumbs ones should fail, even on CI  
-**** TODO Pagination may have an ellipsis if too much pages
+**** Next Pagination and Breadcrumb milestone            
+- [ ] Should fix Pagination max number of pages unit test
+- [ ] Breadcrumb::print should be called toString (return and
+  doesn't print)
+**** DONE Pagination may have an ellipsis if too much pages
 :LOGBOOK:
 CLOCK: [2024-08-05 lun. 10:02]--[2024-08-05 lun. 10:06] =>  0:04
 CLOCK: [2024-08-05 lun. 08:42]--[2024-08-05 lun. 09:03] =>  0:21
@@ -95,9 +99,6 @@ CLOCK: [2023-06-27 mar. 09:08]--[2023-06-27 mar. 09:23] =>  0:15
     - [X] Must be able to check if we have a pattern
     - [X] Added 3rd arg to constructor
     - [X] Maybe a testable function to replace pattern
-- [ ] Should fix Pagination max number of pages unit test
-- [ ] Breadcrumb::print should be called toString (return and
-  doesn't print)
 *** DONE v0.0.2
 **** DONE Try to fix ptree unit test
 :LOGBOOK:
