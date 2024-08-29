@@ -1,3 +1,6 @@
+# If you need to debug/echo some text/values from unit tests, please
+# use `ob_flush();' after your print to update CLI output.
+
 default: check
 
 # NoGameFiles : mainly for CI purpose. See PaginationTest class for more.
@@ -8,7 +11,7 @@ check:
 	phpunit -d memory_limit=-1 test/ 
 
 check-pag:
-	phpunit -d memory_limit=-1 test/PaginationTest.php
+	phpunit test/PaginationTest.php
 
 check-ptree:
 	phpunit --filter testPrintTree test/D2viewTest.php

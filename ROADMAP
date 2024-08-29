@@ -60,8 +60,11 @@ CLOCK: [2024-07-17 mer. 11:44]--[2024-07-17 mer. 12:15] =>  0:31
 :END:
 - [ ] Add more tests to NoGameFiles category
 - [ ] Breadcrumbs ones should fail, even on CI  
-**** Next Pagination and Breadcrumb milestone            
-- [ ] Should fix Pagination max number of pages unit test
+**** TODO Next Pagination and Breadcrumb milestone            
+:LOGBOOK:
+CLOCK: [2024-08-29 jeu. 12:48]--[2024-08-29 jeu. 13:24] =>  0:36
+:END:
+- [X] Should fix Pagination max number of pages unit test
 - [ ] Breadcrumb::print should be called toString (return and
   doesn't print)
 **** DONE Pagination may have an ellipsis if too much pages

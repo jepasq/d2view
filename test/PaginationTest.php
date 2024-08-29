@@ -260,7 +260,7 @@ class PaginationTest extends TestCase
         $len = 3;
         $pag = new Pagination($l1, $len);
         $stack = $pag->getPageLinks("http://url");
-        $this->assertGreaterThan(substr_count($stack, $pag->ellipsisChar), 0);
+        $this->assertGreaterThan(0, substr_count($stack, $pag->ellipsisChar));
     }    
 };
 
