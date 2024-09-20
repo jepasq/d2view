@@ -18,7 +18,7 @@ navbar("explorer");
 
 echo "<section class='explorer-header'><p>Current working dir :";
 $bc = new Breadcrumb($pwd, 'explorer.php?pwd=%s');
-$out = $bc->print();
+$out = $bc->toString();
 
 echo "$out</p></section>";
 echo "<section class='explorer'>

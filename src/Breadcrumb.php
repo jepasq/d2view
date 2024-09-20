@@ -62,7 +62,7 @@ class Breadcrumb
     }
 
     /** Return the printed breadcrumb as a string */
-    function print(){
+    function toString(){
         $ret = $sep = "/";
         foreach ($this->paths as $p) {
             if(end($this->paths) === $p) {
