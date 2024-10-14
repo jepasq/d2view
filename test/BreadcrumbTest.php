@@ -38,11 +38,12 @@ class BreadcrumbTest extends TestCase
         // With should have path number - 1 href
         $bc = new Breadcrumb("/this/is/a/path", "pattern:%s");
         $out = $bc->toString();
-        $this->assertEquals(substr_count($out, 'href'), 3);
+        // Should be 0 pattern doesn't contains 'href'
+        $this->assertEquals(substr_count($out, 'href'), 0);
 
         $bc = new Breadcrumb("/this/is/a/new/path", "pattern:%s");
         $out = $bc->toString();
-        $this->assertEquals(substr_count($out, 'href'), 4);
+        $this->assertEquals(substr_count($out, 'pattern'), 5);
     }
 
     /*
@@ -55,11 +56,11 @@ class BreadcrumbTest extends TestCase
         // With should have path number - 1 href
         $bc = new Breadcrumb("/this/is/a/path", "pattern:%s");
         $out = $bc->toString();
-        $this->assertEquals(substr_count($out, $sep), 3);
+        $this->assertEquals(substr_count($out, $sep), 4);
 
         $bc = new Breadcrumb("/this/is/a/new/path", "pattern:%s");
         $out = $bc->toString();
-        $this->assertEquals(substr_count($out, $sep), 4);
+        $this->assertEquals(substr_count($out, $sep), 5);
     }
 
     /*

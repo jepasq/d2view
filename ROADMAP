@@ -56,10 +56,11 @@ CLOCK: [2023-05-09 mar. 11:33]--[2023-05-09 mar. 11:50] =>  0:17
   - [ ] Make this extractdir viewable with the webserver  
 **** TODO Add more unit tests tests to NoGameFiles category
 :LOGBOOK:
+CLOCK: [2024-10-14 lun. 12:18]--[2024-10-14 lun. 12:48] =>  0:30
 CLOCK: [2024-07-17 mer. 11:44]--[2024-07-17 mer. 12:15] =>  0:31
 :END:
+- [X] Breadcrumbs ones should fail, even on CI
 - [ ] Add more tests to NoGameFiles category
-- [ ] Breadcrumbs ones should fail, even on CI  
 **** DONE Next Pagination and Breadcrumb milestone            
 :LOGBOOK:
 CLOCK: [2024-09-20 ven. 09:41]--[2024-09-20 ven. 09:45] =>  0:04
