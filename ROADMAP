@@ -20,6 +20,8 @@ CLOCK: [2023-01-25 mer. 12:27]--[2023-01-25 mer. 12:53] =>  0:26
 - [X] Document undocumented members
 - [X] May add a markdown mainpage
 - [ ] Must call =doxygen -u= from time to time
+  | 29 Oct. 2024 | Upgraded from 1.10 to 1.12 |
+  |              |                            |
 **** TODO Improve the admin/ interface
 :LOGBOOK:
 CLOCK: [2023-06-21 mer. 07:16]--[2023-06-21 mer. 07:30] =>  0:14
@@ -36,6 +38,7 @@ CLOCK: [2023-06-20 mar. 07:32]--[2023-06-20 mar. 07:45] =>  0:13
   Can't show vars content
 **** TODO Find an image in the dota archive and implement an image viewer
 :LOGBOOK:
+CLOCK: [2024-10-29 mar. 08:50]--[2024-10-29 mar. 08:57] =>  0:07
 CLOCK: [2023-06-12 lun. 05:28]--[2023-06-12 lun. 05:46] =>  0:18
 CLOCK: [2023-06-12 lun. 01:34]--[2023-06-12 lun. 02:02] =>  0:28
 CLOCK: [2023-05-25 jeu. 04:17]--[2023-05-25 jeu. 04:32] =>  0:15

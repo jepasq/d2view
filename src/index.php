@@ -1,6 +1,7 @@
 <?php
 
 $start_time = microtime(TRUE);
+$dl_url="https://store.steampowered.com/app/570/Dota_2/";
 
 include_once('page_layout.php');
 include_once('d2view.php');
@@ -47,8 +48,8 @@ for ($i=0; $i<6; $i++) {
 echo "<section class='welcome'>
       <p>Welcome to <em>d2view</em>, A
       <strong>DotA2</strong> local data viewer and
-      quizz generator. You need a local installation of the game to
-      use this.</p>
+      quizz generator. You need a <a href='$dl_url'>local installation
+      of the game</a> to use this.</p>
       <p>The first and only implemented feature as now is the
       <a href='explorer.php?pwd=/'>Explorer</a> that let's you
   explore the content of the game archive</p>
