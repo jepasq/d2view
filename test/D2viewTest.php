@@ -22,7 +22,7 @@ class D2viewTest extends TestCase
         global $home;
         $this->dota = "$home/.steam/steam/steamapps/common/dota 2 beta/"
             ."game/dota/";
-        echo "=> DOTA path is `$this->dota' (based on home '$home')\n";
+        // echo "=> DOTA path is `$this->dota' (based on home '$home')\n";
     }
 
     /** Tear down instance members
@@ -113,9 +113,7 @@ class D2viewTest extends TestCase
     public function testViewerLink_withoutExtension()
     {
         $d2 = new D2View($this->dota);
-        // We do not test output here. viewer_link() always return true
-        // and onky echo() link
-        $this->assertTrue($d2->viewer_link('ext'));
+        $this->assertStringContainsString('force', $d2->viewer_link('ext'));
     }
 
     /** viewer_link should return true with an usable extension
@@ -124,7 +122,8 @@ class D2viewTest extends TestCase
     public function testViewerLink_withExtension()
     {
         $d2 = new D2View($this->dota);
-        $this->assertTrue($d2->viewer_link('filename.ext'));
+        $out = $d2->viewer_link('filename.txt');
+        $this->assertStringContainsString('[view]', $out);
     }
 
     public function testQueryString_directory_separators()

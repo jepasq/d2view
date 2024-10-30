@@ -54,7 +54,7 @@ if (!empty($query)) {
     echo '<table>';
     foreach ($list as $item) {
         echo '<tr>';
-        $d2->viewer_link($item);//        echo $item."<br>";
+        echo $d2->viewer_link($item);
         echo '</tr>';
     }
     echo '</table>';

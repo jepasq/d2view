@@ -152,15 +152,14 @@ class D2view{
      */
     function viewer_link($file) {
         if ($this->canHandleExtension($file)) {       
-            echo "<td>$file</td>
+            return "<td>$file</td>
                 <td><a href='viewer.php?file=$file'>[view]</a></td>";
             
         } else {
-            echo "<td>$file</td>
+            return "<td>$file</td>
             <td></td>
             <td><a href='viewer.php?file=$file'>[force view]</a></td>";
         }
-        return true;
     }
 
 
