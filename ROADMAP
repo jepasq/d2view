@@ -59,6 +59,7 @@ CLOCK: [2023-05-09 mar. 11:33]--[2023-05-09 mar. 11:50] =>  0:17
   - [ ] Make this extractdir viewable with the webserver  
 **** TODO Add more unit tests tests to NoGameFiles category
 :LOGBOOK:
+CLOCK: [2024-10-30 mer. 12:25]--[2024-10-30 mer. 12:39] =>  0:14
 CLOCK: [2024-10-30 mer. 10:47]--[2024-10-30 mer. 11:28] =>  0:41
 CLOCK: [2024-10-14 lun. 12:18]--[2024-10-14 lun. 12:48] =>  0:30
 CLOCK: [2024-07-17 mer. 11:44]--[2024-07-17 mer. 12:15] =>  0:31
@@ -67,7 +68,7 @@ CLOCK: [2024-07-17 mer. 11:44]--[2024-07-17 mer. 12:15] =>  0:31
 - [ ] Add more tests to NoGameFiles category
 - [-] Should avoid all this echo/print in console during tests
   - [X] d2view::viewer_link() should avoid echo
-  - [ ] The copy to clipboard span  
+  - [ ] The copy to clipboard span from Path::printAndCopy
 **** DONE Next Pagination and Breadcrumb milestone            
 :LOGBOOK:
 CLOCK: [2024-09-20 ven. 09:41]--[2024-09-20 ven. 09:45] =>  0:04

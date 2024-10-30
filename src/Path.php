@@ -1,6 +1,12 @@
 <?php
 
-/** A class used to print a path with a copy HTML button
+/** A class used to get a path with a copy to clipboard HTML button
+ *
+ * The main way to use this is to set internal path member field as
+ * constructor paramater and use printAndCopy() to get dull HTML markup.
+ *
+ *        $p = new Path('/aze/tjk');
+ *        $output = $p->printAndCopy();
  *
  */
 class Path {
@@ -18,7 +24,11 @@ class Path {
         $this->path = $path;
     }
 
-    /** Print the current path and add a copy to clipboard button
+    /** Print the current path and add a Javascript-powered 'Copy to clipboard' button.
+     *
+     *  The called function @c copyToClipboard() can be found in the
+     *  @c src/public/app.js file.
+     *
      */
     function printAndCopy() {
         return "<tt>$this->path</tt><button type='button'
