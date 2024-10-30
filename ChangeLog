@@ -1,3 +1,13 @@
+* v0.0.2-18 (05 Aug. 2024 - 30 Oct. 2024) SLOC 1,751
+- d2view::viewer_link() returns string instead of using echo
+- Add link to the game in homepage
+- Upgrade Doxyfile for 1.12 (was 1.10)
+- Fix the failing Breadcrumb tests
+- Rename Breadcrumb::print to toString and close related ROADMAP section
+- Fix the PaginationTest::testElipsisHasAtLeastOne unit test assert
+- Close a pagination-related ROADMAP section
+- Breadcrumb::print() really uses pattern and str_replace to pass tests
+
 * v0.0.2-17 (8 Apr. 2024 - 5 Aug. 2024) SLOC 1,750
 - Fix breadcrumb test class function name
 - Improve some undocumented members API documentation
