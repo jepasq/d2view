@@ -30,18 +30,20 @@ class D2view{
      *
      * Will set vpk_file and nb_files to -1.
      *
-     * \param $dota_path The dota path base (without the filename).
+     * @param $dota_path The dota path base (without the filename).
+     * @param $print A boolean (default to true) telling if echo must be used.
+     *     If false, the output will be quiet.
      *
      */
-    function __construct($dota_path){
+    function __construct($dota_path, $print=true){
         if (empty($dota_path)) {
             throw new Exception("`dota_path' variable can't be empty.
             Please check the way you call the D2view constructor.");
         }
-        echo "<div><strong>DotA</strong> path is";
+        _echo($print, "<div><strong>DotA</strong> path is");
         $p = new Path($dota_path);
-        echo $p->printAndCopy();
-        echo "</div>";
+        _echo($print, $p->printAndCopy());
+        _echo($print, "</div>");
         $this->vpk_file = $dota_path.'pak01_dir.vpk';
         $this->nb_files = -1;
     }

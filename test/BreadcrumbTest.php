@@ -71,7 +71,7 @@ class BreadcrumbTest extends TestCase
     {
         $bc = new Breadcrumb("/this/is/a/new/path", "pattern:%s");
         $out = $bc->toString();
-        fwrite(STDERR, $out . '\n');
+        // fwrite(STDERR, $out . '\n');
         $this->assertTrue(str_contains($out, 'pattern:this'));
         $this->assertTrue(str_contains($out, 'pattern:is'));
     }

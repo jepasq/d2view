@@ -24,7 +24,8 @@ class Path {
         $this->path = $path;
     }
 
-    /** Print the current path and add a Javascript-powered 'Copy to clipboard' button.
+    /** Print the current path and add a Javascript-powered 'Copy to clipboard'
+     *  button.
      *
      *  The called function @c copyToClipboard() can be found in the
      *  @c src/public/app.js file.

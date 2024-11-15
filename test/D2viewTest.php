@@ -40,7 +40,7 @@ class D2viewTest extends TestCase
     {
         // Should be defined. Only added to make current branch tests fail
         $this->assertTrue(isset($this->dota));
-        $d2 = new D2View($this->dota);
+        $d2 = new D2View($this->dota, false);
         $ret = $d2->printTree(["cfg"], '', false);
         $this->assertTrue(empty($ret));
     }
@@ -48,14 +48,14 @@ class D2viewTest extends TestCase
 
     public function testListFiles()
     {
-        $d2 = new D2View($this->dota);
+        $d2 = new D2View($this->dota, false);
         $ret = $d2->listFiles("cfg", false);
         $this->assertTrue(empty($ret));
     }
 
     public function testGetFile()
     {
-        $d2 = new D2View($this->dota);
+        $d2 = new D2View($this->dota, false);
         $ret = $d2->getFile("cfg/frontpage_layout.txt");
         $this->assertFalse(empty($ret));
 
@@ -66,7 +66,7 @@ class D2viewTest extends TestCase
    
     public function testGetFileContent()
     {
-        $d2 = new D2View($this->dota);
+        $d2 = new D2View($this->dota, false);
         $ret = $d2->getFileContent("cfg/frontpage_layout.txt", 1024);
         $this->assertFalse(empty($ret));
     }
@@ -74,7 +74,7 @@ class D2viewTest extends TestCase
     /// We had some issue with this particular file
     public function testGetFileContentException()
     {
-        $d2 = new D2View($this->dota);
+        $d2 = new D2View($this->dota, false);
         // Real name is prepend with '/materials'
         $filen = "achievements/dota_achievement_placeholder.png";
         $this->expectException('VPKReader\Exception');
@@ -88,7 +88,7 @@ class D2viewTest extends TestCase
      */
     public function testQueryString_cfg()
     {
-        $d2 = new D2View($this->dota);
+        $d2 = new D2View($this->dota, false);
         $list = $d2->queryString("cfg");
 
 //        var_dump(count($list));
@@ -101,7 +101,7 @@ class D2viewTest extends TestCase
      */
     public function testQueryString_png()
     {
-        $d2 = new D2View($this->dota);
+        $d2 = new D2View($this->dota, false);
         $list = $d2->queryString(".png");
 
         $this->assertGreaterThan(0, count($list));
@@ -112,7 +112,7 @@ class D2viewTest extends TestCase
      */
     public function testViewerLink_withoutExtension()
     {
-        $d2 = new D2View($this->dota);
+        $d2 = new D2View($this->dota, false);
         $this->assertStringContainsString('force', $d2->viewer_link('ext'));
     }
 
@@ -121,14 +121,14 @@ class D2viewTest extends TestCase
      */
     public function testViewerLink_withExtension()
     {
-        $d2 = new D2View($this->dota);
+        $d2 = new D2View($this->dota, false);
         $out = $d2->viewer_link('filename.txt');
         $this->assertStringContainsString('[view]', $out);
     }
 
     public function testQueryString_directory_separators()
     {
-        $d2 = new D2View($this->dota);
+        $d2 = new D2View($this->dota, false);
         $list = $d2->queryString(".png");
 
         // Shoud contain subdirs separator (only keep first elements)
@@ -140,7 +140,7 @@ class D2viewTest extends TestCase
     /// Test the new canHandleExtension() function implementation
     public function testCanHandleExtension()
     {
-        $d2 = new D2View($this->dota);
+        $d2 = new D2View($this->dota, false);
         $this->assertTrue($d2->canHandleExtension('aze.txt'));
         $this->assertFalse($d2->canHandleExtension('aze.nottxt'));
 
