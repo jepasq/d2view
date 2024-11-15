@@ -8,7 +8,7 @@ function show_value($var, $val) {
 
 include_once('../page_layout.php');
 //include_once('../d2view.php');
-include('./global.php');
+include('../global.php');
 
 head("Admin");
 navbar("admin");
