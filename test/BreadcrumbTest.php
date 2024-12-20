@@ -85,8 +85,20 @@ class BreadcrumbTest extends TestCase
         $bc = new Breadcrumb("/this/is/a/new/path");
         $this->assertTrue($bc->hasPattern("aze %s dfg"));
         $this->assertFalse($bc->hasPattern("azefg"));
-        
+    }
+
+    /*
+    * @group NoGameFiles
+    *
+    */
+    public function testMultiplePattern()
+    {
+        $bc = new Breadcrumb("/path1/path2");
+        $out = $bc->toString();
+        // fwrite(STDERR, $out . '\n');
+        $this->assertEquals(substr_count($out, 'path1'), 2);
     }    
+    
 };
 
 
