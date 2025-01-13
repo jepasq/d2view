@@ -17,7 +17,7 @@ if (empty($pwd)) {
 navbar("explorer");
 
 echo "<section class='explorer-header'><p>Current working dir :";
-$bc = new Breadcrumb($pwd, "<a/href='explorer.php?pwd=%s>%s</a>/");
+$bc = new Breadcrumb($pwd, "<a/href='explorer.php?pwd=%s'>%s</a>/");
 $out = $bc->toString();
 
 echo "$out</p></section>";

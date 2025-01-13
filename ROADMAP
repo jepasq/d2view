@@ -38,6 +38,7 @@ CLOCK: [2023-06-20 mar. 07:32]--[2023-06-20 mar. 07:45] =>  0:13
   Can't show vars content
 **** TODO Find an image in the dota archive and implement an image viewer
 :LOGBOOK:
+CLOCK: [2025-01-13 lun. 09:39]--[2025-01-13 lun. 10:10] =>  0:31
 CLOCK: [2024-12-20 ven. 09:26]--[2024-12-20 ven. 09:39] =>  0:13
 CLOCK: [2024-11-15 ven. 13:30]--[2024-11-15 ven. 13:46] =>  0:16
 CLOCK: [2024-10-29 mar. 08:50]--[2024-10-29 mar. 08:57] =>  0:07
@@ -53,11 +54,12 @@ CLOCK: [2023-05-09 mar. 11:33]--[2023-05-09 mar. 11:50] =>  0:17
 - [X] Can't simply print file content as base64 why ?
 - [X] Add some popular recherche items to viewer header : for example .png
   *search.php?query=.png*
-
-- [ ] The Working dir printed in explorer is spurious
+- [X] The Working dir printed in explorer is spurious
   =/explorer.php?pwd=media/explorer.php?pwd=heroes=
   - Make sure this works with a multi '%s' pattern
-  
+
+- [ ] There is a double slash between dirs in explorer's breadcrum
+
 - [-] Try to save the content to a file to test it with the =file= tool
   The written file should be in =/var/tmp/systemd-private-*-httpd.service-*/tmp/testpng=
   We have home directory, try to write there

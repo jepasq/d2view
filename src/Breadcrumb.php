@@ -54,6 +54,12 @@ class Breadcrumb
     function setHrefPattern($str) {
         if ($this->hasPattern($str)) {
             $this->pattern = $str;
+
+            // Counting simple quote
+            if (substr_count($str, "'")%2 == 1) {
+                throw new InvalidArgumentException("Invalid number of simple quotes");
+            }
+            
         }
         else{
             throw new Exception("No pattern found");

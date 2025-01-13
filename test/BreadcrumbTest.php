@@ -98,6 +98,22 @@ class BreadcrumbTest extends TestCase
         // fwrite(STDERR, $out . '\n');
         $this->assertEquals(substr_count($out, 'path1'), 2);
     }    
+
+    /* Check the infamous case where we didn't correctly close the quote
+    *
+    * @group NoGameFiles
+    *
+    */
+    public function testPatternQuoteNoEnd()
+    {
+        $bc = new Breadcrumb("/path1/path2");
+        $out = $bc->toString();
+
+        // Could be a custom 'UnclosedQuoteException' one
+        $this->expectException(InvalidArgumentException::class);
+        $bc->setHrefPattern("path1pattern %s with unclosed 'simpleq");
+    }    
+
     
 };
 
