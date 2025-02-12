@@ -69,7 +69,7 @@ class Breadcrumb
 
     /** Return the printed breadcrumb as a string */
     function toString(){
-        $ret = $sep = "/";
+        $ret = "";
         foreach ($this->paths as $p) {
             if(end($this->paths) === $p) {
 		        $ret .= str_replace('%s', $p, $this->pattern);

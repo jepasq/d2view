@@ -95,7 +95,7 @@ class BreadcrumbTest extends TestCase
     {
         $bc = new Breadcrumb("/path1/path2");
         $out = $bc->toString();
-        fwrite(STDERR, $out . '\n');
+        fwrite(STDERR, "\n" . $out . "\n");
         $this->assertEquals(substr_count($out, 'path1'), 2);
     }    
 
@@ -124,6 +124,7 @@ class BreadcrumbTest extends TestCase
         $bc = new Breadcrumb('/media/expl/', "<a href='ex.php?pwd=%s'>%s</a>/");
         $out = $bc->toString();
 
+        fwrite(STDERR, "\n> DoubleSlash: " . $out . "\n");
         $this->assertEquals(substr_count($out, '//'), 0);
     }
     
