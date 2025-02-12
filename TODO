@@ -6,7 +6,8 @@ d2view - AGPLv3 - A DotA2 local data viewer and quizz generator.
     Update Version and Revision in src/page_layout.php and Doxyfile
 
 * v0.0.2-19 (30 Oct. 2024 - ???) SLOC ?,???
-- (5) Fix explorer's breadcrumb and add a unpaired quote test
+- (6) Add a Breadcrumb test for the double slash issue
+- Fix explorer's breadcrumb and add a unpaired quote test
 - Add a failing Breadcrumb test for multiple patterns
 - Improve and fix some typo in README.md file
 - Remove echo statements from D2View ctor using a second argument

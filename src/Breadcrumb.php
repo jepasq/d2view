@@ -35,11 +35,11 @@ class Breadcrumb
         $this->paths = remove_empty(explode($separator, $path));
     }
 
-    /** Does this instance has a pattern ?
+    /** Does the given string contains the actual pattern ?
      *
-     * \param $str The new pattern.
+     * @param $str The string to be tested.
      *
-     * Return true if the given string contains a pattern ('%s') string
+     * @return true if the given string contains the actual pattern ('%s')
      *
      */
     function hasPattern($str) {

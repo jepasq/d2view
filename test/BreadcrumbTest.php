@@ -95,15 +95,15 @@ class BreadcrumbTest extends TestCase
     {
         $bc = new Breadcrumb("/path1/path2");
         $out = $bc->toString();
-        // fwrite(STDERR, $out . '\n');
+        fwrite(STDERR, $out . '\n');
         $this->assertEquals(substr_count($out, 'path1'), 2);
     }    
 
-    /* Check the infamous case where we didn't correctly close the quote
-    *
-    * @group NoGameFiles
-    *
-    */
+    /** Check the infamous case where we didn't correctly close the quote
+     *
+     * @group NoGameFiles
+     *
+     */
     public function testPatternQuoteNoEnd()
     {
         $bc = new Breadcrumb("/path1/path2");
@@ -114,6 +114,18 @@ class BreadcrumbTest extends TestCase
         $bc->setHrefPattern("path1pattern %s with unclosed 'simpleq");
     }    
 
+    /** Check if we don't have a double slash between path element
+     *
+     * @group NoGameFiles
+     *
+     */
+    public function testPatternDoubleSlash()
+    {
+        $bc = new Breadcrumb('/media/expl/', "<a href='ex.php?pwd=%s'>%s</a>/");
+        $out = $bc->toString();
+
+        $this->assertEquals(substr_count($out, '//'), 0);
+    }
     
 };
 
