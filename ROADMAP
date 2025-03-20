@@ -72,6 +72,7 @@ CLOCK: [2023-05-09 mar. 11:33]--[2023-05-09 mar. 11:50] =>  0:17
     Can't from admin/ because global.php doesn work
 **** TODO Add more unit tests tests to NoGameFiles category
 :LOGBOOK:
+CLOCK: [2025-03-20 jeu. 09:02]--[2025-03-20 jeu. 09:23] =>  0:21
 CLOCK: [2024-11-15 ven. 10:28]--[2024-11-15 ven. 10:59] =>  0:31
 CLOCK: [2024-10-30 mer. 12:25]--[2024-10-30 mer. 12:39] =>  0:14
 CLOCK: [2024-10-30 mer. 10:47]--[2024-10-30 mer. 11:28] =>  0:41
@@ -84,6 +85,10 @@ CLOCK: [2024-07-17 mer. 11:44]--[2024-07-17 mer. 12:15] =>  0:31
   - [X] d2view::viewer_link() should avoid echo
   - [X] The copy to clipboard span from Path::printAndCopy
     This doesn't appear with the =check-ngf= Makefile rule
+- [ ] Could we list tests with no category or not in this one ?
+
+- [ ] If base URL is 127.0.0.1, navbar links are spurious (URL/page.php)
+
 **** DONE Next Pagination and Breadcrumb milestone            
 :LOGBOOK:
 CLOCK: [2024-09-20 ven. 09:41]--[2024-09-20 ven. 09:45] =>  0:04
