@@ -1,3 +1,13 @@
+* v0.0.2-19 (30 Oct. 2024 - 20 Mar. 2025) SLOC 1,814
+- Try to include page_layout to error page to add styles
+- Partly fix the double slash Bredcrumb issue
+- Add a Breadcrumb test for the double slash issue
+- Fix explorer's breadcrumb and add a unpaired quote test
+- Add a failing Breadcrumb test for multiple patterns
+- Improve and fix some typo in README.md file
+- Remove echo statements from D2View ctor using a second argument
+- Improve Path class API documentation
+
 * v0.0.2-18 (05 Aug. 2024 - 30 Oct. 2024) SLOC 1,751
 - d2view::viewer_link() returns string instead of using echo
 - Add link to the game in homepage
